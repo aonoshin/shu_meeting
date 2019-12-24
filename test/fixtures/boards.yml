@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content: MyText
+  image: MyString
+  place: MyString
+  day: 2019-11-30
+  times: 2019-11-30 16:03:26
+  user_id: 1
+
+two:
+  title: MyString
+  content: MyText
+  image: MyString
+  place: MyString
+  day: 2019-11-30
+  times: 2019-11-30 16:03:26
+  user_id: 1

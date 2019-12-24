@@ -1,0 +1,26 @@
+<div class="photos-edit">
+    <div class="photos-edit-title">
+        <p>写真を編集する</p>
+    </div>
+    <div class="photos-edit-main">
+        <%= form_for [@user, @photo] do |p| %>
+          <div class="photos-edit-content">
+              <%= p.hidden_field :user_id, :value => current_user.id %>
+              <p>－タイトル－</p>
+              <%= p.text_field :title, :class => "photos-edit-content1" %>
+              <p>－写真－</p>
+              <%= p.file_field :image, :class => "photos-edit-img" %>
+              <p>－撮影場所－</p>
+              <%= p.text_field :place, :class => "photos-edit-content1" %>
+              <p>－コメント－</p>
+              <%= p.text_area :content, :class => "photos-edit-content2" %>
+          </div>
+          <div class="photos-edit-btn">
+              <ul>
+                  <li><%= link_to "アルバムに戻る", "/users/#{@photo.user_id}/photos", :class => "photos-edit-btn1" %></li>
+                  <li><%= p.submit "変更する", :class => "photos-edit-btn2", data: {confirm: '変更してもよろしいでしょうか？'} %></li>
+              </ul>
+          </div>
+        <% end %>
+    </div>
+</div>

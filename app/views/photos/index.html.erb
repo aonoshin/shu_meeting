@@ -1,0 +1,28 @@
+<div class="photos-index">
+    <div class="photos-index-title">
+        <p>アルバム</p>
+    </div>
+    
+    <div class="photos-index-new-btn">
+        <% if @user.id == current_user.id %>
+            <p><%= link_to "写真を投稿する", "/users/#{@user.id}/photos/new" %></p>
+        <% end %>
+        <span><%= link_to @user.name, "/users/#{@user.id}" %>さんのページに戻る</span>
+    </div>
+    
+    <div class="photos-index-main">
+        <% if @photos.present? %>
+            <% @photos.each do |p| %>
+                <div class="photos-index-content">
+                    <%= link_to " /users/#{p.user_id}/photos/#{p.id}" do %>
+                    <%= image_tag p.image, class: "photos-index-img" %>
+                    <% end %>
+                </div>
+            <% end %>
+        <% else %>
+           <div class="photos-index-empty">
+               <p>投稿された写真はありません。</p>
+           </div>
+        <% end %>
+    </div>
+</div>

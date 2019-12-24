@@ -1,0 +1,38 @@
+<div class="friends-index">
+    <div class="friends-index-title">
+        <p><%= @user.name %>さんの友達一覧</p>
+    </div>
+    <div class="friends-index-btn">
+        <% if @user.id == current_user.id %>
+        <ul>
+            <li><%= link_to "掲示板から友達を探す", "/boards" %></li>
+            <li><%= link_to "マイページに戻る", "/users/#{current_user.id}" %></li>
+        </ul>
+        <% else %>
+        <p><%= link_to @user.name, "/users/#{@user.id}" %>さんのページに戻る</p>
+        <% end %>
+    </div>
+    <!--< @friends each do |f| %>-->
+      <div class="friends-index-main clearfix">
+          <div class="friends-index-name">
+              <!--<p>名前< link_to "#{f.name}", "/users/#{@user.id}" %></p>-->
+              <p>名前：</p>
+          </div>
+          <div class="friends-index-icon">
+              <!--< link_to "/users/#{@user.id}" do %>-->
+              <!--  <p>< image_tag @user.icon, class="friends-index-img" %></p>-->
+              <!--< end %>-->
+              <p>アイコン</p>
+          </div>
+          <div class="friends-index-detail">
+              <ul>
+                  <li>性別 ： <%= @user.gender %></li>
+                  <li>年齢 ： <%= @user.age %>歳</li>
+                  <li>趣味 ： <%= @user.hobby %></li>
+                  <li>主な活動場所 ： <%= @user.area %></li>
+                  <li><%= link_to "チャットをする", "/" %></li>
+              </ul>
+          </div>
+      </div>
+    <!--< end %>-->
+</div>

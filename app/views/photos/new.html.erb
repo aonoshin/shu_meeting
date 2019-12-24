@@ -1,0 +1,27 @@
+<div class="photos-new">
+    <div class="photos-new-title">
+        <p>写真を投稿する</p>
+    </div>
+    <div class="photos-new-main">
+        <%= form_for [@user, @photo] do |p| %>
+          <%= p.hidden_field :user_id, :value => current_user.id %>
+          <p>－タイトル－<br>
+          <span>※35文字以内</span></p>
+          <%= p.text_field :title, :class => "photos-new-content1" %>
+          <p>－写真－<br>
+          <span>※必須<span></p>
+          <%= p.file_field :image, :class => "photos-new-content3" %>
+          <p>－コメント－<br>
+          <span>※300文字以内</span></p>
+          <%= p.text_area :content, :class => "photos-new-content2" %>
+          <p>－撮影場所－<br>
+          <span>※20文字以内</span></p>
+          <%= p.text_field :place, :class => "photos-new-content1" %>
+          <br>
+          <ul>
+              <li><%= link_to "アルバムに戻る", "/users/#{@user.id}/photos" %></li>
+              <li><%= p.submit "投稿する", :class => "photos-new-main-btn", data: {confirm: '投稿してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

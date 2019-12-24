@@ -1,0 +1,27 @@
+<div class="photos-show">
+    <div class="photos-show-title">
+        <p>アルバム</p>
+    </div>
+    <div class="photos-show-main">
+        <div class="photos-show-content">
+            <p><%= @photo.title %></p>
+            <%= image_tag @photo.image, class: "photos-show-img" %>
+            <div class="photos-show-text">
+                <p><%= @photo.content %></p>
+            </div>
+            <div class="photos-show-place">
+                <p>撮影場所：<%= @photo.place %></p>
+            </div>
+        </div>
+        
+        <div class="photos-show-btn clearfix">
+            <ul>
+                <span><li><%= link_to "戻る", "/users/#{@photo.user_id}/photos" %></li></span>
+                <% if @photo.user_id == current_user.id %>
+                  <li><%= link_to "削除する", "/users/#{@photo.user_id}/photos/#{@photo.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか？'} %></li>
+                  <li><%= link_to "編集する", edit_user_photo_path(@photo.user_id) %></li>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+</div>

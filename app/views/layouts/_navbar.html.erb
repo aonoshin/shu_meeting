@@ -1,0 +1,19 @@
+<div class="header">
+    <div class="header-logo">
+        <p><a href="/">趣-Meeting</a></p>
+    </div>
+    <ul>
+        <% if user_signed_in? %>
+          <li><%= link_to "ログアウト", destroy_user_session_path, :method => "delete", data: {confirm: '本当にログアウトしてもよろしいでしょうか？'}  %></li>
+          <!--<li><a href="/">チャットルーム</a></li>-->
+          <li><%= link_to "チャットルーム", "/rooms" %></li>
+          <!--<li><a href="/boards">掲示板一覧</a></li>-->
+          <li><%= link_to "掲示板一覧", "/boards" %></li>
+          <!--<li><a href="/users/<%= current_user.id %>">マイページ</a></li>-->
+          <li><%= link_to "マイページ", "/users/#{current_user.id}" %></li>
+        <% else %>
+          <li><a href="/users/sign_in">ログイン</a></li>
+          <li><a href="/users/sign_up">新規登録</a></li>
+        <% end %>
+    </ul>
+</div>

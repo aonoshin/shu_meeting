@@ -1,0 +1,28 @@
+<div class="posts-edit">
+    <div class="posts-edit-title">
+        <p>投稿を編集する</p>
+    </div>
+    <div class="posts-edit-main">
+        <%= form_for @post do |p| %>
+          <%= p.hidden_field :user_id, :value => current_user.id %>
+          <p>－タイトル－<br>
+          <span>※必須[27文字以内]</span></p>
+          <%= p.text_field :title, :class => "posts-new-content1" %>
+          <p>－場所－<br>
+          <span>※必須[15文字以内]</span></p>
+          <%= p.text_field :place, :class => "posts-new-content1" %>
+          <p>－投稿内容－<br>
+          <span>※必須[180文字以内]</span></p>
+          <%= p.text_area :content, :size=>"20x7", :class => "posts-new-content2" %>
+          <p>－写真－</p>
+          <%= p.file_field :image, :class => "posts-new-content3" %>
+          <p>－動画－</p>
+          <%= p.file_field :movie, :class => "posts-new-content3" %>
+          <br>
+          <ul>
+              <li><a class="posts-edit-btn1" href="/users/<%= current_user.id %>">マイページに戻る</a></li>
+              <li><%= p.submit "変更する", :class => "posts-edit-btn2", data: {confirm: '内容を変更してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

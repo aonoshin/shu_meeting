@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ShuMeeting</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render "layouts/navbar" %>
+    
+    <% if notice %>
+      <div class="body-notice">
+        <p class="alert alert-success"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="body-alert">
+        <p class="alert alert-danger"><%= alert %></p>
+      </div>
+    <% end %>
+    <%= yield %>
+    
+    <%= render "layouts/footer" %>
+  </body>
+</html>

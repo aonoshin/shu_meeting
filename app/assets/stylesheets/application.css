@@ -1,0 +1,239 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+/*applicationエリア*/
+
+body{
+    background-color:#eee;
+    margin:0;
+    font-family:Century;
+}
+
+ul{
+    list-style:none;
+}
+
+.body-notice{
+    background-color:#FFAD90;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.body-notice p{
+    color:#fff;
+    text-shadow:1px 1px 1px #00f;
+    margin:0;
+    padding:15px;
+}
+
+.body-alert{
+    background-color:#FFFFCC;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.body-alert p{
+    color:#f00;
+    text-shadow:1px 1px 1px #fff;
+    margin:0;
+    padding:15px;
+}
+
+
+
+
+/*_navbarエリア*/
+
+.header{
+    background-color:#A4C6FF;
+    height:70px;
+    border-bottom:4px double #00f;
+    position:sticky;
+    top:0;
+}
+
+.header-logo{
+    margin:0;
+}
+
+.header-logo p{
+    margin:10px 0 0 15px;
+    float:left;
+    font-size:30px;
+    text-shadow:2px 2px 2px #00f;
+}
+
+.header ul{
+    margin:0;
+    padding:0;
+    text-shadow:2px 2px 2px #00f;
+}
+
+.header span{
+    float:left;
+    font-size:30px;
+    margin-left:10px;
+}
+
+.header li{
+    float:right;
+    margin:20px 20px 0 0;
+}
+
+
+
+.header a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+}
+
+.header li > a:hover{
+    color:#2C7CFF;
+}
+
+
+
+
+/*新規登録エリア*/
+
+.sign-up h2{
+    text-align:center;
+    color:#4689FF;
+    font-size:30px;
+    background-color:#fff;
+}
+
+.field{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4689FF;
+}
+
+.field p{
+    margin:0;
+    padding:0;
+}
+
+.field span{
+    color:#f00;
+    font-size:12px;
+}
+
+.sign-up-text{
+    width:25%;
+    border-radius:5px;
+}
+
+.sign-up-btn{
+    color:#fff;
+    background-color:#FF9933;
+    padding:5px 80px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sign-up-btn:hover{
+    opacity:0.5;
+}
+
+.actions{
+    padding-top:40px;
+    text-align:center;
+    padding-bottom:20px;
+}
+
+
+/*ログインエリア*/
+
+.sign-in h2{
+    text-align:center;
+    color:#4689FF;
+    font-size:30px;
+    background-color:#fff;
+}
+
+.sign-in-text{
+    width:25%;
+    border-radius:5px;
+}
+
+.sign-in-btn{
+    color:#fff;
+    background-color:#FF9933;
+    padding:5px 80px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sign-in-btn:hover{
+    opacity:0.5;
+}
+
+.actions{
+    padding-top:30px;
+    text-align:center;
+    padding-bottom:80px;
+}
+
+
+
+
+
+/*footerエリア*/
+
+.footer{
+    background-color:#4689FF;
+    height:150px;
+}
+
+
+.footer .copy{
+    padding-top:5px;
+    text-align:center;
+    color:#fff;
+}
+
+.footer .copy h3{
+    font-size:23px;
+}
+
+.user-edit-content1{
+    width:40%;
+}
+
+.footer-btn ul{
+    padding:0;
+    margin:0;
+    float:right;
+}
+
+.footer-btn li{
+    display:inline-block;
+    margin-right:15px;
+    font-size:13px;
+}
+
+.footer-btn a{
+    color:#fff;
+}
+
+.footer-btn a:hover{
+    color:#00f;
+}

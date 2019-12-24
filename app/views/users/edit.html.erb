@@ -1,0 +1,38 @@
+<div class="user-edit">
+    <div class="edit-title">
+        <p>プロフィールを編集する</p>
+    </div>
+    <div class="edit-main">
+        <%= form_for @user do |f| %>
+          <p>－名前－<br>
+          <span>※必須[25文字以内]</span></p>
+          <%= f.text_field :name, :class => "user-edit-content1" %>
+          <p>－年齢－</p>
+          <%= f.number_field :age, :class => "user-edit-content1" %>
+          <p>－活動エリア－<br>
+          <span>※必須[25文字以内]</span></p>
+          <%= f.text_field :area, :class => "user-edit-content1" %>
+          <p>－性別－<br>
+          <span>※必須</span></p>
+          <%= f.radio_button :gender, :"女性" %>
+          <%= f.label :gender, "女性", :class => "gender" %>
+          <%= f.radio_button :gender, :"男性" %>
+          <%= f.label :gender, "男性", :class => "gender" %>
+          <%= f.radio_button :gender, :"その他" %>
+          <%= f.label :gender, "その他" %>
+          <p>－趣味－<br>
+          <span>※必須[25文字以内]</span></p>
+          <%= f.text_field :hobby, :class => "user-edit-content1" %>
+          <p>－自己紹介－<br>
+          <span>※150文字以内</span></p>
+          <%= f.text_area :profile, :size=>"20x7", :class => "user-edit-content2" %>
+          <p>－アイコン－</p>
+          <%= f.file_field :icon, :class => "user-edit-content3" %>
+          <br>
+          <ul>
+              <li><a class="user-edit-btn2" href="/users/<%= current_user.id %>">マイページに戻る</a></li>
+              <li><%= f.submit "反映する", :class => "user-edit-btn1", data: {confirm: '内容を変更してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

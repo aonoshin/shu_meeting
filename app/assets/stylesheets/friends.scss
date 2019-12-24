@@ -1,0 +1,118 @@
+// Place all the styles related to the friends controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.friends-index-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.friends-index-btn{
+    padding:0;
+    margin:0;
+}
+
+.friends-index-btn ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.friends-index-btn li{
+    display:inline-block;
+    margin:20px;
+}
+
+.friends-index-btn li a{
+    text-decoration:none;
+    color:#fff;
+    background-color:#6699FF;
+    border-radius:5px;
+    padding:10px 40px;
+}
+
+.friends-index-btn li a:hover{
+    background-color:#00f;
+}
+
+.friends-index-btn p{
+    text-align:center;
+}
+
+.friends-index-main{
+    width:60%;
+    margin:20px auto 60px;
+    background-color:#fff;
+}
+
+.friends-index-name{
+    text-align:center;
+    background-color:#6699CC;
+    padding:6px 0;
+    margin:0;
+}
+
+.friends-index-name p{
+    padding:0;
+    margin:0;
+}
+
+.friends-index-icon{
+    float:left;
+    background-color:#ddd;
+    width:30%;
+    height:200px;
+}
+
+.friends-index-icon p{
+    width:30%;
+    height:200px;
+}
+
+// ※friendsのeachが読み込めたらコメントアウト解除予定
+// .friends-index-img{
+//     width:30%;
+//     height:200px;
+// }
+
+.friends-index-detail{
+    float:right;
+    background-color:#fff    ;
+    width:70%;
+    height:200px;
+}
+
+.friends-index-detail ul{
+    width:90%;
+    padding:0;
+    margin:20px auto;
+}
+
+.friends-index-detail li{
+    width:90%;
+    border-bottom:2px solid #6699CC;
+    padding:0;
+    margin:0 auto 10px;
+}
+
+.friends-index-detail a{
+    color:#fff;
+    text-decoration:none;
+    display:block;
+}
+
+.friends-index-detail li:nth-of-type(5){
+    background-color:#ff9966;
+    text-align:center;
+    padding:4px 0;
+    border-bottom:none;
+}
+
+.friends-index-detail li:nth-of-type(5):hover{
+    background-color:#ff6633;
+}

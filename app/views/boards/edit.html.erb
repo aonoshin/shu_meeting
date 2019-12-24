@@ -1,0 +1,30 @@
+<div class="boards-edit">
+    <div class="boards-edit-title">
+        <p>掲示板を編集する</p>
+    </div>
+    <div class="boards-edit-main">
+        <%= form_for @board do |b| %>
+          <%= b.hidden_field :user_id, :value => current_user.id %>
+          <p>－タイトル－<br>
+          <span>※必須[35文字以内]</span></p>
+          <%= b.text_field :title, :class => "boards-edit-content1" %>
+          <p>－開催日－</p>
+          <%= b.date_field :day, :class => "boards-edit-content1" %>
+          <p>－開催時間－</p>
+          <%= b.time_field :times, :class => "boards-edit-content1" %>
+          <p>－場所－<br>
+          <span>※必須[11文字以内]</span></p>
+          <%= b.text_field :place, :class => "boards-edit-content1" %>
+          <p>－写真－</p>
+          <%= b.file_field :image, multiple: true, :class => "boards-edit-content3" %>
+          <p>－投稿内容－<br>
+          <span>※必須[300文字以内]</span></p>
+          <%= b.text_area :content, :size=>"20x7", :class => "boards-edit-content2" %>
+          <br>
+          <ul>
+              <li><a class="boards-edit-btn1" href="/boards">掲示板一覧に戻る</a></li>
+              <li><%= b.submit "変更する", :class => "boards-edit-btn2", data: {confirm: '内容を変更してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

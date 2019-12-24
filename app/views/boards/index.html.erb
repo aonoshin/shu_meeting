@@ -1,0 +1,44 @@
+<div class="boards-index">
+    <div class="boards-index-title">
+        <p>掲示板一覧</p>
+    </div>
+    <div class="boards-index-new-btn">
+        <p><%= link_to "新規作成する", "/boards/new" %></p>
+    </div>
+    
+    <% @boards.each do |b| %>
+      <div class="boards-index-main">
+          <div class="boards-index-main-title">
+              <p><%= link_to "#{b.title}", "/boards/#{b.id}" %></p>
+          </div>
+          <div class="boards-index-main-content clearfix">
+              <div class="boards-index-main-text">
+                  <ul>
+                      <li>開催日：<span><%= b.day.strftime("%Y/%m/%d") %></span></li>
+                      <li>開催時間：<span><%= b.times.strftime("%H:%M") %></span></li>
+                      <li>場所：<span><%= b.place %></span></li>
+                      <li>主催者：<span><%= User.find_by(id: b.user_id).name %></span></li>
+                  </ul>
+                  <div class="boards-index-btn">
+                      <% if b.user_id != current_user.id %>
+                        <ul>
+                            <li><%= link_to "参加する", "/" %></li>
+                            <li><%= link_to "興味あり", "/" %></li>
+                        </ul>
+                      <% end %>
+                  </div>
+              </div>
+              <div class="boards-index-main-image">
+                  <%= link_to "/boards/#{b.id}" do %>
+                    <% if b.image.present? %>
+                      <%= image_tag b.image, class: "boards-index-img" %>
+                    <% else %>
+                      <%= image_tag "default-board.jpg", class: "boards-index-img" %>
+                    <% end %>
+                  <% end %>
+              </div>
+          </div>
+      </div>
+    <% end %>
+    
+</div>

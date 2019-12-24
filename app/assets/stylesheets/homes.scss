@@ -1,0 +1,113 @@
+/*Topページ*/
+
+.home-image{
+    background-image:url(/assets/top.jpg);
+    background-position:center 40%;
+    height:560px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin:0;
+    opacity:0.9;
+}
+
+.home-title{
+    text-align:center;
+    padding-top:130px;
+}
+
+.home-title h1{
+    margin:0;
+    font-size:70px;
+    font-weight:normal;
+    color:#5D99FF;
+    text-shadow:3px 3px 3px #00f;
+}
+
+.home-title p{
+    font-size:25px;
+    color:#fff;
+    text-shadow:3px 3px 3px #00f;
+}
+
+
+.home-main-1{
+    width:60%;
+    margin:100px auto;
+}
+
+.introduction-title{
+    padding:0;
+    margin:40px 0 0 0;
+    border-top:2px solid #5D99FF;
+    border-bottom:2px solid #5D99FF;
+}
+
+.introduction-title p{
+    padding:5px 0;
+    margin:0;
+    color:#5D99FF;
+    text-align:center;
+    font-size:20px;
+    background-color:#fff;
+}
+
+.introduction-image img{
+    width:100%;
+    box-shadow:3px 3px 3px #000;
+}
+
+.introduction-content{
+    padding:20px 0;
+    margin:20px 0 200px 0;
+    text-align:center;
+    color:#fff;
+    text-shadow:1px 1px 1px #000;
+    background-color:#99CCFF;
+}
+
+.introduction-content p{
+    width:90%;
+    margin:0 auto;
+    line-height:2;
+}
+
+.introduction-content p span{
+    color:#f00;
+    font-weight:bold;
+    text-shadow:1px 1px 1px #fff;
+    font-size:20px;
+}
+
+.home-main-2{
+    width:100%;
+    margin:0;
+    padding:50px 0;
+    background-color:#fff;
+}
+
+.home-contents-1{
+    width:60%;
+    margin:0 auto;
+}
+
+.contents-text{
+    background-color:#fff;
+    border:3px groove #99CCFF;
+    box-shadow:15px 15px 0px #5D99FF;
+    text-align:center;
+    margin:50px 0 150px 0 ;
+}
+
+.contents-text h2{
+    background-color:#ddd;
+    color:#fff;
+    text-shadow:2px 2px 2px #6699CC;
+}
+
+.contents-text p{
+    width:90%;
+    margin:0 auto 20px;
+    line-height:2;
+}

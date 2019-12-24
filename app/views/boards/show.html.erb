@@ -1,0 +1,60 @@
+<div class="boards-show">
+    <div class="boards-show-title">
+        <p><%= @board.title %></p>
+    </div>
+    <div class="boards-show-day clearfix">
+        <table>
+            <tbody>
+                <tr>
+                    <th>開催日</th>
+                    <td><%= @board.day.strftime("%Y/%m/%d") %></td>
+                    <th>時間</th>
+                    <td><%= @board.times.strftime("%H:%M") %></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="boards-show-image">
+        <% if @board.image.present? %>
+          <p><%= image_tag @board.image, class: "boards-show-img" %></p>
+        <% else %>
+          <p><%= image_tag "default-board.jpg", :class => "boards-show-img" %></p>
+        <% end %>
+    </div>
+    <div class="boards-show-btn">
+        <% if @board.user_id != current_user.id %>
+          <ul>
+              <li><%= link_to "参加する", "/" %></li>
+              <li><%= link_to "興味あり", "/" %></li>
+          </ul>
+        <% end %>
+    </div>
+    <div class="boards-detail">
+        <h3>詳細</h3>
+        <div class="boards-show-name-place clearfix">
+            <ul>
+                <li>主催者：<%= link_to @user.name, "/users/#{@user.id}" %></li>
+                <li><span>場所：<%= @board.place %></span></li>
+            </ul>
+        </div>
+        <div class="boards-show-content">
+            <p><%= simple_format(@board.content) %></p>
+        </div>
+        <div class="boards-show-time">
+            <ul>
+                <li>投稿日時：<%= @board.created_at.strftime("%Y/%m/%d %H:%M") %></li>
+                ／<li>更新日時：<%= @board.updated_at.strftime("%Y/%m/%d %H:%M") %></li>
+            </ul>
+        </div>
+    </div>
+    <div class="boards-menu clearfix">
+        <ul>
+            <li><%= link_to "マイページへ", "/users/#{current_user.id}" %></li>
+            <li><%= link_to "掲示板一覧へ", "/boards" %></li>
+            <% if @board.user_id == current_user.id %>
+              <li><%= link_to "編集する", edit_board_path(@board.id) %></li>
+              <li><%= link_to "削除する", "/boards/#{@board.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか？'} %></li>
+            <% end %>
+        </ul>
+    </div>
+</div>

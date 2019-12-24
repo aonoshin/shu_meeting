@@ -1,0 +1,155 @@
+<div class="user-page">
+    <div class="user-title">
+        <p><%= @user.name %>さんのページ</p>
+    </div>
+    <div class="user-icon">
+        <% if @user.icon.present? %>
+            <p><%= image_tag @user.icon, :class => "icon-size" %></p>
+        <% else %>
+            <p><%= image_tag "default-icon.jpg", :class => "icon-size" %></p>
+        <% end %>
+    </div>
+    <div class="user-page-friends-btn">
+        <% if @user.id != current_user.id %>
+        <!--※本来は「ログインユーザーと一致しない場合にボタン表示、&&　状況に応じてボタンの内容を変える」というコード-->
+        <ul>
+            <li><%= link_to "友達申請する", "/", data: {confirm: '友達申請してもよろしいでしょうか？'} %></li>
+            <li><%= link_to "友達申請中", "/", data: {confirm: '友達申請をやめますか？'} %></li>
+            <li><%= link_to "友達", "/", data: {confirm: '友達を解除しますか？※一度解除すると再度友達申請が必要になります。'} %></li>
+            <li><%= link_to "チャットをする", "/" %></li>
+        </ul>
+        <% end %>
+    </div>
+    <div class="user-page-header">
+        <ul>
+            <li><%= link_to "友達一覧", "/users/#{@user.id}/friends" %></li>
+            <li><%= link_to "アルバム", user_photos_path(@user.id) %></li>
+            <li><%= link_to "掲示板一覧", "#user-boards-index" %></li>
+            <li><%= link_to "投稿一覧", "#user-posts-index" %></li>
+        </ul>
+    </div>
+    <div class="user-page-main">
+        <p><span>活動場所</span><%= @user.area %></p>
+        <p><span>主な趣味</span><%= @user.hobby %></p>
+        <p><span>性別</span><%= @user.gender %></p>
+        <p><span>年齢</span><%= @user.age %>歳</p>
+        <h3>－自己紹介―</h3><br>
+        <%= simple_format(@user.profile) %>
+        
+        <% if @user.id == current_user.id %>
+          <div class="user-page-edit">
+              <a href="/users/<%= current_user.id %>/edit">プロフィールを編集する</a>
+          </div>
+        <% end %>
+    </div>
+    
+    
+    
+<!--[掲示板表示]-->
+<div id="user-boards-index" style="height: 100px;"></div>
+
+
+<div class="user-page-boards">
+    <div class="user-page-boards-new">
+        <p><%= link_to "掲示板を新規作成する", "/boards/new" %></p>
+    </div>
+    <div class="user-boards-title">
+        <h3>掲示板一覧</h3>
+    </div>
+    
+    <% @boards.each do |b| %>
+      <div class="user-boards-main">
+          <div class="user-boards-main-title">
+              <p><%= link_to "#{b.title}", "/boards/#{b.id}" %></p>
+          </div>
+          <div class="user-boards-main-content clearfix">
+              <div class="user-boards-main-text">
+                  <ul>
+                      <li>開催日：<span><%= b.day.strftime("%Y/%m/%d") %></span></li>
+                      <li>開催時間：<span><%= b.times.strftime("%H:%M") %></span></li>
+                      <li>場所：<span><%= b.place %></span></li>
+                      <li>主催者：<span><%= @user.name %></span></li>
+                  </ul>
+                  <div class="user-boards-btn">
+                      <% if b.user_id != current_user.id %>
+                        <ul>
+                            <li><%= link_to "参加する", "/" %></li>
+                            <li><%= link_to "興味あり", "/" %></li>
+                        </ul>
+                      <% end %>
+                  </div>
+              </div>
+              <div class="user-boards-main-image">
+                    <%= link_to "/boards/#{b.id}" do %>
+                      <% if b.image.present? %>
+                        <%= image_tag b.image, class: "user-boards-img" %>
+                      <% else %>
+                        <%= image_tag "default-board.jpg", :class => "user-boards-img" %>
+                      <% end %>
+                    <% end %>                  
+              </div>
+          </div>
+      </div>
+    <% end %>
+</div>
+    
+    
+<!--[投稿表示]-->
+    <div id="user-posts-index" style="height: 100px;"></div>
+
+    <div class="user-page-posts">
+        <div class="user-page-posts-new">
+            <p><%= link_to "投稿を新規作成する", "/posts/new" %></p>
+        </div>
+        <div class="user-posts-title">
+            <h3>投稿一覧</h3>
+        </div>
+        <% @posts.each do |p| %>
+            <div class="user-posts-main">
+                <div class="user-posts-title">
+                    <ul>
+                        <li><%= p.title %></li>
+                        <li>＠<%= p.place %></li>
+                    </ul>
+                </div>
+                <div class="user-posts-content clearfix">
+                    <div class="user-posts-detail">
+                            <p><%= p.content %><br>
+                    </div>
+                    <div class="user-posts-image">
+                        <% if p.image.present? %>
+                          <p><%= image_tag p.image, class: "posts-img" %></p>
+                        <% else %>
+                          <p><%= image_tag "default-post.jpg", :class => "posts-img" %></p>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="user-posts-times">
+                    <ul>
+                        <li></li>
+                        <li>投稿日時：<%= p.created_at.strftime("%Y/%m/%d %H:%M") %></li>
+                        ／<li>更新日時：<%= p.updated_at.strftime("%Y/%m/%d %H:%M") %></li>
+                    </ul>
+                </div>
+                <div class="posts-btn clearfix">
+                    <% if p.user_id == current_user.id %>
+                      <ul>
+                          <li><%= link_to "削除する", "/posts/#{p.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか？'} %></li>
+                          <li><%= link_to "編集する", edit_post_path(p.id) %></li>
+                      </ul>
+                   <% end %>
+                </div>
+            </div>
+       <% end %>
+    </div>
+</div>
+
+
+<!--↓ここから友達申請ゾーン-->
+<span id="user_<%= @user.id %>" class="follow-wrapper">
+    <%= render "follow_form", user: @user if signed_in? %>
+</span>
+
+<h4>
+    <%= render "users/stats" %>
+</h4>

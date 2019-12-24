@@ -1,0 +1,15 @@
+<div class="footer">
+    <div class="copy">
+        <h3>趣-Meeting</h3>
+        <p>Copyright @ 2019 Shin Aono</p>
+    </div>
+    <div class="footer-btn">
+        <% if user_signed_in? %>
+          <ul>
+              <li><%= link_to "よくある質問", "/" %></li>
+              <li><%= link_to "お問い合わせ", "/" %></li>
+              <li><%= link_to "退会手続き", "/", data: {confirm: '本当に退会してもよろしいでしょうか？（データの復元不可）'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>
