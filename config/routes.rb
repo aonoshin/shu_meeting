@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  # get 'participations/index'
+
   root "homes#top"
+
   
    devise_for :users, :controllers => {
      :registrations => 'users/registrations',
@@ -8,18 +11,21 @@ Rails.application.routes.draw do
     } 
     
   resources :users, only: [:edit, :update, :show] do
+    post 'friends/accept' => 'friends#accept'
+    delete 'friends/destroy_sub' => 'friends#destroy_sub'
     resources :photos
+    resources :rooms
+    resources :friends, only: [:index, :new, :create]
   end
   
-  # resources :users do
-  #   member do
-  #     get :following, :followers, :user_tweets
-  #   end
-  #   resources :friends, only:[:create, :destroy]
-  # end
-
+  resources :friends, only: [:show] do
+    resources :messages
+  end
+  resources :homes
   resources :posts
   resources :boards
-  resources :rooms
-
+  resources :news
+  resources :voices
+  resources :participations
+  
 end

@@ -2,37 +2,51 @@
     <div class="friends-index-title">
         <p><%= @user.name %>さんの友達一覧</p>
     </div>
+    
     <div class="friends-index-btn">
         <% if @user.id == current_user.id %>
         <ul>
             <li><%= link_to "掲示板から友達を探す", "/boards" %></li>
+            <li><%= link_to "投稿から友達を探す", "/posts" %></li>
             <li><%= link_to "マイページに戻る", "/users/#{current_user.id}" %></li>
         </ul>
         <% else %>
         <p><%= link_to @user.name, "/users/#{@user.id}" %>さんのページに戻る</p>
         <% end %>
     </div>
-    <!--< @friends each do |f| %>-->
+    
+    <% if @friends.present? %>
+    <% @friends.each do |user| %>
       <div class="friends-index-main clearfix">
           <div class="friends-index-name">
-              <!--<p>名前< link_to "#{f.name}", "/users/#{@user.id}" %></p>-->
-              <p>名前：</p>
+            <%= link_to "/users/#{user.id}" do %>
+              <p><%= user.name %></p>
+            <% end %>
           </div>
           <div class="friends-index-icon">
-              <!--< link_to "/users/#{@user.id}" do %>-->
-              <!--  <p>< image_tag @user.icon, class="friends-index-img" %></p>-->
-              <!--< end %>-->
-              <p>アイコン</p>
+            <% if user.icon.present? %>
+              <%= image_tag user.icon, :class => "friends-icon-size" %>
+            <% else %>
+              <%= image_tag "default-icon.jpg", :class => "friends-icon-size" %>
+            <% end %>
           </div>
           <div class="friends-index-detail">
               <ul>
-                  <li>性別 ： <%= @user.gender %></li>
-                  <li>年齢 ： <%= @user.age %>歳</li>
-                  <li>趣味 ： <%= @user.hobby %></li>
-                  <li>主な活動場所 ： <%= @user.area %></li>
-                  <li><%= link_to "チャットをする", "/" %></li>
+                  <li>性別 ： <%= user.gender %></li>
+                  <li>年齢 ： <%= user.age %>歳</li>
+                  <li>趣味 ： <%= user.hobby %></li>
+                  <li>主な活動場所 ： <%= user.area %></li>
+                  <% if friend_check(user.id) == "friend" %>
+                    <li><%= link_to "チャットをする", "/friends/#{find_friend(user.id).id}/messages" %></li>
+                    <!--↑friend.helperを参照-->
+                  <% end %>
               </ul>
           </div>
       </div>
-    <!--< end %>-->
+    <% end %>
+    <% else %>
+      <div class="friends-index-empty">
+        <p>現在友達はいません。</p>
+      </div>
+    <% end %>
 </div>

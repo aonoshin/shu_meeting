@@ -1,8 +1,690 @@
-// Place all the styles related to the photos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ここからスマホ用サイズ-----------------------------------------------------------------------------
+@media(max-width:767px){
+
+// [index画面]
+
+.photos-index-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.photos-index-new-btn{
+    text-align:center;
+    padding-top:10px;
+}
+
+.photos-index-new-btn p a{
+    text-decoration:none;
+    padding:10px 40px;
+    color:#fff;
+    font-size:13px;
+    background-color:#6699FF;
+    border-radius:5px;
+    letter-spacing:3px;
+}
+
+.photos-index-new-btn p a:hover{
+    background-color:#00f;
+}
+
+.photos-index-new-btn span a:hover{
+    opacity:0.5;
+}
+
+.photos-index-main{
+    width:95%;
+    margin:50px auto 100px;
+}
+
+.photos-index-content{
+    padding:0;
+    margin:0;
+    width:49%;
+    height:180px;
+    display:inline-block;
+}
+
+.photos-index-img{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:180px;
+}
+
+.photos-index-img:hover{
+    opacity:0.5;
+}
+
+// ※↓アルバム内に写真が一枚も無い場合
+// ---------------------------------------------
+.photos-index-empty{
+    text-align:center;
+    margin-bottom:269px;
+}
+
+.photos-index-empty p{
+    color:#f00;
+    font-weight:bold;
+}
+// ---------------------------------------------
 
 
+
+// [new画面]
+
+.photos-new-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.photos-new-main{
+    background-color:#fff;
+    width:95%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.photos-new-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.photos-new-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#2C7CFF;
+    font-weight:bold;
+}
+
+.photos-new-main ul{
+    margin-right:50px;
+}
+
+.photos-new-main a{
+    text-decoration:none;
+}
+
+.photos-new-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.photos-new-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:70%;
+}
+
+.photos-new-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+}
+
+.photos-new-main li:nth-of-type(1){
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    padding:12.5px 20px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.photos-new-main li:nth-of-type(1):hover{
+    background-color:#6699FF;
+}
+
+.photos-new-main-btn{
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.photos-new-main-btn:hover{
+    background-color:#6699FF;
+}
+
+
+
+// [show画面]
+
+.photos-show-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.photos-show-main{
+    width:90%;
+    margin:0 auto 30px;
+}
+
+.photos-show-content{
+    width:100%;
+    text-align:center;
+    background-color:#fff;
+}
+
+.photos-show-content > p{
+    font-size:17px;
+    letter-spacing:2px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+    padding:0;
+    margin:0;
+}
+
+.photos-show-content a{
+    padding:0;
+    margin:0;
+}
+
+.photos-show-img{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+.photos-show-text{
+    width:80%;
+    margin:0 auto;
+    background-color:#fff;
+    padding:20px 0;
+}
+
+.photos-show-text p{
+    padding:0;
+    margin:0;
+}
+
+.photos-show-place{
+    background-color:#ddd;
+    padding:5px 0;
+    margin:0;
+}
+
+.photos-show-place p{
+    padding:0;
+    margin:0;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #000;
+}
+
+.photos-show-btn{
+    background-color:#fff;
+    padding:10px 0;
+    margin:0;
+}
+
+.photos-show-btn ul{
+    padding:0;
+    margin:0 10px;
+}
+
+.photos-show-btn li{
+    display:inline-block;
+    float:right;
+    margin-right:20px;
+}
+
+.photos-show-btn span{
+    float:left;
+    margin-left:20px;
+}
+
+
+
+// [edit画面]
+
+.photos-edit-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.photos-edit-main{
+    background-color:#fff;
+    width:95%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.photos-edit-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#2C7CFF;
+    font-weight:bold;
+}
+
+.photos-edit-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:60%;
+}
+
+.photos-edit-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:70%;
+}
+
+.photos-edit-btn ul{
+    margin-right:50px;
+}
+
+.photos-edit-btn a{
+    text-decoration:none;
+}
+
+.photos-edit-btn li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.photos-edit-btn1, .photos-edit-btn2{
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.photos-edit-btn a:nth-of-type(1){
+    padding:13px 20px;
+    border:1px ridge #eee;
+}
+
+.photos-edit-btn2{
+    padding:10px 20px;
+}
+
+.photos-edit-btn1:hover, .photos-edit-btn2:hover{
+    background-color:#6699FF;
+}
+
+
+
+}
+// ここまでがスマホ用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+// ここからタブレット用サイズ-----------------------------------------------------------------------------
+@media(min-width:768px) and (max-width:1024px){
+
+.photos-index-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.photos-index-new-btn{
+    text-align:center;
+    padding-top:10px;
+}
+
+.photos-index-new-btn p a{
+    text-decoration:none;
+    padding:10px 40px;
+    color:#fff;
+    font-size:13px;
+    background-color:#6699FF;
+    border-radius:5px;
+    letter-spacing:3px;
+}
+
+.photos-index-new-btn p a:hover{
+    background-color:#00f;
+}
+
+.photos-index-new-btn span a:hover{
+    opacity:0.5;
+}
+
+.photos-index-main{
+    width:95%;
+    margin:50px auto 65px;
+}
+
+.photos-index-content{
+    padding:0;
+    margin:0;
+    width:32.9%;
+    height:190px;
+    display:inline-block;
+}
+
+.photos-index-img{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:190px;
+}
+
+.photos-index-img:hover{
+    opacity:0.5;
+}
+
+// ※↓アルバム内に写真が一枚も無い場合
+// ---------------------------------------------
+.photos-index-empty{
+    text-align:center;
+    margin-bottom:269px;
+}
+
+.photos-index-empty p{
+    color:#f00;
+    font-weight:bold;
+}
+// ---------------------------------------------
+
+
+
+// [new画面]
+
+.photos-new-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.photos-new-main{
+    background-color:#fff;
+    width:80%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.photos-new-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.photos-new-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#2C7CFF;
+    font-weight:bold;
+}
+
+.photos-new-main ul{
+    margin-right:50px;
+}
+
+.photos-new-main a{
+    text-decoration:none;
+}
+
+.photos-new-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.photos-new-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:70%;
+}
+
+.photos-new-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+}
+
+.photos-new-main li:nth-of-type(1){
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    padding:12.5px 20px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.photos-new-main li:nth-of-type(1):hover{
+    background-color:#6699FF;
+}
+
+.photos-new-main-btn{
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.photos-new-main-btn:hover{
+    background-color:#6699FF;
+}
+
+
+
+// [show画面]
+
+.photos-show-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.photos-show-main{
+    width:90%;
+    margin:0 auto 30px;
+}
+
+.photos-show-content{
+    width:100%;
+    text-align:center;
+    background-color:#fff;
+}
+
+.photos-show-content > p{
+    font-size:17px;
+    letter-spacing:2px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+    padding:0;
+    margin:0;
+}
+
+.photos-show-content a{
+    padding:0;
+    margin:0;
+}
+
+.photos-show-img{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+.photos-show-text{
+    width:80%;
+    margin:0 auto;
+    background-color:#fff;
+    padding:20px 0;
+}
+
+.photos-show-text p{
+    padding:0;
+    margin:0;
+}
+
+.photos-show-place{
+    background-color:#ddd;
+    padding:5px 0;
+    margin:0;
+}
+
+.photos-show-place p{
+    padding:0;
+    margin:0;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #000;
+}
+
+.photos-show-btn{
+    background-color:#fff;
+    padding:10px 0;
+    margin:0;
+}
+
+.photos-show-btn ul{
+    padding:0;
+    margin:0 10px;
+}
+
+.photos-show-btn li{
+    display:inline-block;
+    float:right;
+    margin-right:20px;
+}
+
+.photos-show-btn span{
+    float:left;
+    margin-left:20px;
+}
+
+
+
+// [edit画面]
+
+.photos-edit-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.photos-edit-main{
+    background-color:#fff;
+    width:80%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.photos-edit-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#2C7CFF;
+    font-weight:bold;
+}
+
+.photos-edit-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:60%;
+}
+
+.photos-edit-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:70%;
+}
+
+.photos-edit-btn ul{
+    margin-right:50px;
+}
+
+.photos-edit-btn a{
+    text-decoration:none;
+}
+
+.photos-edit-btn li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.photos-edit-btn1, .photos-edit-btn2{
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.photos-edit-btn a:nth-of-type(1){
+    padding:13px 20px;
+    border:1px ridge #eee;
+}
+
+.photos-edit-btn2{
+    padding:10px 20px;
+}
+
+.photos-edit-btn1:hover, .photos-edit-btn2:hover{
+    background-color:#6699FF;
+}
+
+
+
+}
+// ここまでがタブレット用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+// ここからPC用サイズ-----------------------------------------------------------------------------
+@media(min-width:1025px){
+    
 // [index画面]
 
 .photos-index-title{
@@ -337,3 +1019,6 @@
 .photos-edit-btn1:hover, .photos-edit-btn2:hover{
     background-color:#6699FF;
 }
+
+}
+// ここまでがPC用サイズ-----------------------------------------------------------------------------

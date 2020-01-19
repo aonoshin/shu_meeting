@@ -1,7 +1,6 @@
 class PhotosController < ApplicationController
     
     def index
-        logger.debug("================= 青野user_id = #{params[:user_id]}")
         @photos = Photo.where(user_id: params[:user_id])
         @user = User.find(params[:user_id])
     end
@@ -32,24 +31,28 @@ class PhotosController < ApplicationController
     def edit
         @user = User.find_by(id: params[:user_id])
         @photo = Photo.find_by(id: params[:id])
+        if @photo.user_id == current_user.id
+        else
+            flash[:alert] = "無効なユーザー"
+            redirect_to "/users/#{current_user.id}"
+        end
     end
     
     def update
         @photo = Photo.find(params[:id])
-        @photo.user_id == current_user.id
         if  @photo.update(photo_params)
             flash[:notice] = "写真を編集しました！"
             redirect_to user_photos_path(@photo.user_id)
         else
-            flash[:alert] = "無効なユーザー"
+            flash[:alert] = "入力に誤りがあります"
             redirect_to "/users/#{@photo.user_id}/photos/#{@photo.id}"
         end
     end
     
     def destroy
         @photo = Photo.find(params[:id])
-        @photo.user_id == current_user.id
-        if @photo.destroy
+        if @photo.user_id == current_user.id
+           @photo.destroy
            flash[:notice] = "写真を削除しました"
            redirect_to "/users/#{@photo.user_id}/photos"
         else

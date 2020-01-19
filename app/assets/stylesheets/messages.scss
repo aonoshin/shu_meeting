@@ -1,3 +1,366 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ここからスマホ用サイズ-----------------------------------------------------------------------------
+@media(max-width:767px){
+
+// [index]
+
+.messages-index{
+    background-color:#ddffff;
+}
+
+.messages-index-title{
+    background-color:#fff;
+    padding:5px 0;
+    margin:0;
+    text-align:center;
+    font-size:20px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+    border-bottom:2px double #000080;
+    position:sticky;
+    top:50px;
+}
+
+.messages-index-title p{
+    background-color:#fff;
+    padding:0;
+    margin:0;
+}
+
+.scroll-y{
+    padding-bottom:250px;
+    margin:0 auto;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.my-messages{
+    width:100%;
+    margin:40px 0 0 0;
+}
+
+.my-messages-sub{
+    float:right;
+    margin:0 5px 0 0;
+    width:48%;
+}
+
+.my-messages-sub p{
+    margin:0;
+    padding:8px;
+    background-color:#BAD3FF;
+    border-radius:10px;
+}
+
+.my-messages ul{
+    padding:0;
+    margin:0;
+    text-align:right;
+}
+
+.your-messages{
+    width:100%;
+    margin:40px 0 0 0;
+}
+
+.your-messages-sub{
+    margin:0 0 0 5px;
+    width:48%;
+}
+
+.your-messages-sub p{
+    margin:0;
+    padding:8px;
+    background-color:#fff;
+    border-radius:10px;
+}
+
+.your-messages ul{
+    padding:0;
+    margin:0;
+    text-align:left;
+}
+
+.scroll-y li{
+    display:inline-block;
+    font-size:13px;
+}
+
+.scroll-y li:nth-of-type(2):hover{
+    opacity:0.5;
+}
+
+.message-submit-area{
+    background-color:#000080;
+    padding:10px 0;
+}
+
+.message-input{
+    width:60%;
+    height:20px;
+    margin:0 0 0 60px;
+    border-radius:7px;
+    outline:none;
+}
+
+.message-btn{
+    background-color:#6699ff;
+    color:#fff;
+    cursor:pointer;
+    padding:5px 10px;
+}
+
+.message-btn:hover{
+    opacity:0.7;
+}
+
+
+}
+// ここまでがスマホ用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+// ここかがタブレット用サイズ-----------------------------------------------------------------------------
+@media(min-width:768px) and (max-width:1024px){
+    
+// [index]
+
+.messages-index{
+    background-color:#ddffff;
+}
+
+.messages-index-title{
+    background-color:#fff;
+    padding:7px 0;
+    margin:0;
+    text-align:center;
+    font-size:22px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+    border-bottom:2px double #000080;
+    position:sticky;
+    // z-index:1;
+    top:50px;
+}
+
+.messages-index-title p{
+    background-color:#fff;
+    padding:0;
+    margin:0;
+}
+
+.scroll-y{
+    padding-bottom:250px;
+    margin:0 auto;
+    height: 230px;
+    overflow-y: scroll;
+}
+
+.my-messages{
+    width:100%;
+    margin:40px 0 0 0;
+}
+
+.my-messages-sub{
+    float:right;
+    margin:0 15px 0 0;
+    width:45%;
+}
+
+.my-messages-sub p{
+    margin:0;
+    padding:8px;
+    background-color:#BAD3FF;
+    border-radius:10px;
+}
+
+.my-messages ul{
+    padding:0;
+    margin:0;
+    text-align:right;
+}
+
+.your-messages{
+    width:100%;
+    margin:40px 0 0 0;
+}
+
+.your-messages-sub{
+    margin:0 0 0 15px;
+    width:45%;
+}
+
+.your-messages-sub p{
+    margin:0;
+    padding:8px;
+    background-color:#fff;
+    border-radius:10px;
+}
+
+.your-messages ul{
+    padding:0;
+    margin:0;
+    text-align:left;
+}
+
+.scroll-y li{
+    display:inline-block;
+    font-size:13px;
+}
+
+.scroll-y li:nth-of-type(2):hover{
+    opacity:0.5;
+}
+
+.message-submit-area{
+    background-color:#000080;
+    padding:10px 0;
+}
+
+.message-input{
+    width:70%;
+    height:20px;
+    margin:0 0 0 80px;
+    border-radius:7px;
+    outline:none;
+}
+
+.message-btn{
+    background-color:#6699ff;
+    color:#fff;
+    cursor:pointer;
+    padding:5px 10px;
+}
+
+.message-btn:hover{
+    opacity:0.7;
+}
+
+
+}
+// ここまでがタブレット用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+// ここからPC用サイズ-----------------------------------------------------------------------------
+@media(min-width:1025px){
+    
+// [index]
+
+.messages-index{
+    background-color:#ddffff;
+}
+
+.messages-index-title{
+    background-color:#fff;
+    padding:15px 0;
+    margin:0;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+    border-bottom:2px double #000080;
+    position:sticky;
+    // z-index:1;
+    top:70px;
+}
+
+.messages-index-title p{
+    background-color:#fff;
+    padding:0;
+    margin:0;
+}
+
+.scroll-y{
+    padding-bottom:250px;
+    margin:0 auto;
+    height: 150px;
+    overflow-y: scroll;
+}
+
+.my-messages{
+    width:100%;
+    margin:40px 0 0 0;
+}
+
+.my-messages-sub{
+    float:right;
+    margin:0 30px 0 0;
+    width:45%;
+}
+
+.my-messages-sub p{
+    margin:0;
+    padding:8px;
+    background-color:#BAD3FF;
+    border-radius:10px;
+}
+
+.my-messages ul{
+    padding:0;
+    margin:0;
+    text-align:right;
+}
+
+.your-messages{
+    width:100%;
+    margin:40px 0 0 0;
+}
+
+.your-messages-sub{
+    margin:0 0 0 30px;
+    width:45%;
+}
+
+.your-messages-sub p{
+    margin:0;
+    padding:8px;
+    background-color:#fff;
+    border-radius:10px;
+}
+
+.your-messages ul{
+    padding:0;
+    margin:0;
+    text-align:left;
+}
+
+.scroll-y li{
+    display:inline-block;
+    font-size:13px;
+}
+
+.scroll-y li:nth-of-type(2):hover{
+    opacity:0.5;
+}
+
+.message-submit-area{
+    background-color:#000080;
+    padding:10px 0;
+}
+
+.message-input{
+    width:60%;
+    height:20px;
+    margin:0 0 0 200px;
+    border-radius:7px;
+    outline:none;
+}
+
+.message-btn{
+    background-color:#6699ff;
+    color:#fff;
+    cursor:pointer;
+    padding:5px 10px;
+}
+
+.message-btn:hover{
+    opacity:0.7;
+}
+
+
+}
+// ここまでがPC用サイズ-----------------------------------------------------------------------------

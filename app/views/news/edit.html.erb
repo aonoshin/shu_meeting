@@ -1,0 +1,25 @@
+<div class="news-edit">
+    <div class="news-edit-title">
+        <p>「利用者の声」を編集する<br>
+        ※アプリ管理者のみ編集可能</p>
+    </div>
+    <div class="news-edit-main">
+        <%= form_for @news do |n| %>
+          <%= n.hidden_field :user_id, require: true, :value => current_user.id %>
+          <p>－News内容―<br>
+          <span>※必須[50文字以内]</span></p>
+          <%= n.text_area :content, :class => "news-edit-content2" %>
+          <ul class="voices-check-box">
+              <li><%= label_tag :release, "掲載する" %></li>
+              <span>※掲載する場合はチェックを入れてください。</span>
+              <li><%= n.check_box :release,{}, "1", "0" %></li>
+              <!--チェックする（掲載）場合は「1」、チェックしない（非掲載）場合は「0」を返す-->
+          </ul>
+          <br>
+          <ul>
+              <li><%= link_to "News一覧ページへ", "/news" ,:class => "news-edit-btn1" %></li>
+              <li><%= n.submit "変更する", :class => "news-edit-btn2", data: {confirm: '変更してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

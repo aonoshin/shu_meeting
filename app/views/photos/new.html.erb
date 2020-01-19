@@ -4,6 +4,7 @@
     </div>
     <div class="photos-new-main">
         <%= form_for [@user, @photo] do |p| %>
+        <!--↑routesで「resources :users」の中の「resources :photos」にしているため。-->
           <%= p.hidden_field :user_id, :value => current_user.id %>
           <p>－タイトル－<br>
           <span>※35文字以内</span></p>

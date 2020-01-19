@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191222050343) do
+ActiveRecord::Schema.define(version: 20200118075752) do
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -26,12 +26,21 @@ ActiveRecord::Schema.define(version: 20191222050343) do
 
   create_table "friends", force: :cascade do |t|
     t.integer  "follower_id"
-    t.integer  "following_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["follower_id", "following_id"], name: "index_friends_on_follower_id_and_following_id", unique: true
-    t.index ["follower_id"], name: "index_friends_on_follower_id"
-    t.index ["following_id"], name: "index_friends_on_following_id"
+    t.integer  "followed_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "area"
+    t.string   "image"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "news"
+    t.integer  "day"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -50,6 +59,22 @@ ActiveRecord::Schema.define(version: 20191222050343) do
     t.string   "hobby"
     t.string   "icon"
     t.string   "albums"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.string   "release"
+  end
+
+  create_table "participations", force: :cascade do |t|
+    t.integer  "board_id"
+    t.integer  "user_id"
+    t.string   "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -98,6 +123,18 @@ ActiveRecord::Schema.define(version: 20191222050343) do
     t.text     "profile"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "voices", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "area"
+    t.string   "image"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.string   "release"
   end
 
 end

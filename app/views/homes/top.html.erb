@@ -6,58 +6,65 @@
     </div>
 </div>
 .
-<div class="home-main-1">
+<div class="home-main-1 clearfix">
     <div class="introduction">
-        <div class="introduction-title">
-            <p>”趣-Meeting” とは</p>
+        <div class="introduction-content">
+            <div class="introduction-title">
+                <h2>サービスの紹介</h2>
+            </div>
+            <div class="introduction-text">
+                <p><span>”趣 - Meeting”</span> とは<br>
+                その名の通り共通の「趣味」仲間を見つけて<br>
+                時間があるときに気軽に会えるコミュニティを築くことができる<br>
+                ありそうで無かった時間の過ごし方を変えるアプリケーションです。<br>
+                <br>
+                かつては学校や会社、地元の仲間内など、決められた環境内でしか共通の趣味仲間を見つかられなかったハードルを
+                当サービスでその垣根を崩して、どこにいる人でもいつでも好きな趣味で繋がることができます。</p>
+            </div>
         </div>
         <div class="introduction-image">
             <p><img src="assets/introduction.jpg" alt="サンプル画像"></p>
         </div>
-        <div class="introduction-content">
-            <p>その名の通り「趣味」をもとに、共通の仲間を見つけて、
-            時間があるときに気軽に会えるコミュニティを築くことができるアプリケーションです。<br>
-            <br>
-            かつては学校や会社、地元の仲間内など、決められた環境内でしか共通の趣味仲間を見つかられなかったハードルを
-            当サービスでその垣根を崩して、どこにいる人でもいつでも好きな趣味で繋がることができます。<br>
-            <br>
-            これまで<br>
-            <span>話し相手が見つからずに一人で過ごすことが多かった方も<br>
-            新しい方と出会って刺激が欲しいと思っていた方も<br>
-            時間を有効に使って充実した日々を送りたいと考えていた方も<br></span>
-            それら全てを解決することができます。</p>
-        </div>
     </div>
 </div>
 
-<div class="home-main-2">
-    <div class="home-contents-1">
-        <div class="introduction-title">
-            <p>当サービスを使って楽しめることとは</p>
-        </div>
-        <div class="contents-text">
-            <h2>－その１－<br>
+<div class="home-main-2 clearfix">
+    <div class="home-main-2-title">
+        <h2>"趣－Meeting" を使ってできること</h2>
+    </div>
+    <div class="home-main-2-text clearfixt">
+        <div class="image-1 clearfix">
+            <h2>－1st－<br>
             趣味仲間を見つけられます！</h2><br>
-            <p>当サービスは名前の通り「趣味」に重点を置いたサービスです。<br>
+        </div>
+        <div class="text-1 clearfix">
+            <p>当サービスは名前の通り<br>
+            <span>「趣味」に重点を置いたサービス</span>です。<br>
             そのため、利用者のみなさんには必ず趣味をプロフィールに記載することが
             メンバーになるための条件となっています。<br>
+            <br>
             つまり”無趣味”といった方はメンバーさんの中にいらっしゃらないので、何かしらの
             共通の話題で話を弾ませることができ、会話に困るといった心配はございません。</p>
         </div>
-        <div class="contents-text">
-            <h2>－その２－<br>
+        <div class="image-2 clearfix">
+            <h2>－2nd－<br>
             空いた時間を有効活用して趣味仲間と交流できます！</h2><br>
+        </div>
+        <div class="text-2 clearfix">
             <p>「急に予定が無くなっちゃった」<br>
             「少し時間が空いたな」<br>
-            そんな状況になることってよくありますよね。<br>
+            そんな状況になることって定期的にありますよね。<br>
             そういった時間を自分の好きなことに使って、そしてその楽しい時間を同じ趣味の方と
             共有できたらさらに嬉しいですよね。<br>
-            そういった「余った時間」を「有意義な時間」に変えていくことができます！</p>
+            そういった<br>
+            <span>「余った時間」を「有意義な時間」</span>に変えていくことができます！</p>
         </div>
-        <div class="contents-text">
-            <h2>－その３－<br>
+        <div class="image-3 clearfix">
+            <h2>－3rd－<br>
             自分の新しい趣味を見つけることができます！</h2><br>
-            <p>自分の新しい趣味を見つけて、新鮮な感情に浸ってみたいと一度でも思ったことはないでしょうか。<br>
+        </div>
+        <div class="text-3 clearfix">
+            <p><span>自分の新しい趣味</span>を見つけて、新鮮な感情に浸ってみたいと一度でも思ったことはないでしょうか。<br>
             しかしそのキッカケがなかなか掴めない。<br>
             そんな時こそ当サービスの出番です！<br>
             共通の趣味を持った人と繋がれることはもちろん、全く縁の無かった趣味との出会いのキカッケも得ることができます。<br>
@@ -65,4 +72,66 @@
             そういったことを経験することで新しい世界を知る良い機会にもなることでしょう。</p>
         </div>
     </div>
+</div>
+
+<div class="home-main-3">
+    <div class="home-main-3-title">
+       <h2>利用者の声</h2>
+     </div>
+     <% @voices.each do |v| %>
+       <% if v.release == "1" %>
+         <div class="voice-text clearfix">
+           <div class="voice-text-icon clearfix">
+               <%= image_tag v.image, :class => "home-img" %>
+           </div>
+           <div class="voice-text-detail clearfix">
+               <ul>
+                   <li>名前：<%= v.name %></li>
+                   <li>年齢：<%= v.age %></li>
+                   <li>主な活動拠点：<%= v.area %></li>
+                   <li><%= simple_format(v.content) %></li>
+               </ul>
+           </div>
+         </div>
+       <% end %>
+     <% end %>
+</div>
+
+<div class="home-main-4">
+    <div class="home-main-4-title">
+        <h2>趣－Meeting News</h2>
+    </div>
+    <% @news.each do |n| %>
+      <% if n.release == "1" %>
+        <div class="news-text">
+            <ul>
+                <li>更新日：<%= n.updated_at.strftime("%Y/%m/%d") %></li>
+                <li><%= link_to n.content, "/" %></li>
+            </ul>
+        </div>
+      <% end %>
+    <% end %>
+</div>
+
+<div class="home-main-5">
+    <ul>
+        <li>
+            <div class="home-main-5-list">
+                <h2>SIGN UP</h2>
+                <p>”趣－Meeting” をご利用する際はこちらからユーザー登録手続きを行ってください。</p>
+                <div class="btn-1">
+                    <%= link_to "新規登録する", "/users/sign_up" %>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="home-main-5-list">
+                <h2>CONTACT</h2>
+                <p>当サービスについて気になることがございましたら気軽にお問い合わせください。</p>
+                <div class="btn-2">
+                    <%= link_to "お問い合わせをする", "/" %>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>

@@ -1,19 +1,29 @@
 <div class="header">
     <div class="header-logo">
-        <p><a href="/">趣-Meeting</a></p>
+        <ul>
+            <% if user_signed_in? %>
+              <li><%= link_to "趣-Meeting", "/users/#{current_user.id}" %></li>
+            <% else %>
+              <li><%= link_to "趣-Meeting", "/" %></li>
+            <% end %>
+        </ul>
     </div>
-    <ul>
+    <button>
+      <img src="assets/toggle.png" width="25px" height="21px">
+    </button>
+    <ul class="navbar-select">
         <% if user_signed_in? %>
           <li><%= link_to "ログアウト", destroy_user_session_path, :method => "delete", data: {confirm: '本当にログアウトしてもよろしいでしょうか？'}  %></li>
-          <!--<li><a href="/">チャットルーム</a></li>-->
-          <li><%= link_to "チャットルーム", "/rooms" %></li>
-          <!--<li><a href="/boards">掲示板一覧</a></li>-->
           <li><%= link_to "掲示板一覧", "/boards" %></li>
-          <!--<li><a href="/users/<%= current_user.id %>">マイページ</a></li>-->
+          <li><%= link_to "投稿一覧", "/posts" %></li>
           <li><%= link_to "マイページ", "/users/#{current_user.id}" %></li>
+          <li><%= link_to my_board_participations.count, "/participations" %></li>
+          <!--<li>< fas-icon("exclamation 2x") %></li>-->
+          <!--<li><img src="assets/alert.png" width="25px" height="21px"></li>-->
         <% else %>
-          <li><a href="/users/sign_in">ログイン</a></li>
-          <li><a href="/users/sign_up">新規登録</a></li>
+          <li><%= link_to "ログイン", "/users/sign_in" %></li>
+          <li><%= link_to "新規登録", "/users/sign_up" %></li>
         <% end %>
     </ul>
 </div>
+<a href="/"><%= fa_icon("arrow-circle-up 3x") %></a>

@@ -1,0 +1,36 @@
+<div class="voices-new">
+    <div class="voices-new-title">
+        <p>「利用者の声」を投稿する<br>
+        ※アプリ管理者のみ編集可能</p>
+    </div>
+    <div class="voices-new-main">
+        <%= form_for @voice do |v| %>
+          <%= v.hidden_field :user_id, required: true, :value => current_user.id %>
+          <p>－名前－<br>
+          <span>※必須[35文字以内]</span></p>
+          <%= v.text_field :name, :class => "voices-new-content1" %>
+          <p>－年齢－<br>
+          <span>※必須</span></p>
+          <%= v.number_field :age, :class => "voices-new-content1" %>
+          <p>－主な活動拠点－<br>
+          <span>※必須[11文字以内]</span></p>
+          <%= v.text_field :area, :class => "voices-new-content1" %>
+          <p>－写真－</p>
+          <%= v.file_field :image, :class => "voices-new-content3" %>
+          <p>－コメント－<br>
+          <span>※必須[200字以内]</span></p>
+          <%= v.text_area :content, :class => "voices-new-content2" %>
+          <ul class="voices-check-box">
+              <li><%= label_tag :release, "掲載する" %></li>
+              <span>※掲載する場合はチェックを入れてください。</span>
+              <li><%= v.check_box :release,{}, "1", "0" %></li>
+              <!--チェックする（掲載）場合は「1」、チェックしない（非掲載）場合は「0」を返す-->
+          </ul>
+          <br>
+          <ul>
+              <li><%= link_to "投稿一覧ページへ", "/voices" ,:class => "voices-new-btn1" %></li>
+              <li><%= v.submit "投稿する", :class => "voices-new-btn2", data: {confirm: '投稿してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

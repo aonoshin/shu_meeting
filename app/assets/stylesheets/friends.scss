@@ -1,7 +1,322 @@
-// Place all the styles related to the friends controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ここからスマホ用サイズ-----------------------------------------------------------------------------
+@media(max-width:767px){
 
+// [index画面]
+
+.friends-index-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.friends-index-btn{
+    padding:0;
+    margin:0;
+}
+
+.friends-index-btn ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.friends-index-btn li{
+    display:inline-block;
+    margin:20px 0 0 0;
+}
+
+.friends-index-btn li a{
+    text-decoration:none;
+    color:#fff;
+    background-color:#6699FF;
+    border-radius:5px;
+    padding:10px 30px;
+}
+
+.friends-index-btn li a:hover{
+    background-color:#00f;
+}
+
+.friends-index-btn p{
+    text-align:center;
+}
+
+.friends-index-main{
+    width:95%;
+    margin:20px auto 45px;
+    background-color:#fff;
+    border:2px solid #000080;
+}
+
+.friends-index-name{
+    text-align:center;
+    background-color:#6699CC;
+    padding:0;
+    margin:0;
+}
+
+.friends-index-name:hover{
+    opacity:0.7;
+}
+
+.friends-index-name p{
+    padding:5px 0;
+    margin:0;
+    color:#fff;
+    text-shadow:1px 1px 1px #000080;
+}
+
+.friends-index-name p:hover{
+    color:#000080;
+}
+
+.friends-index-name a{
+    text-decoration:none;
+}
+
+.friends-index-icon{
+    float:left;
+    background-color:#ddd;
+    width:50%;
+    height:200px;
+}
+
+.friends-icon-size{
+    width:100%;
+    height:200px;
+}
+
+.friends-index-detail{
+    float:right;
+    background-color:#fff    ;
+    width:50%;
+    height:200px;
+}
+
+.friends-index-detail ul{
+    width:99%;
+    padding:0;
+    margin:20px auto;
+    font-size:13px;
+}
+
+.friends-index-detail li{
+    width:90%;
+    border-bottom:2px solid #6699CC;
+    padding:0;
+    margin:0 auto 8px;
+}
+
+.friends-index-detail a{
+    color:#fff;
+    text-decoration:none;
+    display:block;
+    padding:5px 0;
+}
+
+.friends-index-detail a:hover{
+    color:#ff6633;
+    padding:3px 0;
+    font-weight:bold;
+}
+
+.friends-index-detail li:nth-of-type(5){
+    background-color:#ff6633;
+    text-align:center;
+    padding:0;
+    border-bottom:none;
+    margin-top:20px;
+}
+
+.friends-index-detail li:nth-of-type(5):hover{
+    background-color:#fff;
+    border:2px solid #ff6633;
+}
+
+// ※↓友達が一人もいない場合
+// ---------------------------------------------
+.friends-index-empty{
+    text-align:center;
+    margin-bottom:269px;
+}
+
+.friends-index-empty p{
+    color:#f00;
+    font-weight:bold;
+}
+// ---------------------------------------------
+
+}
+// ここまでがスマホ用サイズ-----------------------------------------------------------------------------
+
+
+
+
+// ここからタブレット用サイズ-----------------------------------------------------------------------------
+@media(min-width:768px) and (max-width:1024px){
+
+// [index画面]
+
+.friends-index-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.friends-index-btn{
+    padding:0;
+    margin:0;
+}
+
+.friends-index-btn ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.friends-index-btn li{
+    display:inline-block;
+    margin:20px 0 0 0;
+}
+
+.friends-index-btn li a{
+    text-decoration:none;
+    color:#fff;
+    background-color:#6699FF;
+    border-radius:5px;
+    padding:10px 25px;
+}
+
+.friends-index-btn li a:hover{
+    background-color:#00f;
+}
+
+.friends-index-btn p{
+    text-align:center;
+}
+
+.friends-index-main{
+    width:80%;
+    margin:20px auto 45px;
+    background-color:#fff;
+    border:2px solid #000080;
+}
+
+.friends-index-name{
+    text-align:center;
+    background-color:#6699CC;
+    padding:0;
+    margin:0;
+}
+
+.friends-index-name:hover{
+    opacity:0.7;
+}
+
+.friends-index-name p{
+    padding:5px 0;
+    margin:0;
+    color:#fff;
+    text-shadow:1px 1px 1px #000080;
+}
+
+.friends-index-name p:hover{
+    color:#000080;
+}
+
+.friends-index-name a{
+    text-decoration:none;
+}
+
+.friends-index-icon{
+    float:left;
+    background-color:#ddd;
+    width:40%;
+    height:200px;
+}
+
+.friends-icon-size{
+    width:100%;
+    height:200px;
+}
+
+.friends-index-detail{
+    float:right;
+    background-color:#fff    ;
+    width:60%;
+    height:200px;
+}
+
+.friends-index-detail ul{
+    width:99%;
+    padding:0;
+    margin:20px auto;
+    font-size:15px;
+}
+
+.friends-index-detail li{
+    width:90%;
+    border-bottom:2px solid #6699CC;
+    padding:0;
+    margin:0 auto 8px;
+}
+
+.friends-index-detail a{
+    color:#fff;
+    text-decoration:none;
+    display:block;
+    padding:5px 0;
+}
+
+.friends-index-detail a:hover{
+    color:#ff6633;
+    padding:3px 0;
+    font-weight:bold;
+}
+
+.friends-index-detail li:nth-of-type(5){
+    background-color:#ff6633;
+    text-align:center;
+    padding:0;
+    border-bottom:none;
+    margin-top:10px;
+}
+
+.friends-index-detail li:nth-of-type(5):hover{
+    background-color:#fff;
+    border:2px solid #ff6633;
+}
+
+// ※↓友達が一人もいない場合
+// ---------------------------------------------
+.friends-index-empty{
+    text-align:center;
+    margin-bottom:269px;
+}
+
+.friends-index-empty p{
+    color:#f00;
+    font-weight:bold;
+}
+// ---------------------------------------------
+
+}
+// ここまでがタブレット用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+// ここからPC用サイズ-----------------------------------------------------------------------------
+@media(min-width:1025px){
+
+// [index画面]
 
 .friends-index-title{
     background-color:#fff;
@@ -33,7 +348,7 @@
     color:#fff;
     background-color:#6699FF;
     border-radius:5px;
-    padding:10px 40px;
+    padding:10px 30px;
 }
 
 .friends-index-btn li a:hover{
@@ -48,18 +363,33 @@
     width:60%;
     margin:20px auto 60px;
     background-color:#fff;
+    border:2px solid #000080;
 }
 
 .friends-index-name{
     text-align:center;
     background-color:#6699CC;
-    padding:6px 0;
+    padding:0;
     margin:0;
 }
 
+.friends-index-name:hover{
+    opacity:0.7;
+}
+
 .friends-index-name p{
-    padding:0;
+    padding:5px 0;
     margin:0;
+    color:#fff;
+    text-shadow:1px 1px 1px #000080;
+}
+
+.friends-index-name p:hover{
+    color:#000080;
+}
+
+.friends-index-name a{
+    text-decoration:none;
 }
 
 .friends-index-icon{
@@ -69,16 +399,10 @@
     height:200px;
 }
 
-.friends-index-icon p{
-    width:30%;
+.friends-icon-size{
+    width:100%;
     height:200px;
 }
-
-// ※friendsのeachが読み込めたらコメントアウト解除予定
-// .friends-index-img{
-//     width:30%;
-//     height:200px;
-// }
 
 .friends-index-detail{
     float:right;
@@ -97,22 +421,46 @@
     width:90%;
     border-bottom:2px solid #6699CC;
     padding:0;
-    margin:0 auto 10px;
+    margin:0 auto 8px;
 }
 
 .friends-index-detail a{
     color:#fff;
     text-decoration:none;
     display:block;
+    padding:5px 0;
+}
+
+.friends-index-detail a:hover{
+    color:#ff6633;
+    padding:3px 0;
+    font-weight:bold;
 }
 
 .friends-index-detail li:nth-of-type(5){
-    background-color:#ff9966;
+    background-color:#ff6633;
     text-align:center;
-    padding:4px 0;
+    padding:0;
     border-bottom:none;
 }
 
 .friends-index-detail li:nth-of-type(5):hover{
-    background-color:#ff6633;
+    background-color:#fff;
+    border:2px solid #ff6633;
 }
+
+// ※↓友達が一人もいない場合
+// ---------------------------------------------
+.friends-index-empty{
+    text-align:center;
+    margin-bottom:269px;
+}
+
+.friends-index-empty p{
+    color:#f00;
+    font-weight:bold;
+}
+// ---------------------------------------------
+
+}
+// ここまでがPC用サイズ-----------------------------------------------------------------------------

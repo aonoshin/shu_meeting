@@ -1,0 +1,25 @@
+<div class="news-new">
+    <div class="news-new-title">
+        <p>「趣－Meeting News」を投稿する<br>
+        ※アプリ管理者のみ編集可能</p>
+    </div>
+    <div class="news-new-main">
+        <%= form_for @news do |n| %>
+          <%= n.hidden_field :user_id, require: true, :value => current_user.id %>
+          <p>－News内容―<br>
+          <span>※必須[50文字以内]</span></p>
+          <%= n.text_area :content, :class => "news-new-content2" %>
+          <ul class="voices-check-box">
+              <li><%= label_tag :release, "掲載する" %></li>
+              <span>※掲載する場合はチェックを入れてください。</span>
+              <li><%= n.check_box :release,{}, "1", "0" %></li>
+              <!--チェックする（掲載）場合は「1」、チェックしない（非掲載）場合は「0」を返す-->
+          </ul>
+          <br>
+          <ul>
+              <li><%= link_to "News一覧ページへ", "/news", :class => "news-new-btn1" %></li>
+              <li><%= n.submit "投稿する", :class => "news-new-btn2", data: {confirm: '投稿してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

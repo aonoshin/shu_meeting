@@ -26,11 +26,15 @@ class BoardsController < ApplicationController
   
   def edit
     @board = Board.find(params[:id])
+    if @board.user_id == current_user.id
+    else
+      flash[:alert] = "無効なユーザー"
+      redirect_to "/users/#{current_user.id}"
+    end
   end
   
   def update
     @board = Board.find(params[:id])
-    @board.user_id == current_user.id
     if @board.update(board_params)
        flash[:notice] = "編集しました！"
        redirect_to "/boards/#{@board.id}"
@@ -42,13 +46,12 @@ class BoardsController < ApplicationController
   
   def destroy
     @board = Board.find(params[:id])
-    @board.user_id == current_user.id
     if @board.destroy
        flash[:notice] = "掲示板を削除しました"
        redirect_to user_path(@board.user_id)
     else
-       flash[:notice] = "無効なユーザー"
-       render "users/#{current_user.id}"
+       flash[:alert] = "削除できませんでした"
+       redirect_to "users/#{current_user.id}"
     end
   end
   

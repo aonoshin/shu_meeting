@@ -1,2 +1,42 @@
-<h1>Messages#index</h1>
-<p>Find me in app/views/messages/index.html.erb</p>
+<div class="messages-index">
+  <div class="messages-index-title">
+    <p><%= @user.name %>さんとのチャットルーム</p>
+  </div>
+  
+  <div class="scroll-y" id="messagesArea">
+      <% @messages.each do |m| %>
+        <!-- helper/messages_helper.rb にこのメッセージか自分のメッセージか否かのメソッドを作成しました(my_message?(m)) -->
+        <% if my_message?(m) %>
+          <div class="my-messages clearfix">
+            <div class="my-messages-sub">
+              <p><%= m.content %></p>
+              <ul>
+                <li><%= m.created_at.strftime("%m/%d %H:%M") %></li>
+                <li><%= link_to "削除", "/friends/#{@friend.id}/messages/#{m.id}", method: "delete", data: {confirm: "削除してもよろしいですか？"} %></li>
+              </ul>
+            </div>
+          </div>
+        <% else %>
+          <div class="your-messages clearfix">
+            <div class="your-messages-sub">
+              <p><%= m.content %></p>
+              <ul>
+                <li><%= m.created_at.strftime("%m/%d %H:%M") %></li>
+              </ul>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+  
+  <div class="message-submit-area">
+    <%= form_for [@friend, @message] do |m| %>
+    <!--↑routesで「resources :friends」の中の「resources :messages」にしているため。-->
+      <%= m.hidden_field :friend_id , :value => @friend.id %>
+      <!--↑@user.id = Friend.find_by(id: params[:friend_id])-->
+      <%= m.text_field :content, :class => "message-input" %>
+      <%= m.submit "Submit", :class => "message-btn" %>
+    <% end %>
+  </div>
+  
+</div>

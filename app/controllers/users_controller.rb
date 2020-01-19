@@ -19,14 +19,13 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         if @user.id == current_user.id
         else
-            redirect_to "/"
             flash[:alert] = "無効なユーザー"
+            redirect_to "/users/#{current_user.id}"
         end
     end
     
     def update
         @user = User.find(params[:id])
-        @user.id == current_user.id
         if @user.update(user_params)
             flash[:notice] = "プロフィールを編集しました！"
             redirect_to "/users/#{@user.id}"
@@ -43,7 +42,6 @@ class UsersController < ApplicationController
     
     def destroy
         @user = User.find(params[:id])
-        @user.id == current_user.id
         if @user.destroy
             flash[:notice] = "退会手続きが完了しました"
             redirect_to "/"

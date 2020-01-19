@@ -1,3 +1,6 @@
+// ここからスマホ用サイズ-----------------------------------------------------------------------------
+@media(max-width:767px){
+
 // [show画面]
 
 .user-title{
@@ -25,9 +28,490 @@
     margin:0 0 20px 0;
 }
 
-.user-page-friends-btn li{
+.user-page-friends-btn ul{
+    margin:0;
     padding:0;
-    margin:10px;
+}
+
+.user-page-friends-btn li{
+    padding:0;    
+    display:inline-block;
+}
+
+.user-page-friends-btn a{
+    padding:8px 30px;
+    text-decoration:none;
+    color:#fff;
+    background-color:#ff6633;
+    border-radius:10px;
+}
+
+.user-page-friends-btn a:hover{
+    opacity:0.5;
+}
+
+.user-page-header{
+    background-color:#6699FF;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+}
+
+.user-page-header ul{
+    padding:0;
+    margin:0;
+}
+
+.user-page-header li{
+    display:inline-block;
+    padding:5px 0;
+    margin:0 20px;
+}
+
+.user-page-header li:nth-of-type(1){
+    margin-left:15px;
+}
+
+.user-page-header a{
+    color:#fff;
+    font-weight:bold;
+}
+
+.user-page-header a:hover{
+    color:#00f;
+}
+
+.user-page-main{
+    background-color:#fff;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+    padding:0 0 50px;
+}
+
+.user-page-main h3{
+    font-weight:normal;
+    margin:30px 0 0;
+    color:#6699CC;
+    font-weight:bold;
+}
+
+.user-page-main p{
+    border-bottom:1px solid #6699FF;
+    padding:30px 0 0;
+    width:85%;
+    margin:0 auto;
+}
+
+.user-page-main span{
+    float:left;
+    margin-left:20px;    
+    color:#6699CC;
+    font-weight:bold;
+}
+
+.user-page-main p:nth-of-type(5){
+    margin-top:0;
+    padding-top:0;
+}
+
+.user-page-edit{
+    margin-top:30px;
+}
+
+.user-page-edit a{
+    text-decoration:none;
+    padding:10px;
+    color:#fff;
+    font-size:13px;
+    background-color:#6699FF;
+    border-radius:5px;
+    letter-spacing:3px;
+}
+
+.user-page-edit a:hover{
+    background-color:#00f;
+}
+
+
+
+
+// [edit画面]
+
+.edit-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.edit-main{
+    background-color:#fff;
+    width:95%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.edit-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.edit-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#2C7CFF;
+    font-weight:bold;
+}
+
+.edit-main ul{
+    margin-right:50px;
+}
+
+.edit-main a{
+    text-decoration:none;
+}
+
+.edit-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.user-edit-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:80%;
+}
+
+.user-edit-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+}
+
+.gender{
+    margin-right:20px;
+}
+
+.user-edit-btn1{
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+}
+
+.user-edit-btn1:hover{
+    background-color:#6699FF;
+}
+
+.user-edit-btn2{
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    padding:12.5px 20px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.user-edit-btn2:hover{
+    background-color:#6699FF;
+}
+
+
+
+}
+
+// ここまでがスマホ用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+// ここからタブレット用サイズ-----------------------------------------------------------------------------
+@media(min-width:768px) and (max-width:1024px){
+
+// [show画面]
+
+.user-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.user-icon{
+    text-align:center;
+}
+
+.icon-size{
+    width:140px;
+    height:140px;
+    border-radius:50px;
+}
+
+.user-page-friends-btn{
+    text-align:center;
+    padding:0;
+    margin:0 0 20px 0;
+}
+
+.user-page-friends-btn ul{
+    margin:0;
+    padding:0;
+}
+
+.user-page-friends-btn li{
+    padding:0;    
+    display:inline-block;
+}
+
+.user-page-friends-btn a{
+    padding:8px 30px;
+    text-decoration:none;
+    color:#fff;
+    background-color:#ff6633;
+    border-radius:10px;
+}
+
+.user-page-friends-btn a:hover{
+    opacity:0.5;
+}
+
+.user-page-header{
+    background-color:#6699FF;
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+}
+
+.user-page-header ul{
+    padding:0;
+    margin:0;
+}
+
+.user-page-header li{
+    display:inline-block;
+    padding:10px 0;
+    margin:0 40px;
+}
+
+.user-page-header li:nth-of-type(1){
+    margin-left:20px;
+}
+
+.user-page-header a{
+    color:#fff;
+    font-weight:bold;
+}
+
+.user-page-header a:hover{
+    color:#00f;
+}
+
+.user-page-main{
+    background-color:#fff;
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+    padding:0 0 50px;
+}
+
+.user-page-main h3{
+    font-weight:normal;
+    margin:30px 0 0;
+    color:#6699CC;
+    font-weight:bold;
+}
+
+.user-page-main p{
+    border-bottom:1px solid #6699FF;
+    padding:30px 0 0;
+    width:85%;
+    margin:0 auto;
+}
+
+.user-page-main span{
+    float:left;
+    margin-left:20px;    
+    color:#6699CC;
+    font-weight:bold;
+}
+
+.user-page-main p:nth-of-type(5){
+    margin-top:0;
+    padding-top:0;
+}
+
+.user-page-edit{
+    margin-top:30px;
+}
+
+.user-page-edit a{
+    text-decoration:none;
+    padding:10px;
+    color:#fff;
+    font-size:13px;
+    background-color:#6699FF;
+    border-radius:5px;
+    letter-spacing:3px;
+}
+
+.user-page-edit a:hover{
+    background-color:#00f;
+}
+
+
+
+
+// [edit画面]
+
+.edit-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.edit-main{
+    background-color:#fff;
+    width:80%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.edit-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.edit-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#2C7CFF;
+    font-weight:bold;
+}
+
+.edit-main ul{
+    margin-right:50px;
+}
+
+.edit-main a{
+    text-decoration:none;
+}
+
+.edit-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.user-edit-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:80%;
+}
+
+.user-edit-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+}
+
+.gender{
+    margin-right:20px;
+}
+
+.user-edit-btn1{
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+}
+
+.user-edit-btn1:hover{
+    background-color:#6699FF;
+}
+
+.user-edit-btn2{
+    margin-top:40px;
+    background-color:#D9E5FF;
+    border-radius:10px;
+    padding:12.5px 20px;
+    font-weight:bold;
+    color:#00f;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.user-edit-btn2:hover{
+    background-color:#6699FF;
+}
+
+
+}
+
+// ここまでがタブレット用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+// ここからPC用サイズ-----------------------------------------------------------------------------
+@media(min-width:1025px){
+
+// [show画面]
+
+.user-title{
+    background-color:#fff;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#6699CC;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.user-icon{
+    text-align:center;
+}
+
+.icon-size{
+    width:140px;
+    height:140px;
+    border-radius:50px;
+}
+
+.user-page-friends-btn{
+    text-align:center;
+    padding:0;
+    margin:0 0 20px 0;
+}
+
+.user-page-friends-btn ul{
+    margin:0;
+    padding:0;
+}
+
+.user-page-friends-btn li{
+    padding:0;    
     display:inline-block;
 }
 
@@ -219,3 +703,8 @@
 .user-edit-btn2:hover{
     background-color:#6699FF;
 }
+
+
+}
+
+// ここまでがPC用サイズ-----------------------------------------------------------------------------

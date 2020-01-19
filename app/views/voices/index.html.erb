@@ -1,0 +1,44 @@
+<div class="voices-index">
+    <div class="voices-index-title">
+        <p>「利用者の声」一覧<br>
+        ※アプリ管理者のみ編集可能</p>
+    </div>
+    <div class="voices-index-new-btn">
+        <%= link_to "新規作成する", "/voices/new" %>
+    </div>
+    
+    <% @voices.each do |v| %>
+      <div class="voices-index-main clearfix">
+          <div class="voices-index-icon clearfix">
+              <% if v.image.present? %>
+                <%= image_tag v.image, class: "voices-index-img" %>
+              <% else %>
+                 <%= image_tag "default-icon.jpg", class: "voices-index-img" %>
+              <% end %>
+          </div>
+          <div class="voices-index-content">
+              <div class="voices-index-text clearfix">
+                  <ul>
+                      <% if v.release == "1" %>
+                        <li class="release">掲載中</li>
+                      <% else %>
+                        <li class="unrelease">非掲載</li>
+                      <% end %>
+                      <li>名前：<%= v.name %>さん</li>
+                      <li>年齢：<%= v.age %></li>
+                      <li>主な活動拠点：<%= v.area %></li>
+                      <li><%= simple_format(v.content) %></li>
+                  </ul>
+              </div>
+              <div class="voices-index-btn clearfix">
+                  <!--< if v.user_id != current_user.id %>-->
+                    <ul>
+                        <li><%= link_to "削除する", "/voices/#{v.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか。'} %></li>
+                        <li><%= link_to "編集する", "/voices/#{v.id}/edit" %></li>
+                    </ul>
+                  <!--< end %>-->
+              </div>
+          </div>
+      </div>
+    <% end %>
+</div>

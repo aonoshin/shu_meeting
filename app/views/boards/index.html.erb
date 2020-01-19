@@ -9,7 +9,7 @@
     <% @boards.each do |b| %>
       <div class="boards-index-main">
           <div class="boards-index-main-title">
-              <p><%= link_to "#{b.title}", "/boards/#{b.id}" %></p>
+              <p><%= b.title %></p>
           </div>
           <div class="boards-index-main-content clearfix">
               <div class="boards-index-main-text">
@@ -17,25 +17,20 @@
                       <li>開催日：<span><%= b.day.strftime("%Y/%m/%d") %></span></li>
                       <li>開催時間：<span><%= b.times.strftime("%H:%M") %></span></li>
                       <li>場所：<span><%= b.place %></span></li>
-                      <li>主催者：<span><%= User.find_by(id: b.user_id).name %></span></li>
+                      <%= link_to "/users/#{b.user_id}" do %>
+                        <li>主催者：<%= User.find_by(id: b.user_id).name %></li>
+                      <% end %>
                   </ul>
                   <div class="boards-index-btn">
-                      <% if b.user_id != current_user.id %>
-                        <ul>
-                            <li><%= link_to "参加する", "/" %></li>
-                            <li><%= link_to "興味あり", "/" %></li>
-                        </ul>
-                      <% end %>
+                    <%= link_to "詳細を見る", "/boards/#{b.id}" %>
                   </div>
               </div>
               <div class="boards-index-main-image">
-                  <%= link_to "/boards/#{b.id}" do %>
-                    <% if b.image.present? %>
-                      <%= image_tag b.image, class: "boards-index-img" %>
-                    <% else %>
-                      <%= image_tag "default-board.jpg", class: "boards-index-img" %>
-                    <% end %>
-                  <% end %>
+                <% if b.image.present? %>
+                  <%= image_tag b.image, class: "boards-index-img" %>
+                <% else %>
+                  <%= image_tag "default-board.jpg", class: "boards-index-img" %>
+                <% end %>
               </div>
           </div>
       </div>

@@ -1,0 +1,35 @@
+<div class="voices-edit">
+    <div class="voices-edit-title">
+        <p>「利用者の声」を編集する<br>
+        ※アプリ管理者のみ編集可能</p>
+    </div>
+    <div class="voices-edit-main">
+        <%= form_for @voice do |v| %>
+          <%= v.hidden_field :user_id, require: true, :value => current_user.id %>
+          <p>－名前－<br>
+          <span>※35文字以内</span></p>
+          <%= v.text_field :name, :class => "voices-edit-content1" %>
+          <p>－年齢－<br>
+          <%= v.number_field :age, :class => "voices-edit-content1" %>
+          <p>－主な活動拠点－<br>
+          <span>※11文字以内</span></p>
+          <%= v.text_field :area, :class => "voices-edit-content1" %>
+          <p>－写真－<br>
+          <%= v.file_field :image, :class => "voices-edit-content3" %>
+          <p>－コメント－<br>
+          <span>※200文字以内</span></p>
+          <%= v.text_area :content, :class => "voices-edit-content2" %>
+          <ul class="voices-check-box">
+              <li><%= label_tag :release, "掲載する" %></li>
+              <span>※掲載する場合はチェックを入れてください。</span>
+              <li><%= v.check_box :release,{}, "1", "0" %></li>
+              <!--チェックする（掲載）場合は「1」、チェックしない（非掲載）場合は「0」を返す-->
+          </ul>
+          <br>
+          <ul>
+              <li><%= link_to "投稿一覧ページへ", "/voices" ,:class => "voices-new-btn1" %></li>
+              <li><%= v.submit "変更する", :class => "voices-edit-btn2", data: {confirm: '変更してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

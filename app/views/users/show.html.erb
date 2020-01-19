@@ -11,12 +11,18 @@
     </div>
     <div class="user-page-friends-btn">
         <% if @user.id != current_user.id %>
-        <!--※本来は「ログインユーザーと一致しない場合にボタン表示、&&　状況に応じてボタンの内容を変える」というコード-->
         <ul>
-            <li><%= link_to "友達申請する", "/", data: {confirm: '友達申請してもよろしいでしょうか？'} %></li>
-            <li><%= link_to "友達申請中", "/", data: {confirm: '友達申請をやめますか？'} %></li>
-            <li><%= link_to "友達", "/", data: {confirm: '友達を解除しますか？※一度解除すると再度友達申請が必要になります。'} %></li>
-            <li><%= link_to "チャットをする", "/" %></li>
+            <% if friend_check(@user.id) == "other" %>
+              <li><%= link_to "友達申請する", "/users/#{@user.id}/friends", method: "post" %></li>
+            <% elsif friend_check(@user.id) == "request" %>
+              <li><%= link_to "友達申請中", "/users/#{current_user.id}/friends/#{@user.id}", method: "delete", data: {confirm: '友達申請をやめますか？'} %></li>
+            <% elsif friend_check(@user.id) == "offer" %>
+              <li><%= link_to "承認する", " /users/#{@user.id}/friends/accept", method: "post", data: {confirm: '承認しますか？'} %></li>
+            <% elsif friend_check(@user.id) == "friend" %>
+              <li><%= link_to "友達", "/users/#{@user.id}/friends/destroy_sub", method: "delete", data: {confirm: '友達を解除しますか？※ボタンが「承認待ち」に切り替わります。'} %></li>
+              <li><%= link_to "チャットをする", "/friends/#{Friend.find_by(follower_id: current_user.id, followed_id: @user.id).id}/messages" %></li>
+              <!--↑フォローしている側のidが現在ログインしているユーザーのidで、フォローされている側のidが友達になっているユーザーのid-->
+            <% end %>                         
         </ul>
         <% end %>
     </div>
@@ -60,7 +66,7 @@
     <% @boards.each do |b| %>
       <div class="user-boards-main">
           <div class="user-boards-main-title">
-              <p><%= link_to "#{b.title}", "/boards/#{b.id}" %></p>
+              <p><%= b.title %></p>
           </div>
           <div class="user-boards-main-content clearfix">
               <div class="user-boards-main-text">
@@ -71,22 +77,15 @@
                       <li>主催者：<span><%= @user.name %></span></li>
                   </ul>
                   <div class="user-boards-btn">
-                      <% if b.user_id != current_user.id %>
-                        <ul>
-                            <li><%= link_to "参加する", "/" %></li>
-                            <li><%= link_to "興味あり", "/" %></li>
-                        </ul>
-                      <% end %>
+                      <%= link_to "詳細を見る", "/boards/#{b.id}" %>
                   </div>
               </div>
               <div class="user-boards-main-image">
-                    <%= link_to "/boards/#{b.id}" do %>
-                      <% if b.image.present? %>
-                        <%= image_tag b.image, class: "user-boards-img" %>
-                      <% else %>
-                        <%= image_tag "default-board.jpg", :class => "user-boards-img" %>
-                      <% end %>
-                    <% end %>                  
+                <% if b.image.present? %>
+                  <%= image_tag b.image, class: "user-boards-img" %>
+                <% else %>
+                  <%= image_tag "default-board.jpg", :class => "user-boards-img" %>
+                <% end %>
               </div>
           </div>
       </div>
@@ -126,7 +125,6 @@
                 </div>
                 <div class="user-posts-times">
                     <ul>
-                        <li></li>
                         <li>投稿日時：<%= p.created_at.strftime("%Y/%m/%d %H:%M") %></li>
                         ／<li>更新日時：<%= p.updated_at.strftime("%Y/%m/%d %H:%M") %></li>
                     </ul>
@@ -143,13 +141,3 @@
        <% end %>
     </div>
 </div>
-
-
-<!--↓ここから友達申請ゾーン-->
-<span id="user_<%= @user.id %>" class="follow-wrapper">
-    <%= render "follow_form", user: @user if signed_in? %>
-</span>
-
-<h4>
-    <%= render "users/stats" %>
-</h4>

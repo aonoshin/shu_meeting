@@ -23,10 +23,13 @@
     </div>
     <div class="boards-show-btn">
         <% if @board.user_id != current_user.id %>
-          <ul>
-              <li><%= link_to "参加する", "/" %></li>
-              <li><%= link_to "興味あり", "/" %></li>
-          </ul>
+          <% if friend_check(@user.id) == "friend" %>
+            <!--※既に主催者と友達である場合↓-->
+            <%= link_to "参加する", "/boards/#{@board.id}", data: {confirm: '参加予定にしますか？。'} %>
+          <% else %>
+             <!--※主催者と友達になっていない場合↓-->
+             <%= link_to "※参加するには主催者と友達になることが必須です。", "/users/#{@user.id}", data: {confirm: '主催者のプロフィールページに遷移します。'} %>
+          <% end %>
         <% end %>
     </div>
     <div class="boards-detail">

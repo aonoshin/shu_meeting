@@ -1,5 +1,8 @@
 class RoomsController < ApplicationController
-  def index
-    @rooms = Room.all
+  
+  def show
+    @messages = Message.all
   end
+  
+
 end

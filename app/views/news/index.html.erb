@@ -1,0 +1,33 @@
+<div class="news-index">
+    <div class="news-index-title">
+        <p>趣－Meeting News 一覧<br>
+        ※アプリ管理者のみ編集可能</p>
+    </div>
+    <div class="news-index-new-btn">
+        <%= link_to "新規作成する", "/news/new" %>
+    </div>
+    
+    <% @news.each do |n| %>
+      <div class="news-index-main">
+        <div class="news-index-text clearfix">
+            <ul>
+                <% if n.release == "1" %>
+                  <li class="release">掲載中</li>
+                <% else %>
+                  <li class="unrelease">非掲載</li>
+                <% end %>
+                <li>更新日：<%= n.updated_at.strftime("%Y/%m/%d") %></li>
+                <li><%= link_to n.content, "/" %></li>
+            </ul>
+        </div>
+        <div class="news-index-btn clearfix">
+            <!--< if n.user_id != current_user.id %>-->
+              <ul>
+                <li><%= link_to "削除する", "/news/#{n.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか。'} %></li>
+                <li><%= link_to "編集する", "/news/#{n.id}/edit" %></li>
+              </ul>
+            <!--< end %>-->
+        </div>
+      </div>
+    <% end %>
+</div>

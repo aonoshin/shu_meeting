@@ -1,0 +1,48 @@
+<div class="posts-index">
+    <div class="posts-index-main-title">
+        <p>投稿一覧</p>
+    </div>
+
+    <div class="posts-index-new-btn">
+        <p><%= link_to "新規作成する", "/posts/new" %></p>
+    </div>
+    
+    <% @posts.each do |p| %>
+      <div class="posts-index-main clearfix">
+          <div class="posts-index-title">
+            <ul>
+              <li><%= p.title %></li>
+              <li>＠<%= p.place %></li>
+            </ul>
+          </div>
+          <div class="posts-index-content clearfix">
+            <div class="posts-index-detail">
+              <p><%= p.content %><br>
+            </div>
+            <div class="posts-index-image">
+              <% if p.image.present? %>
+                <p><%= image_tag p.image, class: "posts-img" %></p>
+              <% else %>
+                <p><%= image_tag "default-post.jpg", :class => "posts-img" %></p>
+              <% end %>
+            </div>
+          </div>
+          <div class="posts-index-times">
+            <ul>
+              <li>投稿者：<%= link_to User.find_by(id: p.user_id).name, "/users/#{p.user_id}" %></li>
+              <li>投稿日時：<%= p.created_at.strftime("%Y/%m/%d %H:%M") %></li>
+              ／<li>更新日時：<%= p.updated_at.strftime("%Y/%m/%d %H:%M") %></li>
+            </ul>
+          </div>
+          <div class="posts-btn clearfix">
+            <% if p.user_id == current_user.id %>
+              <ul>
+                <li><%= link_to "削除する", "/posts/#{p.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか？'} %></li>
+                <li><%= link_to "編集する", edit_post_path(p.id) %></li>
+              </ul>
+            <% end %>
+          </div>
+      </div>
+    <% end %>
+    
+</div>

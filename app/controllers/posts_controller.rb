@@ -1,13 +1,10 @@
 class PostsController < ApplicationController
   
   def index
-    @posts = Post.all
+    @posts = Post.all.order(updated_at: :desc)
+    # @post = Post.find(params[:user_id])
   end
-  
-  def show
-    @post = Post.find(params[:id])
-  end
-  
+
   def new
     @post = Post.new
   end
@@ -16,7 +13,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "投稿しました！"
-      redirect_to user_path(@post.user_id)
+      redirect_to "/posts"
     else
       flash[:alert] = "入力に誤りがあります"
       render "posts/new"
@@ -25,29 +22,32 @@ class PostsController < ApplicationController
   
   def edit
     @post = Post.find(params[:id])
+    if @post.user_id == current_user.id
+    else
+      flash[:alert] = "無効なユーザー"
+      redirect_to "/users/#{current_user.id}"
+    end
   end
   
   def update
     @post = Post.find(params[:id])
-    @post.user_id == current_user.id
     if @post.update(post_params)
       flash[:notice] = "投稿を編集しました！"
-      redirect_to "/users/#{@post.user_id}"
+      redirect_to "/users/#{@post.user_id}/posts"
     else
       flash[:alert] = "入力に誤りがあります"
-      redirect_to "/posts/#{@post.id}/edit"
+      render "/posts/#{@post.id}/edit"
     end
   end
   
   def destroy
     @post = Post.find(params[:id])
-    @post.user_id == current_user.id
     if @post.destroy
        flash[:notice] = "投稿を削除しました"
-       redirect_to user_path(@post.user_id)
+       redirect_to "/posts"
     else
-       flash[:notice] = "無効なユーザー"
-       render "users/#{current_user.id}"
+       flash[:alert] = "削除できませんでした"
+       redirect_to "users/#{current_user.id}"
     end
   end
   

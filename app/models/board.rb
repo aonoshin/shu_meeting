@@ -5,4 +5,6 @@ class Board < ApplicationRecord
     validates:place, {presence:true, length:{maximum:11}}
     
     belongs_to :user
+    has_many :participations, :dependent => :destroy
+
 end
