@@ -3,8 +3,9 @@
         <p>通知一覧</p>
     </div>
     
-    <% @boards.each do |b| %>
+    <% @participations.each do |pr| %>
       <div class="boards-index-main">
+          <%= pr.board_id %>
       </div>
     <% end %>
     

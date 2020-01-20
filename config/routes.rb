@@ -10,7 +10,7 @@ Rails.application.routes.draw do
      :sessions => 'users/sessions'
     } 
     
-  resources :users, only: [:edit, :update, :show] do
+  resources :users, only: [:edit, :update, :show, :destroy] do
     post 'friends/accept' => 'friends#accept'
     delete 'friends/destroy_sub' => 'friends#destroy_sub'
     resources :photos
@@ -27,5 +27,6 @@ Rails.application.routes.draw do
   resources :news
   resources :voices
   resources :participations
+  # resources :users, only: [:destroy]
   
 end

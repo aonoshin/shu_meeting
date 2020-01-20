@@ -7,6 +7,7 @@ class BoardsController < ApplicationController
   def show
     @board = Board.find(params[:id])
     @user = User.find(@board.user_id)
+    @participation = Participation.new
   end
   
   def new

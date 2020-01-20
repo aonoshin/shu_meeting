@@ -44,7 +44,10 @@
         
         <% if @user.id == current_user.id %>
           <div class="user-page-edit">
-              <a href="/users/<%= current_user.id %>/edit">プロフィールを編集する</a>
+              <ul>
+                  <li><%= link_to "プロフィールを編集する", "/users/#{current_user.id}/edit" %></li>
+                  <li><%= link_to "退会する", "/users/#{current_user.id}/destroy", method: :delete, data: {confirm: '退会してもよろしいでしょうか？'} %></li>
+              </ul>
           </div>
         <% end %>
     </div>

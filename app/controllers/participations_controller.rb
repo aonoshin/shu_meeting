@@ -13,6 +13,37 @@ class ParticipationsController < ApplicationController
       end
     end
     
+    @participations = Participation.all
+    
   end
+  
+  def create
+    @participation = Participation.new(participation_params)
+    if @participation.save
+      flash[:notice] = "参加表明しました！"
+      redirect_to board_path(@participation.board_id)
+    else
+      flash[:alert] = "参加表明できませんでした"
+      redirect_to board_path(@participation.board_id)
+    end
+    
+  end
+  
+  def destroy
+    @participation = Participation.find_by(id: params[:id])
+    board_id = @participation.board_id
+    if @participation.destroy
+      flash[:notice] = "参加表明を取り消しました"
+      redirect_to board_path(board_id)
+    else
+      flash[:alert] = "参加表明を取り消しできませんでした"
+      redirect_to board_path(board_id)
+    end
+  end
+  
+  private
+    def participation_params
+        params.require(:participation).permit(:board_id, :user_id).merge(user_id: current_user.id)
+    end
   
 end
