@@ -52,6 +52,10 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog-aws'
 
-gem 'jquery-rails'
+# gem 'jquery-rails'
 
-gem 'font-awesome-rails'
+# gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.4.1'
+
+# 初期データを入れるGem
+gem 'seed-fu', '~> 2.3'

@@ -1,12 +1,47 @@
 <div class="participations-index">
+    
     <div class="participations-index-title">
         <p>通知一覧</p>
     </div>
     
-    <% @participations.each do |pr| %>
-      <div class="boards-index-main">
-          <%= pr.board_id %>
-      </div>
-    <% end %>
+    <div class="participations-boards">
+        <div class="participations-boards-title">
+            <p>あなたの掲示板への参加状況</p>
+        </div>
+        <% current_board_id = nil %>
+        <!--↑参加予定の通知が来ている掲示板のidが無い状況 = 参加する人がいない-->
+          <% @participations.each do |pa| %>
+            <div class="participations-boards-text">
+            <!--< if current_board_id != pa.board_id %>-->
+            <!--↑参加予定の通知が来ている掲示板のid（pa.board_id）と「current_board_id」が同じじゃない場合（初期値はnil）-->
+              <%= link_to "/boards/#{pa.board_id}" do %>
+                <p><span><%= User.find(pa.user_id).name %></span>さんが「<span><%= Board.find(pa.board_id).title %></span>」に参加予定です。</p>
+              <% end %>
+              <h5><%= Participation.find(pa.id).created_at.strftime("%Y/%m/%d %H:%M") %></h5>
+            </div>
+            <!--< end %>-->
+            <!--<div class="participations-index-main">-->
+            <!--    < pa.user_id %>-->
+            <!--    < current_board_id = pa.board_id %>-->
+                <!--↑参加予定の通知が来ている掲示板のid（pa.board_id）と「current_board_id」が同じ場合-->
+                <!--同じ掲示板の通知をまとめるため-->
+            <!--</div>-->
+          <% end %>
+    </div>
+    
+    <div class="participations-friends">
+        <div class="participations-friends-title">
+            <p>あなたへの友達申請状況</p>
+        </div>
+        <% @offers.each do |of| %>
+          <% user = User.find_by(id: of.follower_id) %>
+          <div class="participations-friends-text">
+              <%= link_to "/users/#{user.id}" do %>
+                <p><span><%= user.name %></span>さんから友達申請が来てます。</p>
+                <h5><%= of.created_at.strftime("%Y/%m/%d %H:%M") %></h5>
+              <% end %>
+          </div>
+        <% end %>
+    </div>
     
 </div>

@@ -27,6 +27,7 @@
     border-radius:10px;
     letter-spacing:3px;
     border:2px groove #fff;
+    outline:none;
 }
 
 .boards-index-new-btn a:hover{
@@ -99,6 +100,7 @@
     padding:5px 70px;
     border-radius:10px;
     border:1px solid #ff4f02;
+    outline:none;
 }
 
 .boards-index-btn a:hover{
@@ -210,6 +212,7 @@
     padding:5px 70px;
     border-radius:10px;
     border:1px solid #ff4f02;
+    outline:none;
 }
 
 .user-boards-btn a:hover{
@@ -299,6 +302,7 @@
     cursor:pointer;
     box-shadow:2px 2px 2px #808080;
     font-size:14px;
+    outline:none;
 }
 
 .boards-new-btn1:hover{
@@ -313,6 +317,7 @@
     font-weight:bold;
     color:#00f;
     cursor:pointer;
+    outline:none;
 }
 
 .boards-new-btn2:hover{
@@ -387,6 +392,7 @@
     cursor:pointer;
     box-shadow:2px 2px 2px #808080;
     font-size:14px;
+    outline:none;
 }
 
 .boards-edit-btn1:hover{
@@ -401,6 +407,7 @@
     font-weight:bold;
     color:#00f;
     cursor:pointer;
+    outline:none;
 }
 
 .boards-edit-btn2:hover{
@@ -474,23 +481,59 @@
     height:320px;
 }
 
-.boards-show-btn{
-    text-align:center;
-    background-color:#ff4f02;
+.boards-join{
+    padding:10px 0;
     margin:0;
-    border-bottom:1px solid #000080;
+    background-color:#000080;
+    text-align:center;
 }
 
-.boards-show-btn:hover{
+.boards-join-btn{
+    padding:10px 0;
+    margin:0;
+    background-color:#000080;
+    color:#fff;
+    text-decoration:none;
+}
+
+.boards-join-btn:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participation-submit-btn{
+    background-color:#ff4f02;
+    width:100%;
+    color:#fff;
+    font-weight:bold;
+    padding:5px 0;
+    cursor:pointer;
+    border-top:2px solid #ddd;
+    border-bottom:2px solid #ddd;
+}
+
+.participation-submit-btn:hover{
     opacity:0.3;
 }
 
-.boards-show-btn a{
-    display:block;
-    color:#fff;
-    text-decoration:none;
-    padding:5px 0;
+.boards-unfriends-btn{
+    padding:10px 0;
     margin:0;
+    background-color:#ff4f02;
+    display:block;
+    text-align:center;
+}
+
+.boards-unfriends-btn a{
+    padding:10px 0;
+    margin:0;
+    text-decoration:none;
+    color:#fff;
+}
+
+.boards-unfriends-btn a:hover{
+    opacity:0.5;
+    text-decoration:underline;
 }
 
 .boards-detail > h3{
@@ -585,6 +628,7 @@
     border-radius:10px;
     letter-spacing:3px;
     border:2px groove #fff;
+    outline:none;
 }
 
 .boards-index-new-btn a:hover{
@@ -662,6 +706,7 @@
     padding:5px 120px;
     border-radius:10px;
     border:1px solid #ff4f02;
+    outline:none;
 }
 
 .boards-index-btn a:hover{
@@ -775,6 +820,7 @@
     padding:10px 110px;
     border-radius:10px;
     border:1px solid #ff4f02;
+    outline:none;
 }
 
 .user-boards-btn a:hover{
@@ -789,10 +835,7 @@
     background-color:#ccffff
 }
 
-.user-boards-img{
-    width:100%;
-    height:239px;
-}
+
 
 
 
@@ -863,6 +906,7 @@
     cursor:pointer;
     box-shadow:2px 2px 2px #808080;
     font-size:14px;
+    outline:none;
 }
 
 .boards-new-btn1:hover{
@@ -877,6 +921,7 @@
     font-weight:bold;
     color:#00f;
     cursor:pointer;
+    outline:none;
 }
 
 .boards-new-btn2:hover{
@@ -954,6 +999,7 @@
     cursor:pointer;
     box-shadow:2px 2px 2px #808080;
     font-size:14px;
+    outline:none;
 }
 
 .boards-edit-btn1:hover{
@@ -968,6 +1014,7 @@
     font-weight:bold;
     color:#00f;
     cursor:pointer;
+    outline:none;
 }
 
 .boards-edit-btn2:hover{
@@ -1042,23 +1089,59 @@
     height:420px;
 }
 
-.boards-show-btn{
-    text-align:center;
-    background-color:#ff4f02;
+.boards-join{
+    padding:10px 0;
     margin:0;
-    border-bottom:1px solid #000080;
+    background-color:#000080;
+    text-align:center;
 }
 
-.boards-show-btn:hover{
+.boards-join-btn{
+    padding:10px 0;
+    margin:0;
+    background-color:#000080;
+    color:#fff;
+    text-decoration:none;
+}
+
+.boards-join-btn:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participation-submit-btn{
+    background-color:#ff4f02;
+    width:100%;
+    color:#fff;
+    font-weight:bold;
+    padding:5px 0;
+    cursor:pointer;
+    border-top:2px solid #ddd;
+    border-bottom:2px solid #ddd;
+}
+
+.participation-submit-btn:hover{
     opacity:0.3;
 }
 
-.boards-show-btn a{
-    display:block;
-    color:#fff;
-    text-decoration:none;
+.boards-unfriends-btn{
     padding:10px 0;
     margin:0;
+    background-color:#ff4f02;
+    display:block;
+    text-align:center;
+}
+
+.boards-unfriends-btn a{
+    padding:10px 0;
+    margin:0;
+    text-decoration:none;
+    color:#fff;
+}
+
+.boards-unfriends-btn a:hover{
+    opacity:0.5;
+    text-decoration:underline;
 }
 
 .boards-detail > h3{
@@ -1344,6 +1427,7 @@
     padding:10px 150px;
     border-radius:10px;
     border:1px solid #ff4f02;
+    outline:none;
 }
 
 .user-boards-btn a:hover{
@@ -1361,10 +1445,6 @@
 .user-boards-img{
     width:100%;
     height:239px;
-}
-
-.user-boards-img:hover{
-    opacity:0.5;
 }
 
 
@@ -1438,6 +1518,7 @@
     cursor:pointer;
     box-shadow:2px 2px 2px #808080;
     font-size:14px;
+    outline:none;
 }
 
 .boards-new-btn1:hover{
@@ -1452,6 +1533,7 @@
     font-weight:bold;
     color:#00f;
     cursor:pointer;
+    outline:none;
 }
 
 .boards-new-btn2:hover{
@@ -1527,6 +1609,7 @@
     cursor:pointer;
     box-shadow:2px 2px 2px #808080;
     font-size:14px;
+    outline:none;
 }
 
 .boards-edit-btn1:hover{
@@ -1541,6 +1624,7 @@
     font-weight:bold;
     color:#00f;
     cursor:pointer;
+    outline:none;
 }
 
 .boards-edit-btn2:hover{
@@ -1615,41 +1699,60 @@
     height:450px;
 }
 
-.boards-show-btn{
-    text-align:center;
-    background-color:#ff4f02;
+.boards-join{
+    padding:10px 0;
     margin:0;
-    border-bottom:1px solid #000080;
+    background-color:#000080;
+    text-align:center;
 }
 
-.boards-show-btn:hover{
+.boards-join-btn{
+    padding:10px 0;
+    margin:0;
+    background-color:#000080;
+    color:#fff;
+    text-decoration:none;
+}
+
+.boards-join-btn:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participation-submit-btn{
+    background-color:#ff4f02;
+    width:100%;
+    color:#fff;
+    font-weight:bold;
+    padding:5px 0;
+    cursor:pointer;
+    border-top:2px solid #ddd;
+    border-bottom:2px solid #ddd;
+}
+
+.participation-submit-btn:hover{
     opacity:0.3;
 }
 
-.boards-show-btn a{
-    display:block;
-    color:#fff;
-    text-decoration:none;
+.boards-unfriends-btn{
     padding:10px 0;
     margin:0;
-}
-
-.user-boards-btn a{
-    text-decoration:none;
-    color:#FF4F02;
-    font-weight:bold;
-    background-color:#ffcc00;
-    padding:10px 150px;
-    border-radius:10px;
-    border:1px solid #ff4f02;
-}
-
-.user-boards-btn a:hover{
-    color:#fff;
     background-color:#ff4f02;
+    display:block;
+    text-align:center;
 }
 
+.boards-unfriends-btn a{
+    padding:10px 0;
+    margin:0;
+    text-decoration:none;
+    color:#fff;
+}
 
+.boards-unfriends-btn a:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
 
 .boards-detail > h3{
     text-align:center;
@@ -1659,6 +1762,7 @@
 
 .boards-show-name-place{
     background-color:#ddd;
+    text-align:center;
 }
 
 .boards-show-name-place ul{
@@ -1666,14 +1770,30 @@
 }
 
 .boards-show-name-place li{
-    float:left;
+    display:inline-block;
     padding:5px 0;
+    margin:0 30px;
     color:#fff;
-    text-shadow:1px 1px 1px #000;
+    font-weight:bold;
+    text-shadow:1px 1px 1px #000080;
 }
 
-.boards-show-name-place li span{
-    margin-left:40px;
+.boards-show-name-place a{
+    color:#000080;
+    text-shadow:none;
+}
+
+.boards-show-name-place a:hover{
+    opacity:0.3;
+}
+
+.boards-show-name-place span{
+    color:#000080;
+}
+
+.boards-show-name-place span:nth-of-type(2){
+    color:#fff;
+    font-size:12px;
 }
 
 .boards-show-content{

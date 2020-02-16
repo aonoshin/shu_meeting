@@ -35,10 +35,12 @@
             </ul>
           </div>
           <div class="posts-btn clearfix">
-            <% if p.user_id == current_user.id %>
+            <% if p.user_id == current_user.id or current_user.id == 0 %>
               <ul>
                 <li><%= link_to "削除する", "/posts/#{p.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか？'} %></li>
-                <li><%= link_to "編集する", edit_post_path(p.id) %></li>
+                <% if p.user_id == current_user.id %>
+                  <li><%= link_to "編集する", edit_post_path(p.id) %></li>
+                <% end %>
               </ul>
             <% end %>
           </div>

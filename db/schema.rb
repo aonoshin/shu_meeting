@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200120060459) do
+ActiveRecord::Schema.define(version: 20200211092426) do
+
+  create_table "answers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "inquiry_id"
+    t.text     "answer"
+    t.string   "email"
+  end
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
@@ -22,6 +30,8 @@ ActiveRecord::Schema.define(version: 20200120060459) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.time     "starttime"
+    t.time     "endtime"
   end
 
   create_table "friends", force: :cascade do |t|
@@ -48,6 +58,8 @@ ActiveRecord::Schema.define(version: 20200120060459) do
     t.string   "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "email"
+    t.integer  "user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -105,6 +117,15 @@ ActiveRecord::Schema.define(version: 20200120060459) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text     "qcontent"
+    t.text     "acontent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "number"
+    t.text     "atext"
   end
 
   create_table "rooms", force: :cascade do |t|

@@ -1,0 +1,37 @@
+<div class="questions-index">
+    
+    <div class="questions-header">
+        <p><%= link_to "Top", "/" %>　＞　<%= link_to "よくある質問", "/questions" %></p>
+    </div>
+    <div class="questions-index-main-image">
+        <div class="questions-index-main-title">
+            <p>よくある質問</p>
+        </div>
+    </div>
+    <% i = 1 %>
+    <!--↑eachで回るたびに「angle-double-down」と「questions-answer」に「+1」加えていく。-->
+    <% @questions.each do |q| %>
+      <div class="questions-main">
+          <div class="questions-question-number">
+              <p><%= q.number %></p>
+          </div>
+          <div class="questions-question">
+              <p>Q.<%= q.qcontent %></p>
+          </div>
+          <div class="angle-double-down">
+              <i class="fas fa-angle-double-down fa-angle-double-down-<%= i.to_s %>"></i>
+          </div>
+          <div class="questions-answer questions-answer-<%= i.to_s %>">
+              <h2>A.<%= q.atext %></h2>
+              <p><%= simple_format(q.acontent) %></p>
+          </div>
+          <% if user_signed_in? and current_user.id == 0 %>
+            <div class="questions-admins-btn">
+                <%= link_to "詳細ページへ", "/questions/#{q.id}" %> 
+            </div>
+          <% end %>
+      </div>
+     <% i += 1 %>
+    <% end %>
+
+</div>

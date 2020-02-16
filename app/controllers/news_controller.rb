@@ -1,7 +1,13 @@
 class NewsController < ApplicationController
     
+    before_action :admin_check_redirect
+    
     def index
         @news = News.all.order(created_at: :desc)
+    end
+
+    def show
+        render 'admins/nonaccess'
     end
     
     def new

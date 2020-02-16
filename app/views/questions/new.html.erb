@@ -1,0 +1,27 @@
+<div class="questions-new">
+    <div class="questions-new-title">
+        <p>投稿を作成する<br>
+        ※アプリ管理者のみ投稿可能</p>
+    </div>
+    <div class="questions-new-main">
+        <%= form_for @question do |q| %>
+          <p>－質問番号―<br>
+          <span>※必須</span></p>
+          <%= q.number_field :number, :class => "questions-new-number" %>
+          <p>－質問－<br>
+          <span>※必須[100文字以内]</span></p>
+          <%= q.text_area :qcontent, :class => "questions-new-content" %>
+          <p>－答え（サブタイトル）－<br>
+          <span>※必須[50文字以内]</span></p>
+          <%= q.text_area :atext, :class => "questions-new-text" %>
+          <p>－答え（本文）－<br>
+          <span>※必須[300文字以内]</span></p>
+          <%= q.text_area :acontent, :class => "questions-new-content" %>
+          <br>
+          <ul>
+              <li><%= link_to "一覧へ戻る", "/questions", :class => "questions-new-btn1" %></li>
+              <li><%= q.submit "投稿する", :class => "questions-new-btn2", data: {confirm: '投稿してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

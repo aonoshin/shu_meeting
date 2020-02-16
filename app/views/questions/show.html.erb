@@ -1,0 +1,25 @@
+<div class="questions-show">
+    
+    <div class="questions-show-main">
+        <div class="questions-show-question-number">
+            <p><%= @question.number %></p>
+        </div>
+        <div class="questions-show-question">
+            <p>Q.<%= @question.qcontent %></p>
+        </div>
+        <div class="questions-show-answer">
+            <h2>A.<%= @question.atext %></h2>
+            <p><%= simple_format(@question.acontent) %></p>
+        </div>
+        <div class="questions-show-btn">
+            <% if current_user.id == 0 %>
+              <ul>
+                <li><%= link_to "一覧に戻る", "/questions" %></li>
+                <li><%= link_to "編集する", "/questions/#{@question.id}/edit" %></li>
+                <li><%= link_to "削除する", "/questions/#{@question.id}", method: "delete", data: {confirm: "削除してもよろしいですか？"} %></li>
+              </ul>
+            <% end %>
+        </div>
+    </div>
+    
+</div>

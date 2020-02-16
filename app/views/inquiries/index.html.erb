@@ -1,0 +1,36 @@
+<div class="inquiry-index">
+    <div class="inquiry-index-title">
+        <h1>お問い合わせ一覧</h1>
+    </div>
+    <div class="inquiry-index-main">
+        <% if @inquiries.present? %>
+          <% @inquiries.each do |i| %>
+            <div class="inquiry-index-content">
+                <div class="inquiry-index-detail">
+                    <ul>
+                        <% if i.user_id == nil %>
+                          <li class="unmember">名前：<%= i.name %>さん（非会員）</li>
+                        <% else %>
+                          <li class="member">名前：<%= i.name %>さん（会員）</li>
+                        <% end %>
+                        <li>メールアドレス：<%= i.email %></li>
+                    </ul>
+                </div>
+                <div class="inquiry-index-text">
+                    <p><%= simple_format(i.message) %></p>
+                </div>
+                <div class="inquiry-index-time">
+                    <p>最新更新日時：<%= i.updated_at.strftime("%Y/%m/%d %H:%M") %></p>
+                </div>
+                <div class="inquiry-index-btn">
+                    <p><%= link_to "メール全文を見る", "/inquiries/#{i.id}" %></p>
+                </div>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="inquiry-index-non">
+              <p>お問い合わせはございません。</p>
+          </div>
+        <% end %>
+    </div>
+</div>

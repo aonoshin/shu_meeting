@@ -1,0 +1,128 @@
+<div class="error-page">
+  <div class="error-main-text">
+    <h1>お探しのページは存在しません。</h1>
+  </div>
+  <div class="error-sub-text">
+    <ul>
+      <li>アドレスを誤って入力したか、ページが移動した可能性があります。</li>
+      <li><%= link_to "トップページに進む", "/" %></li>
+    </ul>
+  </div>
+</div>
+
+
+<style>
+
+/*ここからスマホ用サイズ-----------------------------------------------------------------------------*/
+@media(max-width:767px){
+
+.error-page{
+  padding:0;
+  margin:0;
+  background-color:#fff;
+  text-align:center;
+}
+
+.error-main-text{
+  padding:70px 0;
+  margin:0;
+}
+
+.error-main-text h1{
+  padding:0;
+  margin:0;
+  font-weight:bold;
+  font-size:27px;
+  color:#730E15;
+}
+
+.error-sub-text{
+  padding:0;
+  margin:0;
+}
+
+.error-sub-text ul{
+  padding:0 0 150px 0;
+  margin:0;
+}
+
+.error-sub-text li{
+  padding:0;
+  margin:0 0 10px 0;
+  color:#000080;
+  font-weight:bold;
+  font-size:15px;
+}
+
+.error-sub-text a{
+  padding:0;
+  margin:0;
+  font-size:15px;
+}
+
+.error-sub-text a:hover{
+  opacity:0.5;
+}
+
+
+}
+/*ここまでがスマホ用サイズ-----------------------------------------------------------------------------*/
+
+
+
+
+/*ここからPC＆タブレット用サイズ-----------------------------------------------------------------------------*/
+@media(min-width:768px){
+
+.error-page{
+  padding:0;
+  margin:0;
+  background-color:#fff;
+  text-align:center;
+}
+
+.error-main-text{
+  padding:70px 0;
+  margin:0;
+}
+
+.error-main-text h1{
+  padding:0;
+  margin:0;
+  font-weight:bold;
+  font-size:30px;
+  color:#730E15;
+}
+
+.error-sub-text{
+  padding:0;
+  margin:0;
+}
+
+.error-sub-text ul{
+  padding:0 0 150px 0;
+  margin:0;
+}
+
+.error-sub-text li{
+  padding:0;
+  margin:0 0 10px 0;
+  color:#000080;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.error-sub-text a{
+  padding:0;
+  margin:0;
+  font-size:15px;
+}
+
+.error-sub-text a:hover{
+  opacity:0.5;
+}
+
+}
+/*ここまでがPC＆タブレット用サイズ-----------------------------------------------------------------------------*/
+
+</style>

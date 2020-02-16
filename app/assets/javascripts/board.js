@@ -1,12 +1,12 @@
 $(document).on('turbolinks:load', function() {
-$(window).scroll(function(){
-  $('.boards-index-main').each(function(){
-      let dummy = $(this).offset().top,
-      scroll = $(window).scrollTop(),
-      windowHeight = $(window).height();
-      if (scroll > dummy - windowHeight + 70){
-          $(this).addClass('scrollin');
-      }
+  $(window).scroll(function(){
+    $('.boards-index-main').each(function(){
+        let position = $(this).offset().top,
+        scroll = $(window).scrollTop(),
+        windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 70){
+            $(this).addClass('scrollin');
+        }
+    });
   });
-});
 });

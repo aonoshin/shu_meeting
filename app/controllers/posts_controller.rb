@@ -1,8 +1,14 @@
 class PostsController < ApplicationController
   
+  before_action :authenticate_user!
+  
   def index
     @posts = Post.all.order(updated_at: :desc)
     # @post = Post.find(params[:user_id])
+  end
+  
+  def show
+    render 'admins/nonaccess'
   end
 
   def new
@@ -33,7 +39,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:notice] = "投稿を編集しました！"
-      redirect_to "/users/#{@post.user_id}/posts"
+      redirect_to "/users/#{@post.user_id}"
     else
       flash[:alert] = "入力に誤りがあります"
       render "/posts/#{@post.id}/edit"

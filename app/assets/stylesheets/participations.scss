@@ -1,3 +1,492 @@
-// Place all the styles related to the participations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ここからスマホ用サイズ-----------------------------------------------------------------------------
+@media(max-width:767px){
+
+.participations-index{
+    padding:0 0 50px 0;
+    margin:0;
+    background-image:url(/assets/participations.jpg);
+    background-position:center 37%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position:center 60%;
+    opacity:0.7;
+}
+
+.participations-index-title{
+    padding:10px 0;
+    margin:0;
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+    background-color:#fff;
+    color:#4689FF;
+    text-shadow:1px 1px 1px #000080;
+}
+
+.participations-index-title p{
+    padding:0;
+    margin:0;
+}
+
+.participations-boards{
+    padding:0;
+    margin:0 auto;
+    width:95%;
+}
+
+.participations-boards-title{
+    padding:20px 0 0;
+    margin:0;
+    text-align:center;
+}
+
+.participations-boards-title p{
+    padding:0;
+    margin:0;
+    color:#000080;
+    text-shadow:1px 1px 1px #fff;
+    font-weight:bold;
+    font-size:20px;
+    border-bottom:1px solid #000080;
+}
+
+.participations-boards-text{
+    padding:5px 0 5px 10px;
+    margin:0;
+    background-color:#eeffff;
+    border-bottom:1px solid #000080;
+}
+
+.participations-boards-text:nth-of-type(odd){
+    background-color:#99ccff;
+}
+
+.participations-boards-text p{
+    padding:0;
+    margin:0;
+}
+
+.participations-boards-text p:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participations-boards-text a{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:#000;
+}
+
+.participations-boards-text span{
+    padding:0;
+    margin:0;
+    font-weight:bold;
+    color:#000080;
+}
+
+.participations-boards-text h5{
+    padding:0;
+    margin:0;
+}
+
+.participations-friends{
+    padding:0;
+    margin:40px auto 0;
+    width:95%;
+}
+
+.participations-friends-title{
+    padding:20px 0 0;
+    margin:0;
+    text-align:center;
+}
+
+.participations-friends-title p{
+    padding:0;
+    margin:0;
+    color:#000080;
+    text-shadow:1px 1px 1px #fff;
+    font-weight:bold;
+    font-size:20px;
+    border-bottom:1px solid #000080;
+}
+
+.participations-friends-text{
+    padding:5px 0 5px 5px;
+    margin:0;
+    background-color:#eeffff;
+    border-bottom:1px solid #000080;
+}
+
+.participations-friends-text:nth-of-type(odd){
+    background-color:#99ccff;
+}
+
+.participations-friends-text p{
+    padding:0;
+    margin:0;
+}
+
+.participations-friends-text p:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participations-friends-text a{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:#000;
+}
+
+.participations-friends-text span{
+    padding:0;
+    margin:0;
+    font-weight:bold;
+    color:#000080;
+}
+
+.participations-friends-text h5{
+    padding:0;
+    margin:0;
+}
+
+
+
+}
+// ここまでがスマホ用サイズ-----------------------------------------------------------------------------
+
+
+
+
+// ここからタブレット用サイズ-----------------------------------------------------------------------------
+@media(min-width:768px) and (max-width:1024px){
+
+.participations-index{
+    padding:0 0 50px 0;
+    margin:0;
+    background-image:url(/assets/participations.jpg);
+    background-position:center 37%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position:center 60%;
+    opacity:0.7;
+}
+
+.participations-index-title{
+    padding:10px 0;
+    margin:0;
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+    background-color:#fff;
+    color:#4689FF;
+    text-shadow:1px 1px 1px #000080;
+}
+
+.participations-index-title p{
+    padding:0;
+    margin:0;
+}
+
+.participations-boards{
+    padding:0;
+    margin:0 auto;
+    width:80%;
+}
+
+.participations-boards-title{
+    padding:20px 0 0;
+    margin:0;
+    text-align:center;
+}
+
+.participations-boards-title p{
+    padding:0;
+    margin:0;
+    color:#000080;
+    text-shadow:1px 1px 1px #fff;
+    font-weight:bold;
+    font-size:20px;
+    border-bottom:1px solid #000080;
+}
+
+.participations-boards-text{
+    padding:5px 0 5px 10px;
+    margin:0;
+    background-color:#eeffff;
+    border-bottom:1px solid #000080;
+}
+
+.participations-boards-text:nth-of-type(odd){
+    background-color:#99ccff;
+}
+
+.participations-boards-text p{
+    padding:0;
+    margin:0;
+}
+
+.participations-boards-text p:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participations-boards-text a{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:#000;
+}
+
+.participations-boards-text span{
+    padding:0;
+    margin:0;
+    font-weight:bold;
+    color:#000080;
+}
+
+.participations-boards-text h5{
+    padding:0;
+    margin:0;
+}
+
+.participations-friends{
+    padding:0;
+    margin:40px auto 0;
+    width:80%;
+}
+
+.participations-friends-title{
+    padding:20px 0 0;
+    margin:0;
+    text-align:center;
+}
+
+.participations-friends-title p{
+    padding:0;
+    margin:0;
+    color:#000080;
+    text-shadow:1px 1px 1px #fff;
+    font-weight:bold;
+    font-size:20px;
+    border-bottom:1px solid #000080;
+}
+
+.participations-friends-text{
+    padding:5px 0 5px 5px;
+    margin:0;
+    background-color:#eeffff;
+    border-bottom:1px solid #000080;
+}
+
+.participations-friends-text:nth-of-type(odd){
+    background-color:#99ccff;
+}
+
+.participations-friends-text p{
+    padding:0;
+    margin:0;
+}
+
+.participations-friends-text p:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participations-friends-text a{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:#000;
+}
+
+.participations-friends-text span{
+    padding:0;
+    margin:0;
+    font-weight:bold;
+    color:#000080;
+}
+
+.participations-friends-text h5{
+    padding:0;
+    margin:0;
+}
+
+
+
+}
+// ここまでがタブレット用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// ここからPC用サイズ-----------------------------------------------------------------------------
+@media(min-width:1025px){
+
+.participations-index{
+    padding:0 0 100px 0;
+    margin:0;
+    background-image:url(/assets/participations.jpg);
+    background-position:center 37%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position:center 60%;
+    opacity:0.7;
+}
+
+.participations-index-title{
+    padding:10px 0;
+    margin:0;
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+    background-color:#fff;
+    color:#4689FF;
+    text-shadow:1px 1px 1px #000080;
+}
+
+.participations-index-title p{
+    padding:0;
+    margin:0;
+}
+
+.participations-boards{
+    padding:50px 0 0 0;
+    margin:0 auto;
+    width:70%;
+}
+
+.participations-boards-title{
+    padding:20px 0 0;
+    margin:0;
+    text-align:center;
+}
+
+.participations-boards-title p{
+    padding:0;
+    margin:0;
+    color:#000080;
+    text-shadow:1px 1px 1px #fff;
+    font-weight:bold;
+    font-size:20px;
+    border-bottom:1px solid #000080;
+}
+
+.participations-boards-text{
+    padding:5px 0 5px 10px;
+    margin:0;
+    background-color:#eeffff;
+    border-bottom:1px solid #000080;
+}
+
+.participations-boards-text:nth-of-type(odd){
+    background-color:#99ccff;
+}
+
+.participations-boards-text p{
+    padding:0;
+    margin:0;
+}
+
+.participations-boards-text p:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participations-boards-text a{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:#000;
+}
+
+.participations-boards-text span{
+    padding:0;
+    margin:0;
+    font-weight:bold;
+    color:#000080;
+}
+
+.participations-boards-text h5{
+    padding:0;
+    margin:0;
+}
+
+.participations-friends{
+    padding:50px 0 0 0;
+    margin:40px auto 0;
+    width:70%;
+}
+
+.participations-friends-title{
+    padding:20px 0 0;
+    margin:0;
+    text-align:center;
+}
+
+.participations-friends-title p{
+    padding:0;
+    margin:0;
+    color:#000080;
+    text-shadow:1px 1px 1px #fff;
+    font-weight:bold;
+    font-size:20px;
+    border-bottom:1px solid #000080;
+}
+
+.participations-friends-text{
+    padding:5px 0 5px 5px;
+    margin:0;
+    background-color:#eeffff;
+    border-bottom:1px solid #000080;
+}
+
+.participations-friends-text:nth-of-type(odd){
+    background-color:#99ccff;
+}
+
+.participations-friends-text p{
+    padding:0;
+    margin:0;
+}
+
+.participations-friends-text p:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.participations-friends-text a{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:#000;
+}
+
+.participations-friends-text span{
+    padding:0;
+    margin:0;
+    font-weight:bold;
+    color:#000080;
+}
+
+.participations-friends-text h5{
+    padding:0;
+    margin:0;
+}
+
+
+
+}
+// ここまでがPC用サイズ-----------------------------------------------------------------------------

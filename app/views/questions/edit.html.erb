@@ -1,0 +1,27 @@
+<div class="questions-edit">
+    <div class="questions-edit-title">
+        <p>投稿を編集する<br>
+        ※アプリ管理者のみ編集可能</p>
+    </div>
+    <div class="questions-edit-main">
+        <%= form_for @question do |q| %>
+          <p>－質問番号―<br>
+          <span>※必須</span></p>
+          <%= q.number_field :number, :class => "questions-edit-number" %>
+          <p>－質問－<br>
+          <span>※必須[100文字以内]</span></p>
+          <%= q.text_area :qcontent, :class => "questions-edit-content" %>
+          <p>－答え（サブタイトル）－<br>
+          <span>※必須[50文字以内]</span></p>
+          <%= q.text_area :atext, :class => "questions-new-text" %>
+          <p>－答え（本文）－<br>
+          <span>※必須[300文字以内]</span></p>
+          <%= q.text_area :acontent, :class => "questions-new-content" %>
+          <br>
+          <ul>
+              <li><%= link_to "一覧へ戻る", "/questions", :class => "questions-edit-btn1" %></li>
+              <li><%= q.submit "変更する", :class => "questions-edit-btn2", data: {confirm: '変更してもよろしいでしょうか？'} %></li>
+          </ul>
+        <% end %>
+    </div>
+</div>

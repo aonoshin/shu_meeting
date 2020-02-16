@@ -1,4 +1,5 @@
-//   $(document).on('turbolinks:load', function() { 
-//      const obj = document.getElementById("messagesArea");
-//  　　 obj.scrollTop = obj.scrollHeight;
-//   });
+$(document).on('turbolinks:load', function() {
+    var obj;
+    obj = document.getElementById('messagesArea');
+    obj.scrollTop = obj.scrollHeight;
+});

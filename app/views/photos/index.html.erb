@@ -14,7 +14,7 @@
         <% if @photos.present? %>
             <% @photos.each do |p| %>
                 <div class="photos-index-content">
-                    <%= link_to " /users/#{p.user_id}/photos/#{p.id}" do %>
+                    <%= link_to "/users/#{p.user_id}/photos/#{p.id}" do %>
                     <%= image_tag p.image, class: "photos-index-img" %>
                     <% end %>
                 </div>

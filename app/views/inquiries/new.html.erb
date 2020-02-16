@@ -1,0 +1,35 @@
+<div class="inquiry-new">
+    <div class="inquiry-new-title">
+        <h1>お問い合わせフォーム</h1>
+        <p>以下のフォームをご入力の上、下部の送信ボタンを押してください。</p>
+    </div>
+    <div class="inquiry-new-main">
+        <%= form_for @inquiry do |i| %>
+          <% if user_signed_in? %>
+            <%= i.hidden_field :user_id, :value => current_user.id %>
+          <% end %>
+          <div class="inquiry-new-name">
+              <p><span>必須</span>お名前</p>
+              <%= i.text_field :name ,:class => "new-name" %>
+          </div>
+          <div class="inquiry-new-email">
+              <p><span>必須</span>メールアドレス</p>
+              <%= i.email_field :email, :class => "new-email" %>
+          </div>
+          <div class="inquiry-new-message">
+              <p><span>必須 ※500文字以内</span>お問い合わせ内容</p>
+              <%= i.text_area :message, :class => "new-message" %>
+          </div>
+          <div class="inquiry-new-btn">
+              <ul>
+                  <li><%= i.submit "送信する", :class => "inquiry-post-btn", data: {confirm: "送信してもよろしいですか？"} %></li>
+                  <% if user_signed_in? %>
+                    <li><%= link_to "マイページに戻る", "/users/#{current_user.id}" %></li>
+                  <% else %>
+                    <li><%= link_to "トップページに戻る", "/" %></li>
+                  <% end %>
+              </ul>
+          </div>
+        <% end %>
+    </div>
+</div>

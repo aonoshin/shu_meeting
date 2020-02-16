@@ -1,3 +1,5 @@
+# -------------------------開発環境-------------------------
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -51,4 +53,25 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  
+  config.action_mailer.perform_caching = false
+  host = 'https://e2a8d373b11c4b7daa81a185bf801ced.vfs.cloud9.ap-northeast-1.amazonaws.com/'
+  config.action_mailer.default_url_options = { host: host, port: 3000 }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+     port:                          587,
+     address:          'smtp.gmail.com',
+     domain:                'gmail.com',
+     user_name:       ENV['USER_EMAIL'],
+     password:    ENV['EMAIL_PASSWORD'],
+     authentication:            'login',
+     enable_starttls_auto: true
+  }
+  
+  
+  
+  
+  
 end
+

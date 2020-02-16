@@ -17,8 +17,10 @@
         <div class="photos-show-btn clearfix">
             <ul>
                 <span><li><%= link_to "戻る", "/users/#{@photo.user_id}/photos" %></li></span>
-                <% if @photo.user_id == current_user.id %>
+                <% if @photo.user_id == current_user.id or current_user.id == 0 %>
                   <li><%= link_to "削除する", "/users/#{@photo.user_id}/photos/#{@photo.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか？'} %></li>
+                <% end %>
+                <% if @photo.user_id == current_user.id %>
                   <li><%= link_to "編集する", edit_user_photo_path(@photo.user_id) %></li>
                 <% end %>
             </ul>

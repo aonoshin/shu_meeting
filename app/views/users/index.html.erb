@@ -1,0 +1,36 @@
+<div class="users-index">
+    
+    <div class="users-index-title">
+        <p>ユーザー一覧<br>
+        ※アプリ管理者のみ編集可能</p>
+    </div>
+    
+    <% @users.each do |u| %>
+      <div class="users-index-main clearfix">
+        <div class="users-index-image clearfix">
+          <% if u.icon.present? %>
+            <%= image_tag u.icon, :class => "users-img" %>
+          <% else %>
+            <%= image_tag "default-post.jpg", :class => "users-img" %>
+          <% end %>
+        </div>
+        <div class="users-index-detail clearfix">
+            <ul>
+                <li>ユーザー名：<%= link_to u.name, "/users/#{u.id}" %></li>
+                <li>性別：<%= u.gender %></li>
+                <li>年齢：<%= u.age %></li>
+                <li>主な趣味：<%= u.hobby %></li>
+                <li>主な活動場所：<%= u.area %></li>
+                <li>登録日時：<%= u.created_at.strftime("%Y/%m/%d %H:%M") %></li>
+                <li>更新日時：<%= u.updated_at.strftime("%Y/%m/%d %H:%M") %></li>
+            </ul>
+        </div>
+        <div class="users-btn clearfix">
+            <ul>
+                <li><%= link_to "退会させる", "/", method: "delete", data: {confirm: "本当に退会させてもよろしいですか？※復元不可"} %></li>
+            </ul>
+        </div>
+      </div>
+    <% end %>
+    
+</div>

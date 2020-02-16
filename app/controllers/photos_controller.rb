@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
     
+    before_action :authenticate_user!
+    
     def index
         @photos = Photo.where(user_id: params[:user_id])
         @user = User.find(params[:user_id])
@@ -51,7 +53,7 @@ class PhotosController < ApplicationController
     
     def destroy
         @photo = Photo.find(params[:id])
-        if @photo.user_id == current_user.id
+        if @photo.user_id == current_user.id or current_user.id == 0
            @photo.destroy
            flash[:notice] = "写真を削除しました"
            redirect_to "/users/#{@photo.user_id}/photos"

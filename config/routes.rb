@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :admins, only: [:index]
+
   # get 'participations/index'
 
   root "homes#top"
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
      :sessions => 'users/sessions'
     } 
     
-  resources :users, only: [:edit, :update, :show, :destroy] do
+  resources :users, only: [:edit, :update, :show] do
     post 'friends/accept' => 'friends#accept'
     delete 'friends/destroy_sub' => 'friends#destroy_sub'
     resources :photos
@@ -21,12 +23,18 @@ Rails.application.routes.draw do
   resources :friends, only: [:show] do
     resources :messages
   end
+  
   resources :homes
   resources :posts
   resources :boards
   resources :news
   resources :voices
   resources :participations
-  # resources :users, only: [:destroy]
+  resources :users, only: [:index, :destroy]
+  resources :questions
+  
+  resources :inquiries do 
+    resources :answers
+  end
   
 end

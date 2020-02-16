@@ -1,14 +1,16 @@
 class VoicesController < ApplicationController
     
+    before_action :admin_check_redirect
+    
     def index
         @voices = Voice.all
         @voices.each do |v|
-            logger.debug("/////////////////////// #{v.id}...#{v.release}")
+            # logger.debug("/////////////////////// #{v.id}...#{v.release}")
         end
     end
     
     def show
-        @voice = Voices.find(params[:id])
+        render 'admins/nonaccess'
     end
     
     def new

@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$(document).on 'turbolinks:load', ->
-  obj = document.getElementById('messagesArea')
-  obj.scrollTop = obj.scrollHeight
-  return
+# $(document).on 'turbolinks:load', ->
+#   obj = document.getElementById('messagesArea')
+#   obj.scrollTop = obj.scrollHeight
+#   return

@@ -1,6 +1,7 @@
 class ParticipationsController < ApplicationController
   
-
+  before_action :authenticate_user!
+  
   def index
     
     @boards = current_user.boards
@@ -9,11 +10,13 @@ class ParticipationsController < ApplicationController
     Friend.where(followed_id: current_user.id).order(created_at: :desc).each do |fd|
       if !Friend.find_by('follower_id = ? and followed_id = ?', current_user.id, fd.follower_id)
         # @offersはUserインスタンス群
-        @offers.push(User.find_by(id: fd.follower_id))
+        # @offers.push(User.find_by(id: fd.follower_id))
+        # @offersはFriendインスタンス郡
+        @offers.push(fd)
       end
     end
     
-    @participations = Participation.all
+    @participations = Participation.where(board_id: @boards).order(board_id: :desc)
     
   end
   
@@ -33,10 +36,10 @@ class ParticipationsController < ApplicationController
     @participation = Participation.find_by(id: params[:id])
     board_id = @participation.board_id
     if @participation.destroy
-      flash[:notice] = "参加表明を取り消しました"
+      flash[:notice] = "参加表明を取り消しました！"
       redirect_to board_path(board_id)
     else
-      flash[:alert] = "参加表明を取り消しできませんでした"
+      flash[:alert] = "参加表明の取り消しができませんでした"
       redirect_to board_path(board_id)
     end
   end

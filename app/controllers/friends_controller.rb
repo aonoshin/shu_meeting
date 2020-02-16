@@ -1,5 +1,7 @@
 class FriendsController < ApplicationController
   
+  before_action :authenticate_user!
+  
   def index
     # それぞれ該当するものを下記の[]内にidをぶち込む
     @others = []
@@ -15,7 +17,7 @@ class FriendsController < ApplicationController
         @friends.push(User.find_by(id: fr.followed_id))
       else
         # そうじゃない場合（「follower_id = current_user.id」のidが、followed_idに存在しない場合）は「友達申請中」判定
-        @requests.push(User.find_by(id: f.followed_id))
+        @requests.push(User.find_by(id: fr.followed_id))
       end
     end
     
@@ -82,10 +84,5 @@ class FriendsController < ApplicationController
       redirect_to "/users/#{params[:user_id]}"
     end
   end
-  
-  # private
-  #   def friend_params
-  #     params.require(:friend).permit(:follower_id, :followed_id)
-  #   end
 
 end

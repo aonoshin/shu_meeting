@@ -8,22 +8,30 @@
             <% end %>
         </ul>
     </div>
-    <button>
-      <img src="assets/toggle.png" width="25px" height="21px">
-    </button>
+    <div class="toggle-btn">
+      <i class="fas fa-bars"></i>
+    </div>
     <ul class="navbar-select">
         <% if user_signed_in? %>
+          <% if current_user.id == 0 %>
+            <div class="admin-btn">
+              <li><%= link_to "管理者メニュー", admins_path %></li>
+            </div>
+          <% end %>
           <li><%= link_to "ログアウト", destroy_user_session_path, :method => "delete", data: {confirm: '本当にログアウトしてもよろしいでしょうか？'}  %></li>
           <li><%= link_to "掲示板一覧", "/boards" %></li>
           <li><%= link_to "投稿一覧", "/posts" %></li>
           <li><%= link_to "マイページ", "/users/#{current_user.id}" %></li>
-          <li><%= link_to my_board_participations.count, "/participations" %></li>
-          <!--<li>< fas-icon("exclamation 2x") %></li>-->
-          <!--<li><img src="assets/alert.png" width="25px" height="21px"></li>-->
+          <li><%= link_to "/participations" do  %>
+              <i class="far fa-bell"></i>
+              <!--< my_board_participations.count %>-->
+              <% end %></li>
         <% else %>
           <li><%= link_to "ログイン", "/users/sign_in" %></li>
           <li><%= link_to "新規登録", "/users/sign_up" %></li>
         <% end %>
     </ul>
 </div>
-<a href="/"><%= fa_icon("arrow-circle-up 3x") %></a>
+<div class="arrow-circle-up">
+  <a href="/"><i class="fas fa-arrow-circle-up"></i></a>
+</div>

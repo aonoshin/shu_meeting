@@ -14,7 +14,7 @@ class User < ApplicationRecord
     has_many :photos, :dependent => :destroy
     has_many :posts, :dependent => :destroy
     has_many :boards, :dependent => :destroy
-    has_many :friends, :dependent => :destroy
+    # has_many :friends, :dependent => :destroy
     # has_many :participations, :dependent => :destroy
     
 end

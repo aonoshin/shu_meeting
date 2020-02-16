@@ -15,34 +15,14 @@
 //= require turbolinks
 //= require_tree .
 
-// ページトップ遷移ボタン
-// ---------------------------------------------------
-// $(function(){
-//   let pagetop = $('.fa');
-//   pagetop.hide();
-//   // ここまでひとまずボタンを隠す下ごしらえ
-//   $(window).scroll(function(){
-//       if ($(this).scrollTop() > 100){
-//          pagetop.fadeIn();
-//       } else{
-//          pagetop.fadeOut();
-//       }
-//   });
-//   // ここまでがトップページ遷移ボタンの出現に関する記述
-//   pagetop.click(function(){
-//       $('body', 'html').animate({
-//          scrollTop: 0
-//       }, 700);
-//       return false;
-//   });
-//   // ここまでがボタンを押すと遷移する記述
-// });
-// ---------------------------------------------------
 
 // ページトップ遷移ボタン
-$(function() {
+// update by matsushita 2020/1/23 about turbolinks:load
+// $(document).on('turbolinks:load', window).scroll(function(){
+$(window).on('turbolinks:load', function() {
   let appear = false;
-  let pagetop = $('.fa');
+  let pagetop = $('.fa-arrow-circle-up');
+  
   $(window).scroll(function () {
     if ($(this).scrollTop() > 150) {  //100pxスクロールしたら
       if (appear == false) {
@@ -60,6 +40,7 @@ $(function() {
       }
     }
   });
+  
   pagetop.click(function () {
     $('body, html').animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
     return false;
@@ -68,9 +49,9 @@ $(function() {
 // ---------------------------------------------------
 
 
-// トグルボタンの制御（スマサイズホ時のみ）
-$(function(){
-  $('button').click(function(){
+// トグルボタンの制御（スマホ＆タブレットサイズホ時）
+$(window).on('turbolinks:load', function(){
+  $('.toggle-btn').click(function(){
     $('.navbar-select').slideToggle(300);
   });
 });

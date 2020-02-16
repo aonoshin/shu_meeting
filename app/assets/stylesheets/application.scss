@@ -1,0 +1,899 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+
+
+/*applicationエリア（共通）*/
+
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+body{
+    background-color:#eee;
+    margin:0;
+    padding:0;
+    font-family:Century;
+}
+
+ul{
+    list-style:none;
+}
+
+.body-notice{
+    background-color:#FFAD90;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.body-notice p{
+    color:#fff;
+    text-shadow:1px 1px 1px #00f;
+    margin:0;
+    padding:15px;
+}
+
+.body-alert{
+    background-color:#FFFFCC;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.body-alert p{
+    color:#f00;
+    text-shadow:1px 1px 1px #fff;
+    margin:0;
+    padding:15px;
+}
+
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+
+
+
+/*ここからスマホ用サイズ-----------------------------------------------------------------------------*/
+@media(max-width:767px){
+
+/*_navbarエリア*/
+
+.header{
+    z-index:1;
+    background-color:#000080;
+    height:50px;
+    position:sticky;
+    top:0;
+}
+
+.toggle-btn{
+    padding:0;
+    margin:0;
+}
+
+.toggle-btn i{
+    padding:0;
+    margin:0;
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-size:30px;
+    color:#fff;
+    cursor:pointer;
+}
+
+.header-logo{
+    padding:0;
+    margin:7px 0 0 10px;
+    float:left;
+}
+
+.header-logo ul{
+    padding:0;
+    margin:0;
+}
+
+.header-logo li{
+    padding:0;
+    margin:0;
+    font-size:27px;
+    text-shadow:2px 2px 2px #00f;
+    list-style:none;
+}
+
+.header-logo a{
+    padding:0;
+    margin:0;
+}
+
+.header ul{
+    margin:0;
+    padding:0;
+    text-shadow:2px 2px 2px #00f;
+}
+
+.navbar-select{
+    display:none;
+    width:100%;
+    float:right;
+    text-align:center;
+    padding:0;
+    margin:0;
+}
+
+.navbar-select li{
+    display:block;
+    background-color:#6699ff;
+    border-bottom:0.5px solid #fff;
+    padding:10px 0 10px 20px;
+}
+
+.navbar-select li:hover{
+    background-color:#ccc;
+}
+
+.navbar-select li i{
+    color:#ff0;
+    font-size:20px;
+}
+
+.navbar-select li i:hover{
+    opacity:0.5;
+}
+
+.admin-btn{
+    padding:0;
+    margin:0;
+}
+
+.admin-btn li a{
+    color:#f00;
+    text-shadow:1px 1px 1px #fff;
+}
+
+.header span{
+    float:left;
+    font-size:30px;
+    margin-left:10px;
+}
+
+.header a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+}
+
+
+/*ページトップ遷移ボタン*/
+body > div.arrow-circle-up > a > i{
+    z-index:1;
+    position:fixed;
+    color:#000080;
+    right:20px;
+    bottom:-50px;
+    /*ボタンの初期位置が画面から隠れるようにするために「－」設定にしている*/
+    opacity:1;
+    font-size:40px;
+}
+
+body > div.arrow-circle-up > a > i:hover{
+    opacity:0.2;
+}
+
+body > div.arrow-circle-up > a > i a{
+    position:relative;
+    display:block;
+}
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+/*新規登録エリア*/
+
+.sign-up h2{
+    text-align:center;
+    color:#4689FF;
+    font-size:25px;
+    background-color:#fff;
+}
+
+.field{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4689FF;
+}
+
+.field p{
+    margin:0;
+    padding:0;
+}
+
+.field span{
+    color:#f00;
+    font-size:12px;
+}
+
+.sign-up-text{
+    width:60%;
+    border-radius:5px;
+}
+
+.sign-up-btn{
+    color:#fff;
+    background-color:#FF9933;
+    padding:5px 80px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sign-up-btn:hover{
+    opacity:0.5;
+}
+
+.actions{
+    padding-top:40px;
+    text-align:center;
+    padding-bottom:20px;
+}
+
+
+/*ログインエリア*/
+
+.sign-in h2{
+    text-align:center;
+    color:#4689FF;
+    font-size:25px;
+    background-color:#fff;
+}
+
+.sign-in-text{
+    width:60%;
+    border-radius:5px;
+}
+
+.sign-in-btn{
+    color:#fff;
+    background-color:#FF9933;
+    padding:5px 80px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sign-in-btn:hover{
+    opacity:0.5;
+}
+
+.actions{
+    padding-top:30px;
+    text-align:center;
+    padding-bottom:80px;
+}
+
+
+
+
+
+/*footerエリア*/
+
+.footer{
+    background-color:#4689FF;
+    height:150px;
+    margin-top:auto;
+}
+
+
+.footer .copy{
+    padding-top:1px;
+    text-align:center;
+    color:#fff;
+}
+
+.footer .copy h3{
+    font-size:23px;
+}
+
+.user-edit-content1{
+    width:40%;
+}
+
+.footer-btn ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.footer-btn li{
+    display:inline-block;
+    font-size:13px;
+}
+
+.footer-btn li:nth-of-type(2){
+    margin:0 10px;
+}
+
+.footer-btn a{
+    color:#fff;
+}
+
+.footer-btn a:hover{
+    color:#00f;
+}
+
+.h-100{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+
+}
+
+/*ここまでがスマホ用サイズ-----------------------------------------------------------------------------*/
+
+
+/*ここからタブレット用サイズ-----------------------------------------------------------------------------*/
+
+@media(min-width:768px) and (max-width:1024px){
+
+/*_navbarエリア*/
+
+.header{
+    z-index:1;
+    background-color:#000080;
+    height:50px;
+    position:sticky;
+    top:0;
+}
+
+.toggle-btn{
+    padding:0;
+    margin:0;
+}
+
+.toggle-btn i{
+    padding:0;
+    margin:0;
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-size:30px;
+    color:#fff;
+    cursor:pointer;
+}
+
+.header-logo{
+    padding:0;
+    margin:7px 0 0 10px;
+    float:left;
+}
+
+.header-logo ul{
+    padding:0;
+    margin:0;
+}
+
+.header-logo li{
+    padding:0;
+    margin:0;
+    font-size:27px;
+    text-shadow:2px 2px 2px #00f;
+    list-style:none;
+}
+
+.header-logo a{
+    padding:0;
+    margin:0;
+}
+
+.header ul{
+    margin:0;
+    padding:0;
+    text-shadow:2px 2px 2px #00f;
+}
+
+.navbar-select{
+    display:none;
+    width:100%;
+    float:right;
+    text-align:center;
+    padding:0;
+    margin:0;
+}
+
+.navbar-select li{
+    display:block;
+    background-color:#6699ff;
+    border-bottom:0.5px solid #fff;
+    padding:10px 0 10px 20px;
+}
+
+.navbar-select li:hover{
+    background-color:#ccc;
+}
+
+.navbar-select li i{
+    color:#ff0;
+    font-size:20px;
+}
+
+.navbar-select li i:hover{
+    opacity:0.5;
+}
+
+.admin-btn{
+    padding:0;
+    margin:0;
+}
+
+.admin-btn li a{
+    color:#f00;
+    text-shadow:1px 1px 1px #fff;
+}
+
+.header span{
+    float:left;
+    font-size:30px;
+    margin-left:10px;
+}
+
+.header a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+}
+
+
+/*ページトップ遷移ボタン*/
+body > div.arrow-circle-up > a > i{
+    z-index:1;
+    position:fixed;
+    color:#000080;
+    right:20px;
+    bottom:-50px;
+    /*ボタンの初期位置が画面から隠れるようにするために「－」設定にしている*/
+    opacity:1;
+    font-size:40px;
+}
+
+body > div.arrow-circle-up > a > i:hover{
+    opacity:0.2;
+}
+
+body > div.arrow-circle-up > a > i a{
+    position:relative;
+    display:block;
+}
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+/*新規登録エリア*/
+
+.sign-up h2{
+    text-align:center;
+    color:#4689FF;
+    font-size:25px;
+    background-color:#fff;
+}
+
+.field{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4689FF;
+}
+
+.field p{
+    margin:0;
+    padding:0;
+}
+
+.field span{
+    color:#f00;
+    font-size:12px;
+}
+
+.sign-up-text{
+    width:40%;
+    border-radius:5px;
+}
+
+.sign-up-btn{
+    color:#fff;
+    background-color:#FF9933;
+    padding:5px 80px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sign-up-btn:hover{
+    opacity:0.5;
+}
+
+.actions{
+    padding-top:40px;
+    text-align:center;
+    padding-bottom:20px;
+}
+
+
+/*ログインエリア*/
+
+.sign-in h2{
+    text-align:center;
+    color:#4689FF;
+    font-size:25px;
+    background-color:#fff;
+}
+
+.sign-in-text{
+    width:40%;
+    border-radius:5px;
+}
+
+.sign-in-btn{
+    color:#fff;
+    background-color:#FF9933;
+    padding:5px 80px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sign-in-btn:hover{
+    opacity:0.5;
+}
+
+.actions{
+    padding-top:30px;
+    text-align:center;
+    padding-bottom:80px;
+}
+
+
+
+
+
+/*footerエリア*/
+
+.footer{
+    background-color:#4689FF;
+    height:150px;
+    margin-top:auto;
+}
+
+
+.footer .copy{
+    padding-top:1px;
+    text-align:center;
+    color:#fff;
+}
+
+.footer .copy h3{
+    font-size:23px;
+}
+
+.user-edit-content1{
+    width:40%;
+}
+
+.footer-btn ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.footer-btn li{
+    display:inline-block;
+    font-size:13px;
+}
+
+.footer-btn li:nth-of-type(2){
+    margin:0 10px;
+}
+
+.footer-btn a{
+    color:#fff;
+}
+
+.footer-btn a:hover{
+    color:#00f;
+}
+
+.h-100{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+
+}
+
+/*ここまでがタブレット用サイズ-----------------------------------------------------------------------------*/
+
+
+
+/*ここからPC用サイズ-----------------------------------------------------------------------------*/
+@media(min-width:1025px){
+
+/*_navbarエリア*/
+
+.header{
+    z-index:1;
+    background-color:#000080;
+    height:70px;
+    position:sticky;
+    top:0;
+}
+
+.toggle-btn{
+    display:none;
+}
+
+.header-logo{
+    padding:0;
+    margin:0 0 0 10px;
+    float:left;
+}
+
+.header-logo ul{
+    padding:0;
+    margin:0;
+}
+
+.header-logo li{
+    padding:0;
+    margin:0;
+    font-size:30px;
+    text-shadow:2px 2px 2px #00f;
+    list-style:none;
+}
+
+.header-logo a{
+    padding:0;
+    margin:0;
+}
+
+.header ul{
+    margin:0;
+    padding:0;
+    text-shadow:2px 2px 2px #00f;
+}
+
+.header span{
+    float:left;
+    font-size:30px;
+    margin-left:10px;
+}
+
+.header li{
+    float:right;
+    margin:20px 20px 0 0;
+}
+
+
+
+.header a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+}
+
+.navbar-select li > a:hover{
+    color:#2C7CFF;
+}
+
+.navbar-select li i{
+    color:#ff0;
+    font-size:20px;
+}
+
+.navbar-select li i:hover{
+    color:#f00;
+}
+
+.admin-btn{
+    padding:0;
+    margin:0;
+}
+
+.admin-btn li a{
+    color:#f00;
+    text-shadow:1px 1px 1px #fff;
+}
+
+.admin-btn li a:hover{
+    color:#ff0;
+}
+
+
+
+/*ページトップ遷移ボタン*/
+body > div.arrow-circle-up > a > i{
+    z-index:1;
+    position:fixed;
+    color:#000080;
+    right:20px;
+    bottom:-50px;
+    /*ボタンの初期位置が画面から隠れるようにするために「－」設定にしている*/
+    opacity:1;
+    font-size:40px;
+}
+
+body > div.arrow-circle-up > a > i:hover{
+    opacity:0.2;
+}
+
+body > div.arrow-circle-up > a > i a{
+    position:relative;
+    display:block;
+}
+/*---------------------------------------------------*/
+
+
+
+
+
+
+
+/*新規登録エリア*/
+
+.sign-up h2{
+    text-align:center;
+    color:#4689FF;
+    font-size:30px;
+    background-color:#fff;
+}
+
+.field{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4689FF;
+}
+
+.field p{
+    margin:0;
+    padding:0;
+}
+
+.field span{
+    color:#f00;
+    font-size:12px;
+}
+
+.sign-up-text{
+    width:25%;
+    border-radius:5px;
+}
+
+.sign-up-btn{
+    color:#fff;
+    background-color:#FF9933;
+    padding:5px 80px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sign-up-btn:hover{
+    opacity:0.5;
+}
+
+.actions{
+    padding-top:40px;
+    text-align:center;
+    padding-bottom:20px;
+}
+
+
+/*ログインエリア*/
+
+.sign-in h2{
+    text-align:center;
+    color:#4689FF;
+    font-size:30px;
+    background-color:#fff;
+}
+
+.sign-in-text{
+    width:25%;
+    border-radius:5px;
+}
+
+.sign-in-btn{
+    color:#fff;
+    background-color:#FF9933;
+    padding:5px 80px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sign-in-btn:hover{
+    opacity:0.5;
+}
+
+.actions{
+    padding-top:30px;
+    text-align:center;
+    padding-bottom:80px;
+}
+
+
+
+
+
+/*footerエリア*/
+
+.footer{
+    background-color:#4689FF;
+    height:150px;
+    margin-top:auto;
+}
+
+
+.footer .copy{
+    padding-top:5px;
+    text-align:center;
+    color:#fff;
+}
+
+.footer .copy h3{
+    font-size:23px;
+}
+
+.user-edit-content1{
+    width:40%;
+}
+
+.footer-btn ul{
+    padding:0;
+    margin:0;
+    float:right;
+}
+
+.footer-btn li{
+    display:inline-block;
+    margin-right:15px;
+    font-size:13px;
+}
+
+.footer-btn a{
+    color:#fff;
+}
+
+.footer-btn a:hover{
+    color:#00f;
+}
+
+.h-100{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+
+}
+/*ここまでがPC用サイズ-----------------------------------------------------------------------------*/

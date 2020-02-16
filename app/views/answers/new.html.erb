@@ -1,0 +1,28 @@
+<div class="answer-new">
+    <div class="answer-new-title">
+        <h1><%= @inquiry.name %>さんへの回答フォーム</h1>
+    </div>
+    <div class="answer-new-main">
+        <%= form_for [@inquiry, @answer] do |a| %>
+        　<div class="answer-new-inquiry">
+        　    <p>－質問内容－</p>
+        　   <div class="answer-new-inquiry-text">
+        　       <%= simple_format(@inquiry.message) %>
+        　   </div>
+        　</div>
+          <div class="answer-new-answer">
+              <p>－回答先メールアドレス－</p>
+              <%= a.email_field :email, :value => @inquiry.email, :class => "email-answer" %>
+              <p>－回答内容－</p>
+              <%= a.text_area :answer, :class => "new-answer" %>
+          </div>
+          <div class="answer-new-btn">
+              <ul>
+                  <li><%= a.submit "送信する", :class => "answer-post-btn", data: {confirm: "送信してもよろしいですか？"} %></li>
+                  <li class="answer-new-another-btn"><%= link_to "メール詳細へ戻る", "/inquiries/#{@inquiry.id}" %></li>
+                  <li class="answer-new-another-btn"><%= link_to "メール一覧へ", "/inquiries" %></li>
+              </ul>
+          </div>
+        <% end %>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 class BoardsController < ApplicationController
   
+  before_action :authenticate_user!
+  
   def index
     @boards = Board.all.order(day: :asc)
   end
@@ -8,6 +10,7 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
     @user = User.find(@board.user_id)
     @participation = Participation.new
+    # ↑boards.showに参加ボタンがあるため
   end
   
   def new
@@ -47,7 +50,8 @@ class BoardsController < ApplicationController
   
   def destroy
     @board = Board.find(params[:id])
-    if @board.destroy
+    if @board.user_id == current_user.id or current_user.id == 0
+       @board.destroy
        flash[:notice] = "掲示板を削除しました"
        redirect_to user_path(@board.user_id)
     else

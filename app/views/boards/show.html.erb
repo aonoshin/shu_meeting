@@ -26,17 +26,22 @@
           <% if friend_check(@user.id) == "friend" %>
             <!--※既に主催者と友達である場合↓-->
               <% unless @p = Participation.find_by(board_id: @board.id, user_id: current_user.id) %>
+              <!--↑@participationが重複してしまうため、@pにしている-->
                 <%= form_for @participation do |p| %>
                     <%= p.hidden_field :board_id, :value => @board.id %>
                     <%= p.hidden_field :user_id, :value => current_user.id %>
                     <%= p.submit "参加する", :class => "participation-submit-btn" %>
                 <% end %>
               <% else %>
-                <%= link_to "参加予定", "/participations/#{@p.id}", method: "delete" %>
+              <div class="boards-join">
+                  <%= link_to "参加予定", "/participations/#{@p.id}", method: "delete", :class => "boards-join-btn", data: {confirm: "参加表明を取り消しますか？"} %>
+              </div>
               <% end %>
           <% else %>
-             <!--※主催者と友達になっていない場合↓-->
-             <%= link_to "※参加するには主催者と友達になることが必須です。", "/users/#{@user.id}", data: {confirm: '主催者のプロフィールページに遷移します。'} %>
+            <!--※主催者と友達になっていない場合↓-->
+            <div class="boards-unfriends-btn">
+                <%= link_to "※参加するには主催者と友達になることが必須です。", "/users/#{@user.id}",  data: {confirm: '主催者のプロフィールページに遷移します。'} %>
+            </div>
           <% end %>
         <% end %>
     </div>
@@ -45,7 +50,8 @@
         <div class="boards-show-name-place clearfix">
             <ul>
                 <li>主催者：<%= link_to @user.name, "/users/#{@user.id}" %></li>
-                <li><span>場所：<%= @board.place %></span></li>
+                <li>場所：<%= @board.place %></li>
+                <li>参加予定人数：<span><%= my_board_participations.count %></span> 名<span>※主催者以外</span></li>
             </ul>
         </div>
         <div class="boards-show-content">
@@ -64,6 +70,8 @@
             <li><%= link_to "掲示板一覧へ", "/boards" %></li>
             <% if @board.user_id == current_user.id %>
               <li><%= link_to "編集する", edit_board_path(@board.id) %></li>
+            <% end %>
+            <% if @board.user_id == current_user.id or current_user.id == 0 %>
               <li><%= link_to "削除する", "/boards/#{@board.id}", method: "delete", data: {confirm: '本当に削除してもよろしいでしょうか？'} %></li>
             <% end %>
         </ul>

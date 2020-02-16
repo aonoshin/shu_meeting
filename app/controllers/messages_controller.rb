@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
   
+  before_action :authenticate_user!
+  
   def index
     @friend = Friend.find(params[:friend_id])
     # ↑messagesのfriend_idを@friendに入れる

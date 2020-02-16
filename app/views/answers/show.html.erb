@@ -1,0 +1,19 @@
+<div class="answer-show">
+    <div class="answer-show-title">
+        <h1><%= @inquiry.name %>さんへの回答内容</h1>
+    </div>
+    <div class="answer-show-main">
+        <div class="answer-show-text">
+            <p><%= simple_format(@answer.answer) %></p>
+        </div>
+        <div class="answer-show-time">
+            <p>回答日時：<%= @answer.created_at.strftime("%Y/%m/%d %H:%M") %></p>
+        </div>
+        <div class="answer-show-btn">
+            <ul>
+                <li><%= link_to "メール一覧へ", "/inquiries" %></li>
+                <li><%= link_to "削除する", "/inquiries/#{@inquiry.id}/answers/#{@answer.id}", method: "delete", data: {confirm: "本当に削除してもよろしいですか？ ※復元不可"} %></li>
+            </ul>
+        </div>
+    </div>
+</div>

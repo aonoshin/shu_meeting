@@ -1,0 +1,25 @@
+<div class="user-destroy">
+    <div class="user-destroy-title">
+        <p>退会内容確認ページ</p>
+    </div>
+    <div class="user-destroy-caution">
+        <p>退会をするとあなたの情報（写真や掲示板含む）が全て削除されます。<br>
+        ※復元不可</p>
+    </div>
+    <div class="user-destroy-main">
+        <ul>
+            <li><%= @user.name %></li>
+            <li><%= @user.age %></li>
+            <li><%= @user.gender %></li>
+            <li><%= @user.area %></li>
+            <li><%= @user.hobby %></li>
+            <li><%= @user.profile %></li>
+        </ul>
+    </div>
+    <div class="user-destroy-btn">
+        <%= @user.submit "退会を完了させる", :class => "destroy-btn", data: {confirm: "本当に退会してもよろしいですか？"} %>
+    </div>
+    <div class="user-destroy-stop">
+        <%= link_to "マイページに戻る", "/users/#{current_user.id}" %>
+    </div>
+</div>

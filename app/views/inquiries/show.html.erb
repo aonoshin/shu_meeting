@@ -1,0 +1,37 @@
+<div class="inquiry-show">
+    <div class="inquiry-show-title">
+        <h1>メール全文</h1>
+    </div>
+    <div class="inquiry-show-main">
+        <div class="inquiry-show-detail">
+            <ul>
+                <% if @inquiry.user_id == nil %>
+                  <li class="unmember">名前：<%= @inquiry.name %>さん（非会員）</li>
+                <% else %>
+                  <li class="member">名前：<%= @inquiry.name %>さん（会員）</li>
+                <% end %>
+                <li>メールアドレス：<%= @inquiry.email %></li>
+            </ul>
+        </div>
+        <div class="inquiry-show-text">
+            <p><%= simple_format(@inquiry.message) %></p>
+        </div>
+        <div class="inquiry-show-time">
+            <p>最新更新日時：<%= @inquiry.updated_at.strftime("%Y/%m/%d %H:%M") %></p>
+        </div>
+        <div class="inquiry-show-answer-btn">
+            <p><%= link_to "回答する", "/inquiries/#{@inquiry.id}/answers/new" %></p>
+        </div>
+        <div class="inquiry-show-btn">
+            <ul>
+                <li><%= link_to "メール一覧へ", "/inquiries" %></li>
+                <li><%= link_to "削除する", "/inquiries/#{@inquiry.id}", method: "delete", data: {confirm: "本当に削除してもよろしいですか？ ※復元不可"} %></li>
+            </ul>
+        </div>
+    </div>
+    <div class="inquiry-show-answer">
+        <% @answers.each do |a| %>
+          <%= a.answer %>
+        <% end %>
+    </div>
+</div>
