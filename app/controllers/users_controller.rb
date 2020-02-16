@@ -38,18 +38,18 @@ class UsersController < ApplicationController
         end
     end
     
-    def destroy
-        @user = User.find(params[:id])
-        if @user.id == current_user.id
-            @user.destroy
-            # @friend.destroy
-            flash[:notice] = "退会手続きが完了しました"
-            redirect_to "/"
-        else
-            flash[:alert] = "無効なユーザー"
-            redirect_to "/"
-        end
-    end
+    # def destroy
+    #     @user = User.find(params[:id])
+    #     if @user.id == current_user.id
+    #         @user.destroy
+    #         # @friend.destroy
+    #         flash[:notice] = "退会手続きが完了しました"
+    #         redirect_to "/"
+    #     else
+    #         flash[:alert] = "無効なユーザー"
+    #         redirect_to "/"
+    #     end
+    # end
     
     private
       def user_params

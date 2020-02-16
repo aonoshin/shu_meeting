@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   resources :news
   resources :voices
   resources :participations
-  resources :users, only: [:index, :destroy]
+  resources :users, only: [:index]
   resources :questions
   
   resources :inquiries do 
