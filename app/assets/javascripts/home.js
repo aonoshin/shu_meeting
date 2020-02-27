@@ -9,7 +9,7 @@ $(document).on('turbolinks:load', function(){
 // ---------------------------------------------------
 
 $(document).on('turbolinks:load', window).scroll(function(){
-   $('.home-main-1, .image-1, .text-1, .image-2, .text-2, .image-3, .text-3, .voice-text, .news-text, .home-main-5-list').each(function(){
+   $('.home-main-1, .image-1, .text-1, .image-2, .text-2, .image-3, .text-3, .voice-text, .news-text, .home-main-2-title p, .home-main-3-title p, .home-main-4-title p, .home-main-5-list').each(function(){
       let dummy = $(this).offset().top,
       scroll = $(window).scrollTop(),
       // スクロールの量

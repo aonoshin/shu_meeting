@@ -32,5 +32,8 @@
               <p>お問い合わせはございません。</p>
           </div>
         <% end %>
+        <% @answers.each do |a| %>
+          <%= a.answer %>
+        <% end %>
     </div>
 </div>

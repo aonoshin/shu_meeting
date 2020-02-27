@@ -132,9 +132,24 @@
 .home-main-2-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:70%;
     font-size:20px;
+}
+
+.home-main-2-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-2-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:80%;
+    // -----------------------------------------------------
 }
 
 
@@ -374,9 +389,24 @@
 .home-main-3-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:40%;
     font-size:20px;
+}
+
+.home-main-3-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-3-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:40%;
+    // -----------------------------------------------------
 }
 
 .voice-text{
@@ -453,9 +483,24 @@
 .home-main-4-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:60%;
     font-size:20px;
+}
+
+.home-main-4-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-4-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:60%;
+    // -----------------------------------------------------
 }
 
 .news-text{
@@ -709,9 +754,24 @@
 .home-main-2-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:60%;
     font-size:20px;
+}
+
+.home-main-2-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-2-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:50%;
+    // -----------------------------------------------------
 }
 
 
@@ -954,9 +1014,24 @@
 .home-main-3-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:30%;
     font-size:20px;
+}
+
+.home-main-3-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-3-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:30%;
+    // -----------------------------------------------------
 }
 
 .voice-text{
@@ -1029,9 +1104,24 @@
 .home-main-4-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:60%;
     font-size:20px;
+}
+
+.home-main-4-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-4-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:40%;
+    // -----------------------------------------------------
 }
 
 .news-text{
@@ -1157,6 +1247,9 @@
 }
 
 // ここまでがタブレット用サイズ-----------------------------------------------------------------------------
+
+
+
 
 
 
@@ -1291,8 +1384,23 @@
 .home-main-2-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:40%;
+}
+
+.home-main-2-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-2-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:40%;
+    // -----------------------------------------------------
 }
 
 // image1エリア
@@ -1529,8 +1637,23 @@
 .home-main-3-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:40%;
+}
+
+.home-main-3-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-3-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:30%;
+    // -----------------------------------------------------
 }
 
 .voice-text{
@@ -1604,8 +1727,23 @@
 .home-main-4-title h2{
     padding:0;
     margin:0 auto;
-    border-bottom:1px solid #000080;
     width:40%;
+}
+
+.home-main-4-title p{
+    // jquery用---------------------------------------------
+    transition:1s;
+    width:0.1%;
+    // -----------------------------------------------------
+    padding:0;
+    margin:0 auto 100px;
+    border-bottom:3px solid #6699cc;
+}
+
+.home-main-4-title p.scrollin{
+    // jquery用---------------------------------------------
+    width:30%;
+    // -----------------------------------------------------
 }
 
 .news-text{

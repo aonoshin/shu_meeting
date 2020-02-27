@@ -6,6 +6,7 @@ class InquiriesController < ApplicationController
     if user_signed_in?
       if current_user.id == 0
         @inquiries = Inquiry.all.order(updated_at: :desc)
+        @answers = Answer.where(inquiry_id: @inquiry.id)
       else
         @inquiries = Inquiry.where(user_id: current_user.id)
       end
@@ -17,7 +18,7 @@ class InquiriesController < ApplicationController
   
   def show
     @inquiry = Inquiry.find(params[:id])
-    @answers = Answer.where(id: @inquiry.id)
+    @answers = Answer.where(inquiry_id: @inquiry.id)
   end
   
   def new
