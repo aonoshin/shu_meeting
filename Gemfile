@@ -60,3 +60,5 @@ gem 'font-awesome-sass', '~> 5.4.1'
 
 # 初期データを入れるGem
 gem 'seed-fu', '~> 2.3'
+
+gem 'rails_12factor', group: :production
