@@ -59,29 +59,27 @@
 }
 
 .posts-index-detail{
-    float:left;
-    width:50%;
     height:150px;
     padding:0;
-    margin:10px 0 10px 10px;
+    margin:0;
 }
 
 .posts-index-detail p{
     color:#000;
-    padding:0;
+    padding:5px;
     margin:0;
     font-size:12px;
 }
 
 .posts-index-image{
-    float:right;
-    width:45%;
     height:150px;
-    margin:10px 10px 10px 0;
+    text-align:center;
 }
 
-.posts-index-image .posts-img{
-    width:100%;
+.posts-img{
+    padding:0;
+    margin:0 auto;
+    width:50%;
     height:150px;
 }
 
@@ -96,6 +94,7 @@
 }
 
 .posts-index-times ul{
+    padding:0 2px;
     margin:0;
 }
 
@@ -200,28 +199,31 @@
 }
 
 .user-posts-detail{
-    float:left;
-    width:55%;
     height:150px;
-    padding:0;
-    margin:10px 0 10px 10px;
-}
-
-.user-posts-detail p{
-    color:#000;
     padding:0;
     margin:0;
 }
 
+.user-posts-detail p{
+    color:#000;
+    padding:5px;
+    margin:0;
+}
+
 .user-posts-image{
-    float:right;
-    width:40%;
     height:150px;
     margin:10px 10px 10px 0;
 }
 
-.user-posts-image .posts-img{
-    width:100%;
+.user-posts-image p{
+    padding:0;
+    margin:0;
+    height:150px;
+    text-align:center;
+}
+
+.posts-img{
+    width:50%;
     height:150px;
 }
 
@@ -237,6 +239,7 @@
 }
 
 .user-posts-times ul{
+    padding:0;
     margin:0;
 }
 
@@ -254,6 +257,7 @@
     display:inline-block;
     float:right;
     margin:5px 20px 5px 0;
+    font-size:12px;
 }
 
 .posts-btn li:hover{
@@ -319,8 +323,14 @@
     width:80%;
 }
 
+.posts-new-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
 .posts-new-btn1{
-    margin-top:40px;
+    margin:30px 0 0 0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:12.5px 20px;
@@ -336,7 +346,7 @@
 }
 
 .posts-new-btn2{
-    margin-top:40px;
+    margin:30px 0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:10px 20px;
@@ -409,8 +419,14 @@
     width:80%;
 }
 
+.posts-edit-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
 .posts-edit-btn1{
-    margin-top:40px;
+    margin:30px 0 0 0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:12.5px 20px;
@@ -426,7 +442,7 @@
 }
 
 .posts-edit-btn2{
-    margin-top:40px;
+    margin:30px 0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:10px 20px;

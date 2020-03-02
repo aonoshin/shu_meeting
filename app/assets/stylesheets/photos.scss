@@ -44,7 +44,7 @@
     padding:0;
     margin:0;
     width:49%;
-    height:180px;
+    height:150px;
     display:inline-block;
 }
 
@@ -52,7 +52,7 @@
     padding:0;
     margin:0;
     width:100%;
-    height:180px;
+    height:150px;
 }
 
 .photos-index-img:hover{
@@ -132,7 +132,7 @@
 }
 
 .photos-new-main li:nth-of-type(1){
-    margin-top:40px;
+    margin:20px 0 0 0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:12.5px 20px;
@@ -147,8 +147,19 @@
     background-color:#6699FF;
 }
 
+.photos-new-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.photos-new-main li{
+    padding:0;
+    margin:0 10px;
+}
+
 .photos-new-main-btn{
-    margin-top:40px;
+    margin:30px 0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:10px 20px;
@@ -296,7 +307,9 @@
 }
 
 .photos-edit-btn ul{
-    margin-right:50px;
+    padding:0;
+    margin:0;
+    text-align:center;
 }
 
 .photos-edit-btn a{
@@ -309,7 +322,7 @@
 }
 
 .photos-edit-btn1, .photos-edit-btn2{
-    margin-top:40px;
+    margin:20px 0;
     background-color:#D9E5FF;
     border-radius:10px;
     font-weight:bold;

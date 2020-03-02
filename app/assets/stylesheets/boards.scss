@@ -66,16 +66,16 @@
 
 .boards-index-main-text{
     width:55%;
-    height:190px;
+    height:170px;
     float:left;
 }
 
 .boards-index-main-text li{
-    line-height:2;
+    line-height:1.5;
 }
 
 .boards-index-main-text ul{
-    padding-top:10px;
+    padding:5px;
     margin:0;
 }
 
@@ -90,14 +90,14 @@
 
 .boards-index-btn{
     text-align:center;
-    margin:10px auto 0;
+    margin:0 auto;
 }
 
 .boards-index-btn a{
     text-decoration:none;
     color:#FF4F02;
     background-color:#ffcc00;
-    padding:5px 70px;
+    padding:5px 20px;
     border-radius:10px;
     border:1px solid #ff4f02;
     outline:none;
@@ -110,14 +110,14 @@
 
 .boards-index-main-image{
     width:45%;
-    height:190px;
+    height:170px;
     float:right;
     background-color:#ccffff
 }
 
 .boards-index-img{
     width:100%;
-    height:190px;
+    height:170px;
 }
 
 
@@ -190,7 +190,7 @@
 }
 
 .user-boards-main-text ul{
-    padding-top:20px;
+    padding:10px;
     margin:0;
 }
 
@@ -209,7 +209,7 @@
     color:#FF4F02;
     font-weight:bold;
     background-color:#ffcc00;
-    padding:5px 70px;
+    padding:5px 20px;
     border-radius:10px;
     border:1px solid #ff4f02;
     outline:none;
@@ -292,8 +292,14 @@
     width:80%;
 }
 
+.boards-new-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
 .boards-new-btn1{
-    margin-top:40px;
+    margin:0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:12.5px 20px;
@@ -310,7 +316,7 @@
 }
 
 .boards-new-btn2{
-    margin-top:40px;
+    margin:10px 0 0 0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:10px 20px;
@@ -383,7 +389,7 @@
 }
 
 .boards-edit-btn1{
-    margin-top:40px;
+    margin:0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:12.5px 20px;
@@ -400,7 +406,7 @@
 }
 
 .boards-edit-btn2{
-    margin-top:40px;
+    margin:10px 0 0 0;
     background-color:#D9E5FF;
     border-radius:10px;
     padding:10px 20px;
@@ -468,7 +474,7 @@
     width:100%;
     padding:0;
     margin:0;
-    height:320px;
+    height:270px;
 }
 
 .boards-show-image p{
@@ -478,7 +484,7 @@
 
 .boards-show-img{
     width:100%;
-    height:320px;
+    height:270px;
 }
 
 .boards-join{
@@ -553,12 +559,13 @@
 .boards-show-name-place li{
     float:left;
     padding:5px 0;
+    margin:0 0 0 10px;
     color:#fff;
     text-shadow:1px 1px 1px #000;
 }
 
 .boards-show-name-place li span{
-    margin-left:40px;
+    margin:10px;
 }
 
 .boards-show-content{
