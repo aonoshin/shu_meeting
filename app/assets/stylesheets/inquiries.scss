@@ -2,7 +2,393 @@
 @media(max-width:767px){
 
 
+// [index]
+.inquiry-index{
+    padding:0;
+    margin:0;
+}
 
+.inquiry-index-title{
+    padding:10px 0;
+    margin:0;
+    background-color:#eee;
+    opacity:0.8;
+    text-align:center;
+}
+
+.inquiry-index-title h1{
+    padding:0;
+    margin:0;
+    color:#000080;
+    font-size:22px;
+}
+
+.inquiry-index-main{
+    margin:0 0 50px;
+}
+
+.inquiry-index-content{
+    padding:0;
+    margin:0 auto;
+    width:95%;
+    background-color:#fff;
+    border:1px solid #000080;
+}
+
+.inquiry-index-detail{
+    padding:0;
+    margin:5px 0 5px 5px;
+}
+
+.inquiry-index-detail ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.inquiry-index-detail li{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-index-detail .unmember{
+    color:#f00;
+}
+
+.inquiry-index-detail .member{
+    color:#000080;
+}
+
+.inquiry-index-text{
+    padding:0;
+    margin:0;
+    border-top:1px dotted #000080;
+    border-bottom:1px dotted #000080;
+}
+
+.inquiry-index-text p{
+    padding:0;
+    margin:7px 0 7px 5px;
+}
+
+.inquiry-index-time{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.inquiry-index-time p{
+    padding:0;
+    margin:0;
+    font-size:12px;
+}
+
+.inquiry-index-btn{
+    padding:0;
+    margin:0;
+    background-color:#4689ff;
+    border-top:1px solid #000080;
+    text-align:center;
+}
+
+.inquiry-index-btn:hover{
+    background-color:#eee;
+}
+
+.inquiry-index-btn p{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-index-btn a{
+    padding:5px 0;
+    margin:0;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    display:block;
+}
+
+.inquiry-index-btn a:hover{
+    color:#4689ff;
+}
+
+.inquiry-index-non{
+    padding:0;
+    margin:50px 0 250px;
+    text-align:center;
+}
+
+.inquiry-index-non p{
+    padding:0;
+    margin:0;
+    color:#000080;
+    font-weight:bold;
+}
+
+
+
+
+
+
+// [show]
+
+.inquiry-show{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-title{
+    padding:10px 0;
+    margin:0;
+    background-color:#fff;
+    opacity:0.8;
+    text-align:center;
+}
+
+.inquiry-show-title h1{
+    padding:0;
+    margin:0;
+    color:#000080;
+    font-size:22px;
+}
+
+.inquiry-show-main{
+    padding:0;
+    margin:50px auto 100px;
+    width:95%;
+    border:1px solid #000080;
+    background-color:#fff;
+}
+
+.inquiry-show-detail{
+    padding:0;
+    margin:20px auto 30px;
+    width:95%;
+    border-bottom:1px solid #000080;
+}
+
+.inquiry-show-detail ul{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-detail li{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-text{
+    padding:0;
+    margin:0 auto;
+    width:95%;
+}
+
+.inquiry-show-text{
+    padding:0;
+    margin:0 auto;
+    width:95%;
+}
+
+.inquiry-show-text p{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-time{
+    padding:0;
+    margin:10px 0 0;
+    border-top:1px dotted #000080;
+    border-bottom:1px dotted #000080;
+}
+
+.inquiry-show-time p{
+    padding:0;
+    margin:0 auto;
+    width:95%;
+    font-size:12px;
+}
+
+.inquiry-show-answer-btn{
+    background-color:#ff9933;
+    border:1px solid #ff9933;
+    text-align:center;
+    padding:3px 0;
+}
+
+.inquiry-show-answer-btn:hover{
+    background-color:#eee;
+}
+
+.inquiry-show-answer-btn p{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-answer-btn a{
+    padding:3px 0;
+    margin:0;
+    color:#fff;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+}
+
+.inquiry-show-answer-btn a:hover{
+    color:#ff9933;
+}
+
+.inquiry-show-btn ul{
+    padding:0;
+    margin:5px 0;
+    text-align:center;
+}
+
+.inquiry-show-btn li{
+    padding:0;
+    margin:0 50px;
+    display:inline-block;
+}
+
+.inquiry-show-btn a{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-btn a:hover{
+    opacity:0.3;
+}
+
+
+
+
+
+
+// [new]
+.inquiry-new{
+    padding:0;
+    margin:0;
+    background-image:url(/assets/inquiry-image.jpg);
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-position:center 40%;
+    opacity:0.9;
+    height:670px;
+}
+
+.inquiry-new-title{
+    padding:10px 0;
+    margin:0;
+    background-color:#fff;
+    opacity:0.8;
+    text-align:center;
+}
+
+.inquiry-new-title h1{
+    padding:0;
+    margin:0;
+    color:#000080;
+    font-size:25px;
+}
+
+.inquiry-new-title p{
+    padding:0;
+    margin:0;
+    color:#000080;
+}
+
+.inquiry-new-main{
+    padding:0;
+    margin:30px auto;
+    width:95%;
+    background-color:#fff;
+    opacity:0.9;
+    border-radius:10px;
+    text-align:center;
+}
+
+.inquiry-new-name, .inquiry-new-email, .inquiry-new-message{
+    padding:20px 0;
+    margin:10px 0 0 0;
+}
+
+.inquiry-new-name span, .inquiry-new-email span, .inquiry-new-message span{
+    padding:2px;
+    margin:0 10px 0 0;
+    background-color:#f00;
+    color:#fff;
+    font-size:10px;
+}
+
+.inquiry-new-name p, .inquiry-new-email p, .inquiry-new-message p{
+    padding:0;
+    margin:0;
+    color:#000080;
+}
+
+.new-name, .new-email{
+    padding:0;
+    margin:0;
+    background-color:#eeffff;
+    border-radius:5px;
+    outline:none;
+    width:90%;
+}
+
+.new-message{
+    padding:0;
+    margin:0;
+    background-color:#eeffff;
+    border-radius:5px;
+    outline:none;
+    width:90%;
+    height:150px;
+}
+
+.inquiry-new-btn{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-new-btn ul{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-new-btn li{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-new-btn a{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:#000080;
+}
+
+.inquiry-new-btn a:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.inquiry-post-btn{
+    padding:5px 100px;
+    margin:20px 0 10px;
+    color:#fff;
+    background-color:#000080;
+    border-radius:5px;
+    outline:none;
+    cursor:pointer;
+}
+
+.inquiry-post-btn:hover{
+    color:#000080;
+    background-color:#fff;
+    border:1px solid #000080;
+}
 
 
 }
@@ -15,8 +401,390 @@
 // ここからタブレット用サイズ-----------------------------------------------------------------------------
 @media(min-width:768px) and (max-width:1024px){
 
+// [index]
+.inquiry-index{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-index-title{
+    padding:10px 0;
+    margin:0;
+    background-color:#eee;
+    opacity:0.8;
+    text-align:center;
+}
+
+.inquiry-index-title h1{
+    padding:0;
+    margin:0;
+    color:#000080;
+}
+
+.inquiry-index-main{
+    margin:0 0 50px;
+}
+
+.inquiry-index-content{
+    padding:0;
+    margin:0 auto;
+    width:60%;
+    background-color:#fff;
+    border:1px solid #000080;
+}
+
+.inquiry-index-detail{
+    padding:0;
+    margin:5px 0 5px 5px;
+}
+
+.inquiry-index-detail ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.inquiry-index-detail li{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-index-detail .unmember{
+    color:#f00;
+}
+
+.inquiry-index-detail .member{
+    color:#000080;
+}
+
+.inquiry-index-text{
+    padding:0;
+    margin:0;
+    border-top:1px dotted #000080;
+    border-bottom:1px dotted #000080;
+}
+
+.inquiry-index-text p{
+    padding:0;
+    margin:7px 0 7px 5px;
+}
+
+.inquiry-index-time{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.inquiry-index-time p{
+    padding:0;
+    margin:0;
+    font-size:12px;
+}
+
+.inquiry-index-btn{
+    padding:0;
+    margin:0;
+    background-color:#4689ff;
+    border-top:1px solid #000080;
+    text-align:center;
+}
+
+.inquiry-index-btn:hover{
+    background-color:#eee;
+}
+
+.inquiry-index-btn p{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-index-btn a{
+    padding:5px 0;
+    margin:0;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    display:block;
+}
+
+.inquiry-index-btn a:hover{
+    color:#4689ff;
+}
+
+.inquiry-index-non{
+    padding:0;
+    margin:50px 0 250px;
+    text-align:center;
+}
+
+.inquiry-index-non p{
+    padding:0;
+    margin:0;
+    color:#000080;
+    font-weight:bold;
+}
 
 
+
+
+
+
+// [show]
+
+.inquiry-show{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-title{
+    padding:10px 0;
+    margin:0;
+    background-color:#fff;
+    opacity:0.8;
+    text-align:center;
+}
+
+.inquiry-show-title h1{
+    padding:0;
+    margin:0;
+    color:#000080;
+}
+
+.inquiry-show-main{
+    padding:0;
+    margin:50px auto 100px;
+    width:60%;
+    border:1px solid #000080;
+    background-color:#fff;
+}
+
+.inquiry-show-detail{
+    padding:0;
+    margin:20px auto 30px;
+    width:95%;
+    border-bottom:1px solid #000080;
+}
+
+.inquiry-show-detail ul{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-detail li{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-text{
+    padding:0;
+    margin:0 auto;
+    width:95%;
+}
+
+.inquiry-show-text{
+    padding:0;
+    margin:0 auto;
+    width:95%;
+}
+
+.inquiry-show-text p{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-time{
+    padding:0;
+    margin:10px 0 0;
+    border-top:1px dotted #000080;
+    border-bottom:1px dotted #000080;
+}
+
+.inquiry-show-time p{
+    padding:0;
+    margin:0 auto;
+    width:95%;
+    font-size:12px;
+}
+
+.inquiry-show-answer-btn{
+    background-color:#ff9933;
+    border:1px solid #ff9933;
+    text-align:center;
+    padding:3px 0;
+}
+
+.inquiry-show-answer-btn:hover{
+    background-color:#eee;
+}
+
+.inquiry-show-answer-btn p{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-answer-btn a{
+    padding:3px 0;
+    margin:0;
+    color:#fff;
+    font-weight:bold;
+    text-decoration:none;
+    display:block;
+}
+
+.inquiry-show-answer-btn a:hover{
+    color:#ff9933;
+}
+
+.inquiry-show-btn ul{
+    padding:0;
+    margin:5px 0;
+    text-align:center;
+}
+
+.inquiry-show-btn li{
+    padding:0;
+    margin:0 50px;
+    display:inline-block;
+}
+
+.inquiry-show-btn a{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-show-btn a:hover{
+    opacity:0.3;
+}
+
+
+
+
+
+
+// [new]
+.inquiry-new{
+    padding:0;
+    margin:0;
+    background-image:url(/assets/inquiry-image.jpg);
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-position:center 40%;
+    opacity:0.9;
+    height:670px;
+}
+
+.inquiry-new-title{
+    padding:10px 0;
+    margin:0;
+    background-color:#fff;
+    opacity:0.8;
+    text-align:center;
+}
+
+.inquiry-new-title h1{
+    padding:0;
+    margin:0;
+    color:#000080;
+}
+
+.inquiry-new-title p{
+    padding:0;
+    margin:0;
+    color:#000080;
+}
+
+.inquiry-new-main{
+    padding:0;
+    margin:30px auto;
+    width:70%;
+    background-color:#fff;
+    opacity:0.9;
+    border-radius:10px;
+    text-align:center;
+}
+
+.inquiry-new-name, .inquiry-new-email, .inquiry-new-message{
+    padding:20px 0;
+    margin:10px 0 0 0;
+}
+
+.inquiry-new-name span, .inquiry-new-email span, .inquiry-new-message span{
+    padding:2px;
+    margin:0 10px 0 0;
+    background-color:#f00;
+    color:#fff;
+    font-size:12px;
+}
+
+.inquiry-new-name p, .inquiry-new-email p, .inquiry-new-message p{
+    padding:0;
+    margin:0;
+    color:#000080;
+}
+
+.new-name, .new-email{
+    padding:0;
+    margin:0;
+    background-color:#eeffff;
+    border-radius:5px;
+    outline:none;
+    width:80%;
+}
+
+.new-message{
+    padding:0;
+    margin:0;
+    background-color:#eeffff;
+    border-radius:5px;
+    outline:none;
+    width:80%;
+    height:150px;
+}
+
+.inquiry-new-btn{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-new-btn ul{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-new-btn li{
+    padding:0;
+    margin:0;
+}
+
+.inquiry-new-btn a{
+    padding:0;
+    margin:0;
+    text-decoration:none;
+    color:#000080;
+}
+
+.inquiry-new-btn a:hover{
+    opacity:0.5;
+    text-decoration:underline;
+}
+
+.inquiry-post-btn{
+    padding:5px 100px;
+    margin:20px 0 10px;
+    color:#fff;
+    background-color:#000080;
+    border-radius:5px;
+    outline:none;
+    cursor:pointer;
+}
+
+.inquiry-post-btn:hover{
+    color:#000080;
+    background-color:#fff;
+    border:1px solid #000080;
+}    
 
 }
 // ここまでがタブレット用サイズ-----------------------------------------------------------------------------

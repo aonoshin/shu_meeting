@@ -1,3 +1,713 @@
+// ここからスマホ用サイズ-----------------------------------------------------------------------------
+@media(max-width:767px){
+
+// [index.html]
+
+.voices-index-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:22px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.voices-index-new-btn{
+    text-align:center;
+    margin:50px 0;
+}
+
+.voices-index-new-btn a{
+    text-decoration:none;
+    color:#008000;
+    background-color:#99FFCC;
+    padding:8px 30px;
+    border:1px solid #008000;
+    border-radius:10px;
+}
+
+.voices-index-new-btn a:hover{
+    color:#fff;
+    background-color:#008000;
+}
+
+.voices-index-main{
+    width:95%;
+    padding:0;
+    margin:0 auto 10px;
+    border-top:1px solid #000080;
+    border-bottom:1px solid #000080;
+}
+
+.voices-index-icon{
+    width:60%;
+    padding:0;
+    margin:0 auto;
+}
+
+.voices-index-img{
+    width:100%;
+    padding:0;
+    margin:5px 0 0 0;
+}
+
+.voices-index-content{
+    width:90%;
+    padding:0;
+    margin:0 0 0 10px;
+}
+
+.voices-index-text{
+    padding:0;
+    margin:10px 0 0 0;
+}
+
+.voices-index-text ul{
+    padding:0;
+    margin:0;
+}
+
+.voices-index-text li{
+    padding:0;
+    margin:0;
+}
+
+.release{
+    text-align:center;
+    background-color:#6699ff;
+    color:#fff;
+}
+
+.unrelease{
+    text-align:center;
+    background-color:#f00;
+    color:#fff;
+}
+
+.voices-index-text p{
+    padding:0;
+    margin:10px 0 0 0;
+}
+
+.voices-index-btn{
+    padding:0;
+    margin:0;
+}
+
+.voices-index-btn ul{
+    padding:0;
+    margin:0;
+}
+
+.voices-index-btn li{
+    display:inline-block;
+    float:right;
+    padding:0;
+    margin:10px 20px 0 0;
+}
+
+.voices-index-btn a{
+    color:#008000;
+}
+
+.voices-index-btn a:hover{
+    opacity:0.3;
+}
+
+
+
+
+// [new.html]
+
+.voices-new-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:22px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.voices-new-main{
+    background-color:#99FFCC;
+    width:95%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.voices-new-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.voices-new-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#008000;
+    font-weight:bold;
+}
+
+.voices-new-main ul{
+    margin-right:50px;
+}
+
+.voices-new-main a{
+    text-decoration:none;
+}
+
+.voices-new-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.voices-new-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:60%;
+}
+
+.voices-new-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+    height:70px;
+}
+
+.voices-check-box{
+    padding:0;
+    margin:20px 0 0 0;
+}
+
+.voices-check-box li{
+    display:block;
+    color:#008000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.voices-check-box span{
+    color:#f00;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.voices-new-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.voices-new-btn1{
+    margin:0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.voices-new-btn1:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+.voices-new-btn2{
+    margin:20px 0 0 0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+}
+
+.voices-new-btn2:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+
+
+
+// [edit.html]
+
+.voices-edit-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:22px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.voices-edit-main{
+    background-color:#99FFCC;
+    width:95%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.voices-edit-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.voices-edit-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#008000;
+    font-weight:bold;
+}
+
+.voices-edit-main ul{
+    margin-right:50px;
+}
+
+.voices-edit-main a{
+    text-decoration:none;
+}
+
+.voices-edit-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.voices-edit-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:60%;
+}
+
+.voices-edit-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+    height:70px;
+}
+
+.voices-check-box{
+    padding:20px 0 0 0;
+    margin:0;
+}
+
+.voices-check-box li{
+    display:block;
+    color:#008000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.voices-check-box span{
+    color:#f00;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.voices-edit-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.voices-edit-btn1{
+    margin:0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.voices-edit-btn1:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+.voices-edit-btn2{
+    margin:20px 0 0 0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+}
+
+.voices-edit-btn2:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+}
+// ここまでがスマホ用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+// ここからタブレット用サイズ-----------------------------------------------------------------------------
+@media(min-width:768px) and (max-width:1024px){
+
+// [index.html]
+
+.voices-index-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.voices-index-new-btn{
+    text-align:center;
+    margin:50px 0;
+}
+
+.voices-index-new-btn a{
+    text-decoration:none;
+    color:#008000;
+    background-color:#99FFCC;
+    padding:8px 30px;
+    border:1px solid #008000;
+    border-radius:10px;
+}
+
+.voices-index-new-btn a:hover{
+    color:#fff;
+    background-color:#008000;
+}
+
+.voices-index-main{
+    width:95%;
+    padding:0;
+    margin:0 auto 10px;
+    border-top:1px solid #000080;
+    border-bottom:1px solid #000080;
+}
+
+.voices-index-icon{
+    width:35%;
+    float:left;
+    padding:0;
+    margin:0;
+}
+
+.voices-index-img{
+    width:100%;
+    height:220px;
+    padding:0;
+    margin:5px 0 0 0;
+}
+
+.voices-index-content{
+    width:63%;
+    float:right;
+    padding:0;
+    margin:0 0 0 10px;
+}
+
+.voices-index-text{
+    padding:0;
+    margin:10px 0 0 0;
+}
+
+.voices-index-text ul{
+    padding:0;
+    margin:0;
+}
+
+.voices-index-text li{
+    padding:0;
+    margin:0;
+}
+
+.release{
+    text-align:center;
+    background-color:#6699ff;
+    color:#fff;
+}
+
+.unrelease{
+    text-align:center;
+    background-color:#f00;
+    color:#fff;
+}
+
+.voices-index-text p{
+    padding:0;
+    margin:10px 0 0 0;
+}
+
+.voices-index-btn{
+    padding:0;
+    margin:0;
+}
+
+.voices-index-btn ul{
+    padding:0;
+    margin:0;
+}
+
+.voices-index-btn li{
+    display:inline-block;
+    float:right;
+    padding:0;
+    margin:10px 20px 0 0;
+}
+
+.voices-index-btn a{
+    color:#008000;
+}
+
+.voices-index-btn a:hover{
+    opacity:0.3;
+}
+
+
+
+
+// [new.html]
+
+.voices-new-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.voices-new-main{
+    background-color:#99FFCC;
+    width:80%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.voices-new-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.voices-new-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#008000;
+    font-weight:bold;
+}
+
+.voices-new-main ul{
+    margin-right:50px;
+}
+
+.voices-new-main a{
+    text-decoration:none;
+}
+
+.voices-new-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.voices-new-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:60%;
+}
+
+.voices-new-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+    height:100px;
+}
+
+.voices-check-box{
+    margin-top:40px;
+}
+
+.voices-check-box li{
+    display:block;
+    color:#008000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.voices-check-box span{
+    color:#f00;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.voices-new-btn1{
+    margin-top:40px;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.voices-new-btn1:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+.voices-new-btn2{
+    margin-top:40px;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+}
+
+.voices-new-btn2:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+
+
+
+// [edit.html]
+
+.voices-edit-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.voices-edit-main{
+    background-color:#99FFCC;
+    width:80%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.voices-edit-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.voices-edit-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#008000;
+    font-weight:bold;
+}
+
+.voices-edit-main ul{
+    margin-right:50px;
+}
+
+.voices-edit-main a{
+    text-decoration:none;
+}
+
+.voices-edit-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.voices-edit-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:60%;
+}
+
+.voices-edit-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+    height:100px;
+}
+
+.voices-check-box{
+    margin-top:40px;
+}
+
+.voices-check-box li{
+    display:block;
+    color:#008000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.voices-check-box span{
+    color:#f00;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.voices-edit-btn1{
+    margin-top:40px;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.voices-edit-btn1:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+.voices-edit-btn2{
+    margin-top:40px;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+}
+
+.voices-edit-btn2:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+}
+// ここまでがタブレット用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+// ここからPC用サイズ-----------------------------------------------------------------------------
+@media(min-width:1025px){
+
 // [index.html]
 
 .voices-index-title{
@@ -331,3 +1041,6 @@
     background-color:#008000;
     color:#fff;
 }
+
+}
+// ここまでがPC用サイズ-----------------------------------------------------------------------------

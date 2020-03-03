@@ -1,3 +1,6 @@
+// ここからスマホ用サイズ-----------------------------------------------------------------------------
+@media(max-width:767px){
+
 // [index.html]
 
 .news-index{
@@ -9,7 +12,7 @@
     background-color:#99FFCC;
     margin-top:50px;
     text-align:center;
-    font-size:25px;
+    font-size:22px;
     color:#008000;
     text-shadow:1px 1px 1px #6699CC;
 }
@@ -34,7 +37,7 @@
 }
 
 .news-index-main{
-    width:80%;
+    width:95%;
     padding:0;
     margin:0 auto 50px;
     border-bottom:2px dotted #000;
@@ -110,14 +113,14 @@
     background-color:#99FFCC;
     margin-top:50px;
     text-align:center;
-    font-size:25px;
+    font-size:22px;
     color:#008000;
     text-shadow:1px 1px 1px #6699CC;
 }
 
 .news-new-main{
     background-color:#99FFCC;
-    width:60%;
+    width:95%;
     margin:0 auto 30px;
     padding:10px 0 40px 0;
     text-align:center;
@@ -158,6 +161,466 @@
 .news-new-content2{
     background-color:#eeffff;
     border-radius:5px;
+    width:80%;
+}
+
+.voices-check-box{
+    margin-top:40px;
+}
+
+.voices-check-box li{
+    display:block;
+    color:#008000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.voices-check-box span{
+    color:#f00;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.news-new-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.news-new-btn1{
+    margin:0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:12px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.news-new-btn1:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+.news-new-btn2{
+    margin:20px 0 0 0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+}
+
+.news-new-btn2:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+
+
+
+// [edit.html]
+
+.news-edit-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:22px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.news-edit-main{
+    background-color:#99FFCC;
+    width:95%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.news-edit-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.news-edit-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#008000;
+    font-weight:bold;
+}
+
+.news-edit-main ul{
+    margin-right:50px;
+}
+
+.news-edit-main a{
+    text-decoration:none;
+}
+
+.news-edit-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.news-edit-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:40%;
+}
+
+.news-edit-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+}
+
+.voices-check-box{
+    margin-top:40px;
+}
+
+.voices-check-box li{
+    display:block;
+    color:#008000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.voices-check-box span{
+    color:#f00;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.news-new-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.news-edit-btn1{
+    margin:0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:12px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.news-edit-btn1:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+.news-edit-btn2{
+    margin:20px 0 0 0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+}
+
+.news-edit-btn2:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+
+}
+// ここまでがスマホ用サイズ-----------------------------------------------------------------------------
+
+
+
+
+
+// ここからタブレット用サイズ-----------------------------------------------------------------------------
+@media(min-width:768px) and (max-width:1024px){
+
+
+// [index.html]
+
+.news-index{
+    padding:0;
+    margin:0;
+}
+
+.news-index-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:22px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.news-index-new-btn{
+    text-align:center;
+    margin:50px 0;
+}
+
+.news-index-new-btn a{
+    text-decoration:none;
+    color:#008000;
+    background-color:#99FFCC;
+    padding:8px 30px;
+    border:1px solid #008000;
+    border-radius:10px;
+}
+
+.news-index-new-btn a:hover{
+    color:#fff;
+    background-color:#008000;
+}
+
+.news-index-main{
+    width:95%;
+    padding:0;
+    margin:0 auto 50px;
+    border-bottom:2px dotted #000;
+}
+
+.news-index-text{
+    padding:0;
+    margin:0;
+}
+
+.news-index-text ul{
+    padding:0 0 10px 0;
+    margin:0;
+}
+
+.news-index-text li{
+    padding:0;
+    margin:0 0 0 20px;
+    display:inline-block;
+}
+
+.release{
+    text-align:center;
+    background-color:#6699ff;
+    color:#fff;
+}
+
+.unrelease{
+    text-align:center;
+    background-color:#f00;
+    color:#fff;
+}
+
+.news-index-text a{
+    text-decoration:none;
+    color:#000;
+}
+
+.news-index-text a:hover{
+    opacity:0.3;
+}
+
+.news-index-btn{
+    padding:0;
+    margin:0;
+    float:right;
+}
+
+.news-index-btn ul{
+    padding:0;
+    margin:0;
+}
+
+.news-index-btn li{
+    padding:0;
+    margin:0 15px 0 0;
+    display:inline-block;
+}
+
+.news-index-btn a{
+    color:#008000;
+}
+
+.news-index-btn a:hover{
+    opacity:0.3;
+}
+
+
+
+// [new.html]
+
+.news-new-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:22px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.news-new-main{
+    background-color:#99FFCC;
+    width:95%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.news-new-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.news-new-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#008000;
+    font-weight:bold;
+}
+
+.news-new-main ul{
+    margin-right:50px;
+}
+
+.news-new-main a{
+    text-decoration:none;
+}
+
+.news-new-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.news-new-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:40%;
+}
+
+.news-new-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+}
+
+.voices-check-box{
+    margin-top:40px;
+}
+
+.voices-check-box li{
+    display:block;
+    color:#008000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.voices-check-box span{
+    color:#f00;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.news-new-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.news-new-btn1{
+    margin:0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:12px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.news-new-btn1:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+.news-new-btn2{
+    margin:20px 0 0 0;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+}
+
+.news-new-btn2:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+
+
+
+// [edit.html]
+
+.news-edit-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:25px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.news-edit-main{
+    background-color:#99FFCC;
+    width:80%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.news-edit-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.news-edit-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#008000;
+    font-weight:bold;
+}
+
+.news-edit-main ul{
+    margin-right:50px;
+}
+
+.news-edit-main a{
+    text-decoration:none;
+}
+
+.news-edit-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.news-edit-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:40%;
+}
+
+.news-edit-content2{
+    background-color:#eeffff;
+    border-radius:5px;
     width:70%;
 }
 
@@ -178,8 +641,235 @@
     font-weight:bold;
 }
 
-.news-new-btn1{
+.news-edit-btn1{
     margin-top:40px;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:12px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+    box-shadow:2px 2px 2px #808080;
+    font-size:14px;
+}
+
+.news-edit-btn1:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+.news-edit-btn2{
+    margin-top:40px;
+    background-color:#CCFFCC;
+    border-radius:10px;
+    padding:10px 20px;
+    font-weight:bold;
+    color:#008000;
+    cursor:pointer;
+}
+
+.news-edit-btn2:hover{
+    background-color:#008000;
+    color:#fff;
+}
+
+
+}
+// ここまでがタブレット用サイズ-----------------------------------------------------------------------------
+
+
+
+// ここからPC用サイズ-----------------------------------------------------------------------------
+@media(min-width:1025px){
+
+// [index.html]
+
+.news-index{
+    padding:0;
+    margin:0;
+}
+
+.news-index-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:22px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.news-index-new-btn{
+    text-align:center;
+    margin:50px 0;
+}
+
+.news-index-new-btn a{
+    text-decoration:none;
+    color:#008000;
+    background-color:#99FFCC;
+    padding:8px 30px;
+    border:1px solid #008000;
+    border-radius:10px;
+}
+
+.news-index-new-btn a:hover{
+    color:#fff;
+    background-color:#008000;
+}
+
+.news-index-main{
+    width:70%;
+    padding:0;
+    margin:0 auto 50px;
+    border-bottom:2px dotted #000;
+}
+
+.news-index-text{
+    padding:0;
+    margin:0;
+}
+
+.news-index-text ul{
+    padding:0 0 10px 0;
+    margin:0;
+}
+
+.news-index-text li{
+    padding:0;
+    margin:0 0 0 20px;
+    display:inline-block;
+}
+
+.release{
+    text-align:center;
+    background-color:#6699ff;
+    color:#fff;
+}
+
+.unrelease{
+    text-align:center;
+    background-color:#f00;
+    color:#fff;
+}
+
+.news-index-text a{
+    text-decoration:none;
+    color:#000;
+}
+
+.news-index-text a:hover{
+    opacity:0.3;
+}
+
+.news-index-btn{
+    padding:0;
+    margin:0;
+    float:right;
+}
+
+.news-index-btn ul{
+    padding:0;
+    margin:0;
+}
+
+.news-index-btn li{
+    padding:0;
+    margin:0 15px 0 0;
+    display:inline-block;
+}
+
+.news-index-btn a{
+    color:#008000;
+}
+
+.news-index-btn a:hover{
+    opacity:0.3;
+}
+
+
+
+// [new.html]
+
+.news-new-title{
+    background-color:#99FFCC;
+    margin-top:50px;
+    text-align:center;
+    font-size:22px;
+    color:#008000;
+    text-shadow:1px 1px 1px #6699CC;
+}
+
+.news-new-main{
+    background-color:#99FFCC;
+    width:95%;
+    margin:0 auto 30px;
+    padding:10px 0 40px 0;
+    text-align:center;
+}
+
+.news-new-main span{
+    font-size:12px;
+    color:#f00;
+}
+
+.news-new-main p{
+    margin:30px 0 0 0;
+    padding:0;
+    color:#008000;
+    font-weight:bold;
+}
+
+.news-new-main ul{
+    margin-right:50px;
+}
+
+.news-new-main a{
+    text-decoration:none;
+}
+
+.news-new-main li{
+    display:inline-block;
+    margin-right:20px;
+}
+
+.news-new-content1{
+    background-color:#eeffff;
+    border-radius:5px;
+    text-align:center;
+    width:40%;
+}
+
+.news-new-content2{
+    background-color:#eeffff;
+    border-radius:5px;
+    width:80%;
+}
+
+.voices-check-box{
+    margin-top:40px;
+}
+
+.voices-check-box li{
+    display:block;
+    color:#008000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.voices-check-box span{
+    color:#f00;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.news-new-main ul{
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.news-new-btn1{
+    margin:0;
     background-color:#CCFFCC;
     border-radius:10px;
     padding:12px 20px;
@@ -196,7 +886,7 @@
 }
 
 .news-new-btn2{
-    margin-top:40px;
+    margin:20px 0 0 0;
     background-color:#CCFFCC;
     border-radius:10px;
     padding:10px 20px;
@@ -213,7 +903,7 @@
 
 
 
-// [new.html]
+// [edit.html]
 
 .news-edit-title{
     background-color:#99FFCC;
@@ -318,3 +1008,7 @@
     background-color:#008000;
     color:#fff;
 }
+
+
+}
+// ここまでがPC用サイズ-----------------------------------------------------------------------------
