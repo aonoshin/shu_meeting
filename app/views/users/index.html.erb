@@ -25,11 +25,6 @@
                 <li>更新日時：<%= u.updated_at.strftime("%Y/%m/%d %H:%M") %></li>
             </ul>
         </div>
-        <div class="users-btn clearfix">
-            <ul>
-                <li><%= link_to "退会させる", "/", method: "delete", data: {confirm: "本当に退会させてもよろしいですか？※復元不可"} %></li>
-            </ul>
-        </div>
       </div>
     <% end %>
     
